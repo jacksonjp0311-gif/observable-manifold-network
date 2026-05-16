@@ -40,12 +40,12 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Runtime status | minimal local scaffold |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
-| Current tests | expected 3 passed |
+| Current tests | 13 passing |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N mode | self-reported repository navigation shell |
 | NCI mode | self |
-| NCI target | 0.90+ after checker pass |
+| NCI self | 1.0 |
 
 ### What this is not
 
@@ -155,34 +155,49 @@ The current hardening layer includes:
 ## Project Structure
 
     observable-manifold-network/
-    â”œâ”€â”€ AGENTS.md                         # Agent entry beacon and operating contract
-    â”œâ”€â”€ README.md                         # Human / RCC Nexus / AI trisection
-    â”œâ”€â”€ README_90_SECONDS.md              # Short adoption compression
-    â”œâ”€â”€ configs/                          # Runtime and seed configuration
-    â”œâ”€â”€ docs/                             # Architecture, context, theory, protocols, injections
-    â”‚   â”œâ”€â”€ architecture/                 # Existing OMN architecture notes
-    â”‚   â”œâ”€â”€ context/                      # RCC indexes, validation surfaces, drift reports
-    â”‚   â”œâ”€â”€ injections/                   # RCC/RCC-N injection records
-    â”‚   â”œâ”€â”€ protocols/                    # AI and non-claim protocols
-    â”‚   â”œâ”€â”€ software_architecture/         # Software architecture shell
-    â”‚   â””â”€â”€ theory/                       # GMN and OMN theory summaries
-    â”œâ”€â”€ examples/                         # Seed entry points
-    â”œâ”€â”€ outputs/                          # Generated evidence artifacts
-    â”‚   â”œâ”€â”€ state/
-    â”‚   â”œâ”€â”€ evidence/
-    â”‚   â”œâ”€â”€ reports/
-    â”‚   â”œâ”€â”€ plots/
-    â”‚   â”œâ”€â”€ logs/
-    â”‚   â””â”€â”€ ledger/
-    â”œâ”€â”€ rcc/nexus/                        # RCC-N route maps, protocol, Echo template, handoff
-    â”œâ”€â”€ reports/rcc_nexus/                # RCC-N checker reports
-    â”œâ”€â”€ scripts/rcc/                      # RCC-N checker scripts
-    â”œâ”€â”€ src/omn/                          # Importable Python package
-    â”‚   â”œâ”€â”€ core/                         # Runtime implementation
-    â”‚   â””â”€â”€ schemas/                      # JSON schemas
-    â”œâ”€â”€ tests/                            # unittest implementation-health validation
-    â””â”€â”€ visuals/rcc_nexus/                # Future RCC-N charts
-
+      AGENTS.md                         # Agent entry beacon and operating contract
+      README.md                         # Human / RCC Nexus / AI trisection
+      README_90_SECONDS.md              # Short adoption compression
+      .github/workflows/ci.yml          # GitHub Actions validation surface
+      configs/                          # Runtime and seed configuration
+      docs/
+        architecture/                   # Source boundary and architecture notes
+        architecture_changes/           # Versioned architecture-change records
+        benchmarks/                     # RCC-N benchmark reports and metrics
+        context/                        # RCC indexes, validation surfaces, drift reports
+        future_architecture/            # Planned architecture tracks
+        injected_theory/                # Source-bounded theory admitted by process
+        injections/                     # Governance/module/documentation injections
+        protocols/                      # AI and non-claim protocols
+        public_release/                 # Public-safe RCC-N explanations
+        release_notes/                  # Version continuity records
+        software_architecture/          # OMN-SA software architecture documents
+        theory/                         # GMN and OMN theory summaries
+      examples/                         # Seed entry points
+      outputs/
+        state/                          # Runtime state artifacts
+        evidence/                       # Evidence packages
+        reports/                        # Runtime reports
+        plots/                          # Diagnostic plots
+        logs/                           # Runtime logs
+        ledger/                         # JSONL continuity records
+      rcc/nexus/                        # RCC-N route maps, protocol, Echo template, handoff
+      reports/
+        architecture/                   # OMN-SA architecture validation reports
+        rcc_nexus/                      # RCC-N checker reports
+      schemas/
+        omn/                            # OMN schema contracts
+        rcc_nexus/                      # RCC-N schema contracts
+      scripts/
+        rcc/                            # RCC-N checker scripts
+        release/                        # Fresh-clone verification
+        validation/                     # Architecture contract validator
+        run_all_checks.ps1              # Local validation bundle
+      src/omn/
+        core/                           # Runtime implementation
+        schemas/                        # Runtime schema surfaces
+      tests/                            # unittest implementation-health validation
+      visuals/rcc_nexus/                # RCC-N charts
 ## Project Structure Director
 
 | Surface | What it does | Why it matters |
@@ -202,7 +217,7 @@ The current hardening layer includes:
 | `tests/` | Stores implementation-health tests. | Catches local scaffold regressions. |
 | `outputs/` | Stores generated run artifacts. | Preserves state, evidence, reports, plots, logs, and ledgers. |
 | `reports/rcc_nexus/` | Stores RCC-N checker reports. | Makes navigation health inspectable. |
-| `visuals/rcc_nexus/` | Future chart surface. | Will support NCI and coverage visualization. |
+| `visuals/rcc_nexus/` | RCC-N chart and benchmark visualization surface. | Will support NCI and coverage visualization. |
 
 ## Structure Reading Route
 
@@ -452,8 +467,8 @@ Current repository context:
 
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
-- Current runtime layer: OMN-SA v0.1 minimal local scaffold.
-- Conceptual architecture: Observable Manifold Network Software Architecture.
+- Current runtime layer: OMN runtime scaffold.
+- Current software architecture layer: OMN-SA v0.2.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -593,8 +608,8 @@ This section is a permanent root README registry. It must be updated every time 
 
     OMN v1.0 theory
     -> OMN v1.1 minimal runtime bridge
-    -> OMN-SA v0.1 software architecture
-    -> OMN v0.1 local runtime scaffold
+    -> OMN-SA v0.2 software architecture
+    -> OMN local runtime scaffold
     -> RCC-N repository navigation shell
     -> docs registry and version update obligation
 
@@ -622,6 +637,36 @@ This registry improves documentation continuity and agent navigation.
 It does not prove code correctness, empirical validation, patch safety, causality, mechanism, production readiness, biological equivalence, physical manifold identity, or full GMN replication.
 
 ---
+
+
+---
+
+## Current v0.2 Validation Status
+
+Current clean checkpoint:
+
+| Surface | Status |
+|---|---:|
+| Architecture contract validation | passing |
+| RCC-N checker | passing |
+| NCI self | 1.0 |
+| Unit tests | 13 passing |
+| Runtime seed | synthetic-toy runtime-validated |
+| Evidence validation | valid |
+| Current main commit | 542df92 |
+| Intended tag | v0.2.0-omn-sa-contract-validation |
+
+Validation commands:
+
+    python scripts/validation/validate_architecture_contracts.py
+    python scripts/rcc/check_rcc_nexus.py
+    python -m unittest discover -s tests
+    python -m omn run --seed synthetic-toy
+    python -m omn validate
+
+Boundary:
+
+Passing this validation surface does not prove code correctness, production readiness, empirical validation, causality, mechanism, AI understanding, or GMN replication.
 
 ## RCC-N Benchmarks and Public Release
 ### RCC-N Echo Chart
