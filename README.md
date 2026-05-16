@@ -668,3 +668,30 @@ Added validation surfaces:
 Boundary:
 
 The v0.2 engineering patch improves validation and release discipline. It does not prove empirical validation, production readiness, causality, mechanism, AI understanding, or GMN replication.
+
+---
+
+## OMN-SA v0.2 Software Architecture
+
+The repository now includes the next software architecture iteration:
+
+| Artifact | Path | Purpose |
+|---|---|---|
+| OMN-SA v0.2 Architecture | `docs/software_architecture/omn_sa_v0_2_software_architecture.md` | Defines CI, modular runtime target, schema validation, and RCC-N drift hardening. |
+| v0.2 Architecture Change | `docs/architecture_changes/omn_sa_v0_2_architecture_change.md` | Records the v0.1 to v0.2 software architecture transition. |
+| Schema Contracts | `schemas/` | Stores lightweight evidence, graph, route map, and RCC-N index contracts. |
+| Architecture Validator | `scripts/validation/validate_architecture_contracts.py` | Validates v0.2 architecture contract completeness. |
+| v0.2 Tests | `tests/test_omn_sa_v0_2_architecture.py` | Tests the v0.2 architecture layer. |
+
+### v0.2 Software Law
+
+    No schema, no stable contract.
+    No CI, no remote validation surface.
+    No docs-lane enforcement, no reliable AI orientation.
+    No fresh-clone check, no release confidence.
+
+### v0.2 Boundary
+
+OMN-SA v0.2 is engineering hardening.
+
+It does not update OMN theory, prove empirical validation, prove code correctness, prove causality, prove mechanism, prove AI understanding, prove production readiness, or replicate GMN.

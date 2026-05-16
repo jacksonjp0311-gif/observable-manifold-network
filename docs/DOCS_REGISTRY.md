@@ -88,3 +88,18 @@ Boundary rule: injection records are not architecture docs, architecture changes
 | v0.2 Patch Notes | `docs/release_notes/v0_2_engineering_patch.md` | active | Records this engineering patch seed. |
 | Graph Contract Tests | `tests/test_graph_contracts.py` | active | Tests typed edges, baselines, topology sensitivity, and claim gate boundaries. |
 | RCC-N Integrity Tests | `tests/test_rcc_nexus_integrity.py` | active | Tests chart embedding, docs lanes, route map, and public-release boundary. |
+
+## OMN-SA v0.2 Software Architecture
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_2_software_architecture.md` | active | CI, modular runtime target, schema validation, and RCC-N drift hardening architecture. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_2_architecture_change.md` | active | Records the v0.1 -> v0.2 architecture transition. |
+| Evidence Schema | `schemas/omn/evidence_package.schema.json` | active | Lightweight evidence package contract. |
+| Graph Schema | `schemas/omn/graph_contract.schema.json` | active | Lightweight graph contract. |
+| Route Map Schema | `schemas/rcc_nexus/route_map.schema.json` | active | Lightweight RCC-N route map contract. |
+| RCC-N Index Schema | `schemas/rcc_nexus/rcc_nexus_index.schema.json` | active | Lightweight RCC-N index contract. |
+| Architecture Validator | `scripts/validation/validate_architecture_contracts.py` | active | Validates v0.2 architecture contracts. |
+| Architecture Test | `tests/test_omn_sa_v0_2_architecture.py` | active | Unit tests for v0.2 architecture contract. |
+
+Boundary: OMN-SA v0.2 is software architecture hardening. It does not update OMN theory, prove code correctness, prove empirical validation, or replicate GMN.

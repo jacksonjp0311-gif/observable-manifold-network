@@ -1,0 +1,19 @@
+{
+  "schema_id": "OMN-SA-v0.2-evidence-package-contract",
+  "required_keys": [
+    "schema",
+    "run_id",
+    "seed",
+    "claim_status",
+    "source_boundary",
+    "metrics",
+    "artifacts",
+    "baselines",
+    "topology_sensitivity",
+    "audit",
+    "non_claim_locks"
+  ],
+  "boundary": "Evidence package schema validation checks contract completeness, not empirical truth.",
+  "validation_command": "python scripts/validation/validate_architecture_contracts.py",
+  "non_claim_lock": "schema_validation_is_not_truth"
+}

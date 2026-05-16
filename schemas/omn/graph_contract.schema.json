@@ -1,0 +1,27 @@
+{
+  "schema_id": "OMN-SA-v0.2-graph-contract",
+  "required_keys": [
+    "schema",
+    "run_id",
+    "nodes",
+    "edges",
+    "valid",
+    "failure_flags"
+  ],
+  "node_required_keys": [
+    "node_id",
+    "observable_name",
+    "observable_type",
+    "claim_boundary"
+  ],
+  "edge_required_keys": [
+    "source",
+    "target",
+    "edge_type",
+    "weight",
+    "claim_boundary"
+  ],
+  "boundary": "Graph contract validation checks declared observable topology, not causal mechanism.",
+  "validation_command": "python scripts/validation/validate_architecture_contracts.py",
+  "non_claim_lock": "graph_contract_is_not_mechanism"
+}

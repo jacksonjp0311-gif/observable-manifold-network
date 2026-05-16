@@ -73,3 +73,21 @@ The main README now embeds:
 This chart compares RCC-N repository orientation against a regular README structural baseline.
 
 Boundary: the chart measures navigation/orientation structure, not code correctness or empirical validation.
+## OMN-SA v0.2
+
+The next software architecture layer is now stored at:
+
+    docs/software_architecture/omn_sa_v0_2_software_architecture.md
+
+v0.2 adds:
+
+- schema contracts,
+- architecture contract validation,
+- RCC-N drift hardening,
+- CI/release validation expectations,
+- docs-lane enforcement,
+- modular runtime target.
+
+Boundary:
+
+    OMN-SA v0.2 is engineering hardening, not OMN theory evolution or GMN replication.

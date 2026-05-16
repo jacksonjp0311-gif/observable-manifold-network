@@ -1,0 +1,18 @@
+{
+  "schema_id": "RCC-N-v1.0-route-map-contract",
+  "required_keys": [
+    "schema",
+    "repository",
+    "routes",
+    "non_claim_boundary"
+  ],
+  "required_route_task_types": [
+    "docs",
+    "runtime",
+    "evidence",
+    "rcc"
+  ],
+  "boundary": "Route map validation checks navigational completeness, not patch safety or code correctness.",
+  "validation_command": "python scripts/validation/validate_architecture_contracts.py",
+  "non_claim_lock": "navigation_is_not_validation"
+}

@@ -31,6 +31,12 @@ jobs:
           $env:PYTHONPATH = "$PWD\src"
           python scripts/rcc/check_rcc_nexus.py
 
+      - name: Run architecture contract validation
+        shell: pwsh
+        run: |
+          $env:PYTHONPATH = "$PWD\src"
+          python scripts/validation/validate_architecture_contracts.py
+
       - name: Run unit tests
         shell: pwsh
         run: |

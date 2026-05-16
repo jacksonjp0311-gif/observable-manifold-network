@@ -1,0 +1,16 @@
+{
+  "schema_id": "RCC-N-v1.0-index-contract",
+  "required_keys": [
+    "schema",
+    "repository",
+    "shells",
+    "meridians",
+    "sectors",
+    "nodes",
+    "validation_surface",
+    "non_claim_locks"
+  ],
+  "boundary": "RCC-N index validation checks repository orientation structure, not AI understanding.",
+  "validation_command": "python scripts/validation/validate_architecture_contracts.py",
+  "non_claim_lock": "rcc_nexus_is_not_ai_understanding"
+}
