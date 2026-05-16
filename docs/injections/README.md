@@ -28,4 +28,71 @@ Every future injection must include:
 
 ## Boundary
 
-Injection records document governance and architecture additions. They do not prove code correctness, empirical validation, patch safety, causality, mechanism, or GMN replication.
+Injection records document governance and architecture additions.
+
+They do not prove code correctness, empirical validation, patch safety, causality, mechanism, biological equivalence, physical manifold identity, production readiness, or GMN replication.
+
+## RCC Nexus Echo Location
+
+Sphere Position:
+
+- Shell: outer
+- Meridian(s): documentation, agent, safety, drift
+- Sector: rcc
+- Version / TTL: RCC-N-v1.0 / 180 days
+- Last Verified: 2026-05-16
+
+Local Role:
+
+- Stores governance injection records for RCC-N, docs registry, and future architecture modules.
+
+Inbound Hooks:
+
+- README.md
+- docs/DOCS_REGISTRY.md
+- docs/context/rcc_nexus_index.json
+- rcc/nexus/route_map.json
+
+Outbound Hooks:
+
+- docs/injections/rcc_nexus_injection.md
+- docs/injections/docs_registry_injection.md
+- docs/software_architecture/
+- docs/theory/
+- docs/future_architecture/
+- docs/release_notes/
+
+Evidence Surface:
+
+- reports/rcc_nexus/latest_rcc_nexus_check.md
+- reports/rcc_nexus/latest_rcc_nexus_check.json
+- docs/context/drift/latest_rcc_nexus_report.md
+
+Validation Surface:
+
+    python scripts/rcc/check_rcc_nexus.py
+    python -m unittest discover -s tests
+
+Claim Boundary:
+
+- Injection records improve governance traceability and repository navigation.
+- Injection records do not prove runtime correctness, empirical validation, patch safety, causality, mechanism, biological equivalence, physical manifold identity, production readiness, or GMN replication.
+
+Non-Claim Locks:
+
+- geometry_is_not_ai_internal_proof
+- nci_is_not_code_quality_proof
+- navigation_is_not_validation
+- context_reconstruction_is_not_correctness_proof
+- validation_remains_required
+- observable_topology_is_not_truth
+- prediction_is_not_mechanism
+- simulation_is_not_proof
+
+Agent Route:
+
+- Read README.md, docs/DOCS_REGISTRY.md, docs/context/repository_context_index.json, docs/context/rcc_nexus_index.json, rcc/nexus/route_map.json, then this README before editing injection records.
+
+Update Obligation:
+
+- Update this README, docs/DOCS_REGISTRY.md, root README registry section, and RCC-N indexes whenever injection records, governance modules, software architecture layers, future architecture tracks, claim boundaries, or validation commands change.
