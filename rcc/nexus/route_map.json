@@ -78,5 +78,6 @@
                              "nci_proves_code_quality",
                              "context_reconstruction_proves_runtime_truth",
                              "toy_seed_proves_empirical_validation"
-                         ]
+                         ],
+    "non_claim_boundary":  "Route maps improve navigation discipline. They do not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication."
 }

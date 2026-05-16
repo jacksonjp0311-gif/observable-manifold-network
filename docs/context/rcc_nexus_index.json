@@ -223,5 +223,60 @@
                             "navigation_is_not_validation":  true,
                             "context_reconstruction_is_not_correctness_proof":  true,
                             "validation_remains_required":  true
-                        }
+                        },
+    "shells":  [
+                   {
+                       "id":  "center",
+                       "name":  "Invariant Core",
+                       "meaning":  "Purpose, source boundaries, non-claim locks, evidence boundaries, and safety rules."
+                   },
+                   {
+                       "id":  "inner",
+                       "name":  "Primitives",
+                       "meaning":  "Source objects, runtime primitives, schemas, graph contracts, and validation contracts."
+                   },
+                   {
+                       "id":  "middle",
+                       "name":  "Processes",
+                       "meaning":  "Runtime flows, scripts, tests, CI, route maps, and validation workflows."
+                   },
+                   {
+                       "id":  "outer",
+                       "name":  "Evidence and Reflection",
+                       "meaning":  "Evidence packages, reports, ledgers, architecture docs, release notes, and public artifacts."
+                   }
+               ],
+    "meridians":  [
+                      "source",
+                      "validation",
+                      "evidence",
+                      "drift",
+                      "agent",
+                      "safety",
+                      "runtime",
+                      "graph",
+                      "release",
+                      "documentation"
+                  ],
+    "sectors":  [
+                    "core",
+                    "schemas",
+                    "graph",
+                    "runtime",
+                    "validation",
+                    "evidence",
+                    "rcc",
+                    "agent",
+                    "examples",
+                    "release"
+                ],
+    "validation_surface":  {
+                               "rcc_nexus_checker":  "python scripts/rcc/check_rcc_nexus.py",
+                               "architecture_contract_validator":  "python scripts/validation/validate_architecture_contracts.py",
+                               "unit_tests":  "python -m unittest discover -s tests",
+                               "runtime_seed":  "python -m omn run --seed synthetic-toy",
+                               "evidence_validation":  "python -m omn validate",
+                               "boundary":  "Validation checks repository contracts and runtime evidence emission. It does not prove code correctness, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication."
+                           },
+    "v0_2_contract_boundary":  "Top-level shells, meridians, sectors, and validation_surface are compatibility keys for OMN-SA v0.2 architecture validation. They do not change the RCC-N claim boundary and do not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication."
 }

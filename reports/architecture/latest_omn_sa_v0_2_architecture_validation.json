@@ -1,19 +1,12 @@
 {
   "schema": "OMN-SA-v0.2-architecture-contract-validation",
-  "passed": false,
+  "passed": true,
   "missing_required_paths": [],
   "missing_doc_lanes": [],
   "missing_readme_markers": [],
   "missing_public_boundaries": [],
   "schema_failures": [],
-  "route_map_failures": [
-    "missing route_map key: non_claim_boundary"
-  ],
-  "nexus_index_failures": [
-    "missing rcc_nexus_index key: shells",
-    "missing rcc_nexus_index key: meridians",
-    "missing rcc_nexus_index key: sectors",
-    "missing rcc_nexus_index key: validation_surface"
-  ],
+  "route_map_failures": [],
+  "nexus_index_failures": [],
   "non_claim_boundary": "Architecture validation checks repository contracts, not code correctness, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication."
 }
