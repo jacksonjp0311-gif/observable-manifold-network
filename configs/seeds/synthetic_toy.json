@@ -1,0 +1,5 @@
+{
+  "seed": "synthetic-toy",
+  "benchmark_class": "S0",
+  "allowed_claim": "runtime sanity check"
+}

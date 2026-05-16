@@ -1,0 +1,5 @@
+{
+  "seed": "artifact-graph",
+  "benchmark_class": "S3",
+  "allowed_claim": "Codex artifact-graph demonstration"
+}

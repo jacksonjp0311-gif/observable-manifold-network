@@ -1,0 +1,10 @@
+{
+  "horizon": 50,
+  "interaction_method": "lagged_abs_correlation",
+  "top_k": 2,
+  "embedding": {
+    "policy": "delay",
+    "E": 3,
+    "tau": 1
+  }
+}

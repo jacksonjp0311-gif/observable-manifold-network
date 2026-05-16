@@ -1,0 +1,17 @@
+__pycache__/
+*.pyc
+.pytest_cache/
+.venv/
+venv/
+build/
+dist/
+*.egg-info/
+.DS_Store
+Thumbs.db
+outputs/state/*
+outputs/evidence/*
+outputs/reports/*
+outputs/plots/*
+outputs/logs/*
+outputs/ledger/*
+!outputs/**/README.md

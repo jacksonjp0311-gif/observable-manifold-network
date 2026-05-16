@@ -1,0 +1,5 @@
+{
+  "title": "OMN-SA v0.1 State",
+  "type": "object",
+  "required": ["schema", "run_id", "seed", "source_boundary", "validation", "claim_gate", "locks"]
+}
