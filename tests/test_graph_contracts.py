@@ -38,7 +38,7 @@ class TestGraphContracts(unittest.TestCase):
         evidence = run("lorenz", str(ROOT))
         claim_status = evidence["claim_status"]
         self.assertTrue(claim_status["overpromotion_blocked"])
-        self.assertIn("proves causality", claim_status["prohibited_claim"])
+        self.assertIn("does not prove causality", claim_status["prohibited_claim"])
         self.assertIn(claim_status["computed_status"], ["blocked", "demo-only", "runtime-validated"])
 
 
