@@ -63,3 +63,13 @@ Public benchmark artifacts:
 One-line result:
 
     RCC-N turns a repository from a passive file tree into an AI-orientable environment by exposing meaning, location, routes, evidence, validation, and claim boundaries.
+
+## Echo Chart
+
+The main README now embeds:
+
+    visuals/rcc_nexus/rcc_nexus_echo_chart.svg
+
+This chart compares RCC-N repository orientation against a regular README structural baseline.
+
+Boundary: the chart measures navigation/orientation structure, not code correctness or empirical validation.

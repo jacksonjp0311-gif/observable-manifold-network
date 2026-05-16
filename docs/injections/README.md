@@ -2,7 +2,23 @@
 
 ## Purpose
 
-This folder records governance and architecture injections into Observable Manifold Network.
+This folder records governance, module, documentation, and repository-context injections into Observable Manifold Network.
+
+An injection is not the same as an architecture change.
+
+An injection is a declared addition that modifies how the repository is governed, navigated, interpreted, validated, or extended.
+
+## Separation Rule
+
+Use these folders distinctly:
+
+| Folder | Purpose |
+|---|---|
+| `docs/injections/` | Governance/module/documentation injections and their Anchor -> Inject -> Retract -> Seal records. |
+| `docs/software_architecture/` | Current canonical software architecture. |
+| `docs/architecture_changes/` | Versioned changes to architecture or repo structure. |
+| `docs/theory/` | Canonical theory and theory bridge summaries. |
+| `docs/injected_theory/` | Source-bounded theory inserted through a declared injection/admission process. |
 
 ## Active Injections
 
@@ -11,7 +27,7 @@ This folder records governance and architecture injections into Observable Manif
 | RCC-N shell | `rcc_nexus_injection.md` | active | Adds AERMA-style README trisection, route maps, Echo Location records, and repository navigation. |
 | Docs registry shell | `docs_registry_injection.md` | active | Adds theory / software architecture / injections registry and update obligation. |
 
-## Update Rule
+## Injection Record Requirements
 
 Every future injection must include:
 
@@ -24,7 +40,10 @@ Every future injection must include:
 7. seal step,
 8. classification,
 9. validation surface,
-10. non-claim boundary.
+10. non-claim boundary,
+11. affected architecture files if any,
+12. affected theory files if any,
+13. rollback or downgrade rule.
 
 ## Boundary
 
@@ -44,7 +63,7 @@ Sphere Position:
 
 Local Role:
 
-- Stores governance injection records for RCC-N, docs registry, and future architecture modules.
+- Stores governance injection records for RCC-N, docs registry, and future governance modules.
 
 Inbound Hooks:
 
@@ -58,6 +77,8 @@ Outbound Hooks:
 - docs/injections/rcc_nexus_injection.md
 - docs/injections/docs_registry_injection.md
 - docs/software_architecture/
+- docs/architecture_changes/
+- docs/injected_theory/
 - docs/theory/
 - docs/future_architecture/
 - docs/release_notes/
@@ -95,4 +116,4 @@ Agent Route:
 
 Update Obligation:
 
-- Update this README, docs/DOCS_REGISTRY.md, root README registry section, and RCC-N indexes whenever injection records, governance modules, software architecture layers, future architecture tracks, claim boundaries, or validation commands change.
+- Update this README, docs/DOCS_REGISTRY.md, root README registry section, and RCC-N indexes whenever injection records, governance modules, software architecture layers, architecture-change records, injected-theory tracks, future architecture tracks, claim boundaries, or validation commands change.

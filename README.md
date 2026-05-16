@@ -155,33 +155,33 @@ The current hardening layer includes:
 ## Project Structure
 
     observable-manifold-network/
-    ├── AGENTS.md                         # Agent entry beacon and operating contract
-    ├── README.md                         # Human / RCC Nexus / AI trisection
-    ├── README_90_SECONDS.md              # Short adoption compression
-    ├── configs/                          # Runtime and seed configuration
-    ├── docs/                             # Architecture, context, theory, protocols, injections
-    │   ├── architecture/                 # Existing OMN architecture notes
-    │   ├── context/                      # RCC indexes, validation surfaces, drift reports
-    │   ├── injections/                   # RCC/RCC-N injection records
-    │   ├── protocols/                    # AI and non-claim protocols
-    │   ├── software_architecture/         # Software architecture shell
-    │   └── theory/                       # GMN and OMN theory summaries
-    ├── examples/                         # Seed entry points
-    ├── outputs/                          # Generated evidence artifacts
-    │   ├── state/
-    │   ├── evidence/
-    │   ├── reports/
-    │   ├── plots/
-    │   ├── logs/
-    │   └── ledger/
-    ├── rcc/nexus/                        # RCC-N route maps, protocol, Echo template, handoff
-    ├── reports/rcc_nexus/                # RCC-N checker reports
-    ├── scripts/rcc/                      # RCC-N checker scripts
-    ├── src/omn/                          # Importable Python package
-    │   ├── core/                         # Runtime implementation
-    │   └── schemas/                      # JSON schemas
-    ├── tests/                            # unittest implementation-health validation
-    └── visuals/rcc_nexus/                # Future RCC-N charts
+    â”œâ”€â”€ AGENTS.md                         # Agent entry beacon and operating contract
+    â”œâ”€â”€ README.md                         # Human / RCC Nexus / AI trisection
+    â”œâ”€â”€ README_90_SECONDS.md              # Short adoption compression
+    â”œâ”€â”€ configs/                          # Runtime and seed configuration
+    â”œâ”€â”€ docs/                             # Architecture, context, theory, protocols, injections
+    â”‚   â”œâ”€â”€ architecture/                 # Existing OMN architecture notes
+    â”‚   â”œâ”€â”€ context/                      # RCC indexes, validation surfaces, drift reports
+    â”‚   â”œâ”€â”€ injections/                   # RCC/RCC-N injection records
+    â”‚   â”œâ”€â”€ protocols/                    # AI and non-claim protocols
+    â”‚   â”œâ”€â”€ software_architecture/         # Software architecture shell
+    â”‚   â””â”€â”€ theory/                       # GMN and OMN theory summaries
+    â”œâ”€â”€ examples/                         # Seed entry points
+    â”œâ”€â”€ outputs/                          # Generated evidence artifacts
+    â”‚   â”œâ”€â”€ state/
+    â”‚   â”œâ”€â”€ evidence/
+    â”‚   â”œâ”€â”€ reports/
+    â”‚   â”œâ”€â”€ plots/
+    â”‚   â”œâ”€â”€ logs/
+    â”‚   â””â”€â”€ ledger/
+    â”œâ”€â”€ rcc/nexus/                        # RCC-N route maps, protocol, Echo template, handoff
+    â”œâ”€â”€ reports/rcc_nexus/                # RCC-N checker reports
+    â”œâ”€â”€ scripts/rcc/                      # RCC-N checker scripts
+    â”œâ”€â”€ src/omn/                          # Importable Python package
+    â”‚   â”œâ”€â”€ core/                         # Runtime implementation
+    â”‚   â””â”€â”€ schemas/                      # JSON schemas
+    â”œâ”€â”€ tests/                            # unittest implementation-health validation
+    â””â”€â”€ visuals/rcc_nexus/                # Future RCC-N charts
 
 ## Project Structure Director
 
@@ -558,6 +558,21 @@ These exact markers are intentionally preserved for the RCC-N checker:
 ---
 
 ## Theory / Software Architecture / Injections Registry
+### Documentation Separation Rule
+
+The documentation shell is intentionally separated into distinct lanes:
+
+| Lane | Path | Purpose |
+|---|---|---|
+| Theory | `docs/theory/` | Canonical theory summaries and theory bridge records. |
+| Software Architecture | `docs/software_architecture/` | Current executable software architecture. |
+| Architecture Changes | `docs/architecture_changes/` | Versioned architecture and repository-structure changes. |
+| Injections | `docs/injections/` | Governance/module/documentation injections with Anchor -> Inject -> Retract -> Seal records. |
+| Injected Theory | `docs/injected_theory/` | Source-bounded theory admitted through a declared injection/admission process. |
+| Future Architecture | `docs/future_architecture/` | Planned architecture tracks before promotion. |
+| Release Notes | `docs/release_notes/` | Version continuity and release records. |
+
+Rule: do not mix governance injections with software architecture changes or injected theory. Each lane must preserve its own boundary and update obligation.
 
 This section is a permanent root README registry. It must be updated every time the repository versions.
 
@@ -609,6 +624,13 @@ It does not prove code correctness, empirical validation, patch safety, causalit
 ---
 
 ## RCC-N Benchmarks and Public Release
+### RCC-N Echo Chart
+
+![RCC-N Echo Benchmark](visuals/rcc_nexus/rcc_nexus_echo_chart.svg)
+
+The chart compares this repository's RCC-N navigation layer against a regular README structural baseline.
+
+Boundary: the chart measures repository orientation and navigation discipline. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.
 
 The repository now includes public benchmark and explanation artifacts for the RCC-N repository navigation layer.
 

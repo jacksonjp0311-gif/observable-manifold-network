@@ -57,3 +57,23 @@ RCC/Nexus navigation is not proof of AI understanding, patch safety, causality, 
 | Echo Chart | `visuals/rcc_nexus/rcc_nexus_echo_chart.svg` | active | Visual comparison chart for RCC-N vs regular README. |
 
 Update rule: if RCC-N checker logic, benchmark categories, NCI scoring, route maps, or public claims change, update these artifacts and the root README registry.
+
+## Documentation Lane Separation
+
+| Lane | Path | Rule |
+|---|---|---|
+| Theory | `docs/theory/` | Stores canonical source-bounded theory summaries and theory bridge records. |
+| Software Architecture | `docs/software_architecture/` | Stores current executable software architecture. |
+| Architecture Changes | `docs/architecture_changes/` | Stores versioned structure/runtime/docs architecture changes. |
+| Injections | `docs/injections/` | Stores governance/module/documentation injections and HYDRA-style records. |
+| Injected Theory | `docs/injected_theory/` | Stores source-bounded theory inserted through declared admission. |
+| Future Architecture | `docs/future_architecture/` | Stores planned architecture tracks before promotion. |
+| Release Notes | `docs/release_notes/` | Stores version continuity and release records. |
+
+Boundary rule: injection records are not architecture docs, architecture changes are not theory, and injected theory is not implementation proof.
+## Added Documentation Lanes
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Architecture Changes | `docs/architecture_changes/README.md` | active | Separates architecture-change records from injections and theory. |
+| Injected Theory | `docs/injected_theory/README.md` | reserved | Separates source-bounded injected theory from architecture and governance injections. |
