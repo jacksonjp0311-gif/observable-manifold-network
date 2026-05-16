@@ -554,3 +554,54 @@ These exact markers are intentionally preserved for the RCC-N checker:
 - Simulation is not proof
 - Navigation is not validation
 - Context is not truth
+
+---
+
+## Theory / Software Architecture / Injections Registry
+
+This section is a permanent root README registry. It must be updated every time the repository versions.
+
+### Current Versioned Documentation Stack
+
+| Layer | Current file | Status | Notes |
+|---|---|---|---|
+| Theory | `docs/theory/omn_v1_1_theory_bridge.md` | active | OMN v1.1 minimal runtime bridge and adoption layer. |
+| Software Architecture | `docs/software_architecture/omn_sa_v0_1_software_architecture.md` | active | OMN-SA v0.1 minimal runtime software architecture. |
+| Source Boundary | `docs/architecture/source_boundary.md` | active | GMN authorship and non-invention boundary. |
+| Docs Registry | `docs/DOCS_REGISTRY.md` | active | Canonical map of theory, architecture, injections, and future docs. |
+| Injection Records | `docs/injections/` | active | RCC-N and docs-registry injections. |
+| Future Architecture | `docs/future_architecture/README.md` | reserved | Planned architecture tracks before promotion. |
+| Release Notes | `docs/release_notes/README.md` | active | Version update checklist and current checkpoint. |
+| RCC-N Context | `docs/context/rcc_nexus_index.json` | active | Repository navigation and Echo Location index. |
+
+### Current Architecture Chain
+
+    OMN v1.0 theory
+    -> OMN v1.1 minimal runtime bridge
+    -> OMN-SA v0.1 software architecture
+    -> OMN v0.1 local runtime scaffold
+    -> RCC-N repository navigation shell
+    -> docs registry and version update obligation
+
+### Version Update Obligation
+
+Every future version must update this registry section when any of the following changes:
+
+- theory layer,
+- software architecture layer,
+- runtime behavior,
+- evidence package schema,
+- CLI surface,
+- validation commands,
+- RCC/RCC-N route maps,
+- injection records,
+- future architecture status,
+- claim boundaries,
+- source attribution,
+- release status.
+
+### Boundary
+
+This registry improves documentation continuity and agent navigation.
+
+It does not prove code correctness, empirical validation, patch safety, causality, mechanism, production readiness, biological equivalence, physical manifold identity, or full GMN replication.

@@ -1,108 +1,73 @@
-# Folder Purpose
+# Software Architecture
 
-## S - Specification
+## Purpose
 
-Software architecture shell for OMN-SA runtime contracts.
+This folder stores canonical and future software architecture documents for Observable Manifold Network.
 
-## H - Hooks
+## Current Canonical Architecture
 
-Inbound hooks:
+- `omn_sa_v0_1_software_architecture.md`
 
-- README.md
-- docs/injections
+## Current Architecture Summary
 
-Outbound hooks:
+OMN-SA v0.1 turns OMN v1.1 into a minimal executable runtime:
 
-- src/omn
-- tests
-- outputs
+    input
+    -> observable registry
+    -> interaction matrix
+    -> typed graph contract
+    -> delay/history embeddings
+    -> local manifold state
+    -> node-local generators
+    -> closed-loop generated state
+    -> validation residuals
+    -> DeltaPhi / Omega residual geometry
+    -> baseline comparison
+    -> ablation report
+    -> topology ensemble sensitivity
+    -> residual attribution
+    -> claim gate
+    -> state artifacts
+    -> evidence JSON
+    -> markdown report
+    -> RCC context surfaces
 
-## A - Artifacts
+## Update Rule
 
-Evidence / output surfaces:
+Every architecture change must update:
 
-- docs/software_architecture
+- this README,
+- `docs/DOCS_REGISTRY.md`,
+- root `README.md` section named “Theory / Software Architecture / Injections Registry”,
+- `README_90_SECONDS.md` if public behavior changes,
+- relevant mini READMEs,
+- validation commands if needed.
 
-## T - Theory / Basis
+## Boundary
 
-Governed by OMN-SA v0.1 and RCC-N v1.0.
-
-OMN-SA basis:
-
-    observables -> interaction matrix -> typed graph -> generated state -> residuals -> evidence
-
-RCC-N basis:
-
-    Human README -> RCC Nexus README -> AI Agent README -> route map -> Echo Location -> validation
-
-## I - Invariants
-
-- Preserve GMN source attribution.
-- Preserve non-claim locks.
-- Preserve evidence-bound claims.
-- Do not claim causality, mechanism, biological equivalence, physical manifold identity, empirical validation, or full GMN replication.
-- Navigation is not validation.
-- Context is not correctness.
-
-## E - Examples
-
-Validation examples:
-
-- python -m unittest discover -s tests
+This architecture documents the runtime scaffold. It does not prove empirical validity, code correctness, causality, mechanism, biological equivalence, physical manifold identity, production readiness, or full GMN replication.
 
 ## RCC Nexus Echo Location
 
 Sphere Position:
 
 - Shell: outer
-- Meridian(s): documentation, source, runtime
+- Meridian(s): documentation, runtime, source, safety
 - Sector: release
 - Version / TTL: RCC-N-v1.0 / 180 days
 - Last Verified: 2026-05-16
 
 Local Role:
 
-- Software architecture shell for OMN-SA runtime contracts.
-
-Inbound Hooks:
-
-- README.md
-- docs/injections
-
-Outbound Hooks:
-
-- src/omn
-- tests
-- outputs
-
-Evidence Surface:
-
-- docs/software_architecture
+- Stores canonical and future software architecture records.
 
 Validation Surface:
 
-- python -m unittest discover -s tests
+    python scripts/rcc/check_rcc_nexus.py
+    python -m unittest discover -s tests
 
 Claim Boundary:
 
-- This folder improves implementation, evidence, documentation, or navigation only within its declared scope.
-- It does not prove code correctness, patch safety, empirical validation, causality, mechanism, or GMN replication.
-
-Non-Claim Locks:
-
-- geometry_is_not_ai_internal_proof
-- nci_is_not_code_quality_proof
-- navigation_is_not_validation
-- context_reconstruction_is_not_correctness_proof
-- validation_remains_required
-- observable_topology_is_not_truth
-- prediction_is_not_mechanism
-- simulation_is_not_proof
-
-Agent Route:
-
-- Read root README, docs/context indexes, route map, then this README before editing.
-
-Update Obligation:
-
-- Update this README and RCC/Nexus records if folder purpose, hooks, evidence surfaces, validation commands, or claim boundaries change.
+- Architecture is not correctness.
+- Design is not validation.
+- Runtime scaffold is not full GMN replication.

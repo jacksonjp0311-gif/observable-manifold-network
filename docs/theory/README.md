@@ -1,27 +1,27 @@
-# Folder Purpose
+# Theory Documents
 
-## S — Specification
+## Purpose
 
-This folder owns one bounded surface of the OMN runtime.
+This folder stores source-bounded theory summaries and version bridges.
 
-## H — Hooks
+## Current Theory Stack
 
-Read local code and tests before editing.
+| Theory | File | Role |
+|---|---|---|
+| OMN v1.0 | `omn_v1_0_summary.md` | Observable-topology source-bounded extraction. |
+| OMN v1.1 | `omn_v1_1_theory_bridge.md` | Minimal runtime bridge and adoption layer. |
+| GMN source summary | `gmn_source_summary.md` | Source-method boundary and attribution. |
 
-## A — Artifacts
+## Update Rule
 
-When this folder emits artifacts, paths must be represented in evidence JSON.
+Every theory change must update:
 
-## T — Theory / Basis
+- root README registry section,
+- `docs/DOCS_REGISTRY.md`,
+- this README,
+- relevant software architecture docs if runtime behavior changes,
+- relevant injection docs if a governance layer changes.
 
-Governed by OMN-SA v0.1: observable nodes, typed edges, residual validation, claim gates.
+## Boundary
 
-## I — Invariants
-
-Do not weaken source attribution or non-claim locks.
-
-## E — Examples
-
-Run:
-
-    python -m omn run --seed synthetic-toy
+Theory documents are not implementation proof, empirical validation, or source-paper replication.

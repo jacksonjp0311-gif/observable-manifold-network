@@ -36,3 +36,17 @@ Core rule:
     No residuals, no evidence.
     No claim gate, no strong claim.
     No route map, no agent-safe patch.
+## Docs Registry
+
+Canonical docs are tracked in:
+
+- `docs/DOCS_REGISTRY.md`
+- `docs/theory/omn_v1_1_theory_bridge.md`
+- `docs/software_architecture/omn_sa_v0_1_software_architecture.md`
+- `docs/injections/`
+- `docs/future_architecture/`
+- `docs/release_notes/`
+
+Every version must update the root README registry section named:
+
+    Theory / Software Architecture / Injections Registry
