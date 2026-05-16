@@ -2,24 +2,24 @@
 
 ## S - Specification
 
-Runnable seed example entry points.
+Injection records for RCC/RCC-N and future governance modules.
 
 ## H - Hooks
 
 Inbound hooks:
 
 - README.md
-- src/omn/core/runtime.py
 
 Outbound hooks:
 
-- outputs/evidence
+- rcc/nexus
+- docs/context
 
 ## A - Artifacts
 
 Evidence / output surfaces:
 
-- outputs/evidence
+- docs/injections
 
 ## T - Theory / Basis
 
@@ -46,38 +46,38 @@ RCC-N basis:
 
 Validation examples:
 
-- python examples/synthetic_toy_seed.py
+- python scripts/rcc/check_rcc_nexus.py
 
 ## RCC Nexus Echo Location
 
 Sphere Position:
 
-- Shell: middle
-- Meridian(s): runtime, validation
-- Sector: examples
+- Shell: outer
+- Meridian(s): documentation, agent, safety
+- Sector: rcc
 - Version / TTL: RCC-N-v1.0 / 180 days
 - Last Verified: 2026-05-16
 
 Local Role:
 
-- Runnable seed example entry points.
+- Injection records for RCC/RCC-N and future governance modules.
 
 Inbound Hooks:
 
 - README.md
-- src/omn/core/runtime.py
 
 Outbound Hooks:
 
-- outputs/evidence
+- rcc/nexus
+- docs/context
 
 Evidence Surface:
 
-- outputs/evidence
+- docs/injections
 
 Validation Surface:
 
-- python examples/synthetic_toy_seed.py
+- python scripts/rcc/check_rcc_nexus.py
 
 Claim Boundary:
 

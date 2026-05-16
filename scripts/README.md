@@ -1,27 +1,102 @@
 # Folder Purpose
 
-## S — Specification
+## S - Specification
 
-This folder owns one bounded surface of the OMN runtime.
+Helper scripts for local runs, tests, package build, and RCC checks.
 
-## H — Hooks
+## H - Hooks
 
-Read local code and tests before editing.
+Inbound hooks:
 
-## A — Artifacts
+- README.md
 
-When this folder emits artifacts, paths must be represented in evidence JSON.
+Outbound hooks:
 
-## T — Theory / Basis
+- scripts/rcc
 
-Governed by OMN-SA v0.1: observable nodes, typed edges, residual validation, claim gates.
+## A - Artifacts
 
-## I — Invariants
+Evidence / output surfaces:
 
-Do not weaken source attribution or non-claim locks.
+- reports/rcc_nexus
 
-## E — Examples
+## T - Theory / Basis
 
-Run:
+Governed by OMN-SA v0.1 and RCC-N v1.0.
 
-    python -m omn run --seed synthetic-toy
+OMN-SA basis:
+
+    observables -> interaction matrix -> typed graph -> generated state -> residuals -> evidence
+
+RCC-N basis:
+
+    Human README -> RCC Nexus README -> AI Agent README -> route map -> Echo Location -> validation
+
+## I - Invariants
+
+- Preserve GMN source attribution.
+- Preserve non-claim locks.
+- Preserve evidence-bound claims.
+- Do not claim causality, mechanism, biological equivalence, physical manifold identity, empirical validation, or full GMN replication.
+- Navigation is not validation.
+- Context is not correctness.
+
+## E - Examples
+
+Validation examples:
+
+- powershell -ExecutionPolicy Bypass -File scripts/run_tests.ps1
+
+## RCC Nexus Echo Location
+
+Sphere Position:
+
+- Shell: middle
+- Meridian(s): runtime, validation, agent
+- Sector: runtime
+- Version / TTL: RCC-N-v1.0 / 180 days
+- Last Verified: 2026-05-16
+
+Local Role:
+
+- Helper scripts for local runs, tests, package build, and RCC checks.
+
+Inbound Hooks:
+
+- README.md
+
+Outbound Hooks:
+
+- scripts/rcc
+
+Evidence Surface:
+
+- reports/rcc_nexus
+
+Validation Surface:
+
+- powershell -ExecutionPolicy Bypass -File scripts/run_tests.ps1
+
+Claim Boundary:
+
+- This folder improves implementation, evidence, documentation, or navigation only within its declared scope.
+- It does not prove code correctness, patch safety, empirical validation, causality, mechanism, or GMN replication.
+
+Non-Claim Locks:
+
+- geometry_is_not_ai_internal_proof
+- nci_is_not_code_quality_proof
+- navigation_is_not_validation
+- context_reconstruction_is_not_correctness_proof
+- validation_remains_required
+- observable_topology_is_not_truth
+- prediction_is_not_mechanism
+- simulation_is_not_proof
+
+Agent Route:
+
+- Read root README, docs/context indexes, route map, then this README before editing.
+
+Update Obligation:
+
+- Update this README and RCC/Nexus records if folder purpose, hooks, evidence surfaces, validation commands, or claim boundaries change.

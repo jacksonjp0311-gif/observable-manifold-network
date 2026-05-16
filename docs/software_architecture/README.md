@@ -2,24 +2,26 @@
 
 ## S - Specification
 
-Runnable seed example entry points.
+Software architecture shell for OMN-SA runtime contracts.
 
 ## H - Hooks
 
 Inbound hooks:
 
 - README.md
-- src/omn/core/runtime.py
+- docs/injections
 
 Outbound hooks:
 
-- outputs/evidence
+- src/omn
+- tests
+- outputs
 
 ## A - Artifacts
 
 Evidence / output surfaces:
 
-- outputs/evidence
+- docs/software_architecture
 
 ## T - Theory / Basis
 
@@ -46,38 +48,40 @@ RCC-N basis:
 
 Validation examples:
 
-- python examples/synthetic_toy_seed.py
+- python -m unittest discover -s tests
 
 ## RCC Nexus Echo Location
 
 Sphere Position:
 
-- Shell: middle
-- Meridian(s): runtime, validation
-- Sector: examples
+- Shell: outer
+- Meridian(s): documentation, source, runtime
+- Sector: release
 - Version / TTL: RCC-N-v1.0 / 180 days
 - Last Verified: 2026-05-16
 
 Local Role:
 
-- Runnable seed example entry points.
+- Software architecture shell for OMN-SA runtime contracts.
 
 Inbound Hooks:
 
 - README.md
-- src/omn/core/runtime.py
+- docs/injections
 
 Outbound Hooks:
 
-- outputs/evidence
+- src/omn
+- tests
+- outputs
 
 Evidence Surface:
 
-- outputs/evidence
+- docs/software_architecture
 
 Validation Surface:
 
-- python examples/synthetic_toy_seed.py
+- python -m unittest discover -s tests
 
 Claim Boundary:
 

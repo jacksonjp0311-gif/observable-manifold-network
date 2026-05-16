@@ -1,0 +1,37 @@
+{
+    "schema":  "RCC-v1.3-repository-context-index",
+    "repository":  "observable-manifold-network",
+    "package":  "omn",
+    "purpose":  "Governed observable-topology runtime with typed graph contracts, residual validation, claim gates, and evidence packages.",
+    "current_status":  "minimal local scaffold",
+    "source_boundary":  "GMN remains Park et al.\u0027s method; OMN is a Codex software architecture.",
+    "primary_entrypoints":  [
+                                "README.md",
+                                "README_90_SECONDS.md",
+                                "AGENTS.md",
+                                "docs/context/rcc_nexus_index.json",
+                                "rcc/nexus/route_map.json"
+                            ],
+    "validation_commands":  [
+                                "python scripts/rcc/check_rcc_nexus.py",
+                                "python -m unittest discover -s tests",
+                                "python -m omn run --seed synthetic-toy",
+                                "python -m omn run --seed lorenz",
+                                "python -m omn run --seed artifact-graph"
+                            ],
+    "evidence_surfaces":  [
+                              "outputs/state",
+                              "outputs/evidence",
+                              "outputs/reports",
+                              "outputs/plots",
+                              "outputs/logs",
+                              "outputs/ledger"
+                          ],
+    "non_claim_locks":  {
+                            "omn_is_not_gmn":  true,
+                            "observable_topology_is_not_truth":  true,
+                            "prediction_is_not_mechanism":  true,
+                            "simulation_is_not_proof":  true,
+                            "rcc_nexus_is_not_code_correctness":  true
+                        }
+}

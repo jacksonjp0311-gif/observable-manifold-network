@@ -1,30 +1,38 @@
 # OMN in 90 Seconds
 
-OMN is a source-bounded observable-topology runtime inspired by Park et al.'s Generative Manifold Networks.
+Observable Manifold Network is a local-first observable-topology runtime.
 
-It does:
+It preserves the GMN-style spine:
 
-- declare observable nodes
-- compute or load interaction matrices
-- build typed graph contracts
-- run node-local generators
-- generate future state
-- validate residuals
-- compare baselines
-- test topology sensitivity
-- emit evidence JSON
+    observables
+    -> interaction matrix
+    -> typed graph
+    -> generated state
 
-It does not:
+It adds Codex governance:
 
-- claim to invent GMN
-- prove causality
-- prove mechanism
-- prove biological equivalence
-- prove observable topology is truth
-- replace validation or human review
+    residuals
+    -> baselines
+    -> topology sensitivity
+    -> claim gate
+    -> evidence package
+
+It now uses the AERMA/RCC-N README shell:
+
+    PART I - Human README
+    PART II - RCC Nexus README
+    PART III - AI Agent README
+
+Run:
+
+    $env:PYTHONPATH = "$PWD\src"
+    python -m omn run --seed synthetic-toy
+    python -m unittest discover -s tests
+    python scripts/rcc/check_rcc_nexus.py
 
 Core rule:
 
     No graph contract, no topology claim.
     No residuals, no evidence.
     No claim gate, no strong claim.
+    No route map, no agent-safe patch.

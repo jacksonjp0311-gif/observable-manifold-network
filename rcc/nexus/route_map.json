@@ -1,0 +1,82 @@
+{
+    "schema":  "RCC-N-v1.0-route-map",
+    "repository":  "observable-manifold-network",
+    "routes":  [
+                   {
+                       "task_type":  "docs",
+                       "entry_sequence":  [
+                                              "README.md",
+                                              "docs/context/repository_context_index.json",
+                                              "docs/context/rcc_nexus_index.json",
+                                              "target folder README"
+                                          ],
+                       "required_checks":  [
+                                               "preserve trisection",
+                                               "preserve non-claim locks",
+                                               "run RCC-N checker"
+                                           ],
+                       "validation":  [
+                                          "python scripts/rcc/check_rcc_nexus.py"
+                                      ]
+                   },
+                   {
+                       "task_type":  "runtime",
+                       "entry_sequence":  [
+                                              "README.md",
+                                              "src/omn/core/README.md",
+                                              "src/omn/core/runtime.py",
+                                              "tests/test_runtime.py"
+                                          ],
+                       "required_checks":  [
+                                               "inspect source",
+                                               "inspect tests",
+                                               "run unit tests",
+                                               "run affected seed"
+                                           ],
+                       "validation":  [
+                                          "python -m unittest discover -s tests",
+                                          "python -m omn run --seed synthetic-toy"
+                                      ]
+                   },
+                   {
+                       "task_type":  "evidence",
+                       "entry_sequence":  [
+                                              "README.md",
+                                              "outputs/README.md",
+                                              "outputs/evidence",
+                                              "src/omn/core/runtime.py"
+                                          ],
+                       "required_checks":  [
+                                               "verify artifact paths",
+                                               "validate evidence",
+                                               "preserve claim boundaries"
+                                           ],
+                       "validation":  [
+                                          "python -m omn validate"
+                                      ]
+                   },
+                   {
+                       "task_type":  "rcc",
+                       "entry_sequence":  [
+                                              "README.md",
+                                              "rcc/nexus/README.md",
+                                              "docs/context/rcc_nexus_index.json",
+                                              "rcc/nexus/route_map.json"
+                                          ],
+                       "required_checks":  [
+                                               "check Echo Locations",
+                                               "check route map",
+                                               "check indexes"
+                                           ],
+                       "validation":  [
+                                          "python scripts/rcc/check_rcc_nexus.py"
+                                      ]
+                   }
+               ],
+    "forbidden_claims":  [
+                             "navigation_proves_correctness",
+                             "nci_proves_code_quality",
+                             "context_reconstruction_proves_runtime_truth",
+                             "toy_seed_proves_empirical_validation"
+                         ]
+}

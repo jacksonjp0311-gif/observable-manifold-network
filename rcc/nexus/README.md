@@ -2,24 +2,25 @@
 
 ## S - Specification
 
-Runnable seed example entry points.
+RCC-N route maps, Echo template, protocol, and handoff contract.
 
 ## H - Hooks
 
 Inbound hooks:
 
 - README.md
-- src/omn/core/runtime.py
+- docs/context/rcc_nexus_index.json
 
 Outbound hooks:
 
-- outputs/evidence
+- route_map.json
+- scripts/rcc/check_rcc_nexus.py
 
 ## A - Artifacts
 
 Evidence / output surfaces:
 
-- outputs/evidence
+- reports/rcc_nexus
 
 ## T - Theory / Basis
 
@@ -46,38 +47,39 @@ RCC-N basis:
 
 Validation examples:
 
-- python examples/synthetic_toy_seed.py
+- python scripts/rcc/check_rcc_nexus.py
 
 ## RCC Nexus Echo Location
 
 Sphere Position:
 
 - Shell: middle
-- Meridian(s): runtime, validation
-- Sector: examples
+- Meridian(s): agent, drift, documentation, safety
+- Sector: rcc
 - Version / TTL: RCC-N-v1.0 / 180 days
 - Last Verified: 2026-05-16
 
 Local Role:
 
-- Runnable seed example entry points.
+- RCC-N route maps, Echo template, protocol, and handoff contract.
 
 Inbound Hooks:
 
 - README.md
-- src/omn/core/runtime.py
+- docs/context/rcc_nexus_index.json
 
 Outbound Hooks:
 
-- outputs/evidence
+- route_map.json
+- scripts/rcc/check_rcc_nexus.py
 
 Evidence Surface:
 
-- outputs/evidence
+- reports/rcc_nexus
 
 Validation Surface:
 
-- python examples/synthetic_toy_seed.py
+- python scripts/rcc/check_rcc_nexus.py
 
 Claim Boundary:
 

@@ -1,0 +1,227 @@
+{
+    "schema":  "RCC-N-v1.0-nexus-index",
+    "repository":  {
+                       "name":  "observable-manifold-network",
+                       "root":  ".",
+                       "rcc_base":  "RCC-v1.3",
+                       "nexus_version":  "RCC-N-v1.0",
+                       "last_verified":  "2026-05-16",
+                       "verification_mode":  "self"
+                   },
+    "readme_trisection":  {
+                              "human_layer_present":  true,
+                              "rcc_nexus_layer_present":  true,
+                              "ai_agent_layer_present":  true,
+                              "layer_fusion_detected":  false
+                          },
+    "sphere":  {
+                   "model":  "spherical_echo_architecture",
+                   "shells":  [
+                                  "center",
+                                  "inner",
+                                  "middle",
+                                  "outer"
+                              ],
+                   "meridians":  [
+                                     "source",
+                                     "validation",
+                                     "evidence",
+                                     "drift",
+                                     "agent",
+                                     "safety",
+                                     "runtime",
+                                     "graph",
+                                     "release",
+                                     "documentation"
+                                 ],
+                   "sectors":  [
+                                   "core",
+                                   "schemas",
+                                   "graph",
+                                   "runtime",
+                                   "validation",
+                                   "evidence",
+                                   "rcc",
+                                   "agent",
+                                   "examples",
+                                   "release"
+                               ]
+               },
+    "nodes":  [
+                  {
+                      "path":  "README.md",
+                      "node_type":  "root_readme",
+                      "shell":  "center",
+                      "meridians":  [
+                                        "source",
+                                        "safety",
+                                        "agent",
+                                        "runtime",
+                                        "evidence"
+                                    ],
+                      "sector":  "rcc",
+                      "ttl_days":  180,
+                      "echo_location_path":  "README.md#rcc-nexus-echo-location",
+                      "inbound_hooks":  [
+                                            "GitHub repository page"
+                                        ],
+                      "outbound_hooks":  [
+                                             "docs/context/repository_context_index.json",
+                                             "docs/context/rcc_nexus_index.json",
+                                             "rcc/nexus/route_map.json"
+                                         ],
+                      "evidence_surface":  [
+                                               "outputs/evidence"
+                                           ],
+                      "validation_surface":  [
+                                                 "python scripts/rcc/check_rcc_nexus.py",
+                                                 "python -m unittest discover -s tests"
+                                             ],
+                      "claim_boundary":  [
+                                             "does_not_prove_correctness",
+                                             "does_not_prove_gmn_replication"
+                                         ]
+                  },
+                  {
+                      "path":  "src/omn/core",
+                      "node_type":  "source_module",
+                      "shell":  "inner",
+                      "meridians":  [
+                                        "runtime",
+                                        "validation",
+                                        "evidence",
+                                        "safety"
+                                    ],
+                      "sector":  "core",
+                      "ttl_days":  180,
+                      "echo_location_path":  "src/omn/core/README.md#rcc-nexus-echo-location",
+                      "inbound_hooks":  [
+                                            "src/omn/cli.py",
+                                            "python -m omn"
+                                        ],
+                      "outbound_hooks":  [
+                                             "outputs/state",
+                                             "outputs/evidence",
+                                             "outputs/reports",
+                                             "tests/test_runtime.py"
+                                         ],
+                      "evidence_surface":  [
+                                               "outputs/evidence"
+                                           ],
+                      "validation_surface":  [
+                                                 "python -m unittest discover -s tests"
+                                             ],
+                      "claim_boundary":  [
+                                             "runtime_validated_not_empirical_validation"
+                                         ]
+                  },
+                  {
+                      "path":  "tests",
+                      "node_type":  "validation_surface",
+                      "shell":  "middle",
+                      "meridians":  [
+                                        "validation",
+                                        "safety"
+                                    ],
+                      "sector":  "validation",
+                      "ttl_days":  180,
+                      "echo_location_path":  "tests/README.md#rcc-nexus-echo-location",
+                      "inbound_hooks":  [
+                                            "src/omn/core/runtime.py"
+                                        ],
+                      "outbound_hooks":  [
+                                             "python -m unittest discover -s tests"
+                                         ],
+                      "evidence_surface":  [
+                                               "test output"
+                                           ],
+                      "validation_surface":  [
+                                                 "python -m unittest discover -s tests"
+                                             ],
+                      "claim_boundary":  [
+                                             "tests_are_implementation_health_not_truth"
+                                         ]
+                  },
+                  {
+                      "path":  "outputs",
+                      "node_type":  "evidence_surface",
+                      "shell":  "outer",
+                      "meridians":  [
+                                        "evidence",
+                                        "runtime"
+                                    ],
+                      "sector":  "evidence",
+                      "ttl_days":  180,
+                      "echo_location_path":  "outputs/README.md#rcc-nexus-echo-location",
+                      "inbound_hooks":  [
+                                            "src/omn/core/runtime.py"
+                                        ],
+                      "outbound_hooks":  [
+                                             "outputs/state",
+                                             "outputs/evidence",
+                                             "outputs/reports",
+                                             "outputs/ledger"
+                                         ],
+                      "evidence_surface":  [
+                                               "outputs/evidence"
+                                           ],
+                      "validation_surface":  [
+                                                 "python -m omn validate"
+                                             ],
+                      "claim_boundary":  [
+                                             "evidence_packages_are_bounded_to_run"
+                                         ]
+                  },
+                  {
+                      "path":  "rcc/nexus",
+                      "node_type":  "navigation_surface",
+                      "shell":  "middle",
+                      "meridians":  [
+                                        "agent",
+                                        "drift",
+                                        "documentation",
+                                        "safety"
+                                    ],
+                      "sector":  "rcc",
+                      "ttl_days":  180,
+                      "echo_location_path":  "rcc/nexus/README.md#rcc-nexus-echo-location",
+                      "inbound_hooks":  [
+                                            "README.md"
+                                        ],
+                      "outbound_hooks":  [
+                                             "docs/context/rcc_nexus_index.json",
+                                             "rcc/nexus/route_map.json",
+                                             "scripts/rcc/check_rcc_nexus.py"
+                                         ],
+                      "evidence_surface":  [
+                                               "reports/rcc_nexus"
+                                           ],
+                      "validation_surface":  [
+                                                 "python scripts/rcc/check_rcc_nexus.py"
+                                             ],
+                      "claim_boundary":  [
+                                             "navigation_is_not_validation"
+                                         ]
+                  }
+              ],
+    "nci":  {
+                "mode":  "self",
+                "target":  0.9,
+                "components":  {
+                                   "completeness":  1,
+                                   "link_correctness":  0.9,
+                                   "pattern_rigidity":  0.95,
+                                   "invariant_compliance":  1,
+                                   "evidence_validation_linkage":  0.9,
+                                   "drift_freshness":  0.9,
+                                   "coordinate_completeness":  1
+                               }
+            },
+    "non_claim_locks":  {
+                            "geometry_is_not_ai_internal_proof":  true,
+                            "nci_is_not_code_quality_proof":  true,
+                            "navigation_is_not_validation":  true,
+                            "context_reconstruction_is_not_correctness_proof":  true,
+                            "validation_remains_required":  true
+                        }
+}

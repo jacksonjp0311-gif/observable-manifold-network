@@ -1,0 +1,19 @@
+{
+  "schema": "RCC-N-v1.0-check-report",
+  "repository": "observable-manifold-network",
+  "timestamp": "2026-05-16T20:03:17.217837+00:00",
+  "mode": "self",
+  "passed": false,
+  "nci_self": 0.8333,
+  "missing_required_files": [],
+  "missing_readme_markers": [],
+  "missing_non_claim_locks": [
+    "Observable topology is not truth",
+    "Prediction is not mechanism",
+    "Simulation is not proof"
+  ],
+  "echo_location_missing": [],
+  "index_ok": true,
+  "route_map_ok": true,
+  "non_claim_boundary": "RCC-N check improves navigation integrity. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, or GMN replication."
+}
