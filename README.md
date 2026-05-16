@@ -647,3 +647,24 @@ Benchmark boundary:
 - The regular README baseline is a structural comparison baseline, not a measurement of one specific external repository.
 - RCC-N improves orientation, routing, evidence linkage, and validation discipline.
 - RCC-N does not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.
+
+---
+
+## OMN-SA v0.2 Engineering Hardening
+
+This repository now includes a v0.2 engineering hardening seed.
+
+Added validation surfaces:
+
+| Surface | Path | Purpose |
+|---|---|---|
+| GitHub Actions CI | `.github/workflows/ci.yml` | Runs RCC-N checker, unit tests, seed run, and evidence validation on push/PR. |
+| Local all-check script | `scripts/run_all_checks.ps1` | Runs full local validation sequence. |
+| Fresh clone verification | `scripts/release/fresh_clone_verify.ps1` | Clones GitHub repo and verifies from a clean checkout. |
+| Graph contract tests | `tests/test_graph_contracts.py` | Verifies typed edges, claim boundaries, baselines, topology sensitivity, and claim gates. |
+| RCC-N integrity tests | `tests/test_rcc_nexus_integrity.py` | Verifies chart embed, docs-lane separation, route map, and public boundary. |
+| v0.2 plan | `docs/future_architecture/omn_sa_v0_2_plan.md` | Defines the next modular runtime and drift-hardening architecture. |
+
+Boundary:
+
+The v0.2 engineering patch improves validation and release discipline. It does not prove empirical validation, production readiness, causality, mechanism, AI understanding, or GMN replication.

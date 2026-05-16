@@ -77,3 +77,14 @@ Boundary rule: injection records are not architecture docs, architecture changes
 |---|---|---|---|
 | Architecture Changes | `docs/architecture_changes/README.md` | active | Separates architecture-change records from injections and theory. |
 | Injected Theory | `docs/injected_theory/README.md` | reserved | Separates source-bounded injected theory from architecture and governance injections. |
+## OMN-SA v0.2 Engineering Hardening
+
+| Artifact | Path | Status | Purpose |
+|---|---|---|---|
+| CI Workflow | `.github/workflows/ci.yml` | active | Runs RCC-N checker, unit tests, seed run, and evidence validation on GitHub. |
+| Local All Checks | `scripts/run_all_checks.ps1` | active | Runs full local validation surface. |
+| Fresh Clone Verify | `scripts/release/fresh_clone_verify.ps1` | active | Verifies remote repo from a clean clone. |
+| v0.2 Plan | `docs/future_architecture/omn_sa_v0_2_plan.md` | active | Defines next engineering hardening targets. |
+| v0.2 Patch Notes | `docs/release_notes/v0_2_engineering_patch.md` | active | Records this engineering patch seed. |
+| Graph Contract Tests | `tests/test_graph_contracts.py` | active | Tests typed edges, baselines, topology sensitivity, and claim gate boundaries. |
+| RCC-N Integrity Tests | `tests/test_rcc_nexus_integrity.py` | active | Tests chart embedding, docs lanes, route map, and public-release boundary. |
