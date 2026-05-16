@@ -545,3 +545,12 @@ A change is not complete until:
 - validation command ran,
 - evidence paths are updated if outputs changed,
 - claims remain inside evidence boundaries.
+## Exact RCC-N Checker Non-Claim Markers
+
+These exact markers are intentionally preserved for the RCC-N checker:
+
+- Observable topology is not truth
+- Prediction is not mechanism
+- Simulation is not proof
+- Navigation is not validation
+- Context is not truth

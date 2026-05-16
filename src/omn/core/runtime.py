@@ -503,18 +503,6 @@ def run(seed="synthetic-toy", root="."):
         "next_action": "Inspect evidence package and compare seeds."
     }
 
-    declared_paths = []
-    for value in evidence["artifacts"].values():
-        if isinstance(value, str):
-            declared_paths.append(value)
-        elif isinstance(value, dict):
-            declared_paths.extend(value.values())
-
-    evidence["audit"]["declared_artifact_paths_exist"] = all(Path(p).exists() for p in declared_paths if p)
-    evidence["audit"]["passed"] = evidence["audit"]["declared_artifact_paths_exist"] and contract["valid"]
-
-    write_json(paths["evidence"], evidence)
-
     report = f"""# OMN Run Report
 
 Run ID: {run_id}
@@ -550,6 +538,18 @@ Evidence package: {paths["evidence"]}
     write_text(paths["report"], report)
     write_text(paths["log"], f"{utc_iso()} completed {run_id}\n")
     append_ledger(paths["ledger"], {"run_id": run_id, "timestamp": utc_iso(), "seed": seed, "evidence": str(paths["evidence"]), "status": gate["computed_status"]})
+
+    declared_paths = []
+    for value in evidence["artifacts"].values():
+        if isinstance(value, str):
+            declared_paths.append(value)
+        elif isinstance(value, dict):
+            declared_paths.extend(value.values())
+
+    evidence["audit"]["declared_artifact_paths_exist"] = all(Path(p).exists() for p in declared_paths if p)
+    evidence["audit"]["passed"] = evidence["audit"]["declared_artifact_paths_exist"] and contract["valid"]
+
+    write_json(paths["evidence"], evidence)
 
     return evidence
 
