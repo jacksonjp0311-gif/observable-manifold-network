@@ -47,3 +47,13 @@ Documentation quality is not code correctness.
 Architecture clarity is not empirical validation.
 
 RCC/Nexus navigation is not proof of AI understanding, patch safety, causality, mechanism, biological equivalence, physical manifold identity, or GMN replication.
+## Benchmark and Public Release Artifacts
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| RCC-N Benchmark | `docs/benchmarks/rcc_nexus_echo_benchmark.md` | active | Compares RCC-N repository navigation against a regular README baseline. |
+| Benchmark Metrics | `docs/benchmarks/rcc_nexus_echo_benchmark_metrics.csv` | active | Stores benchmark category scores. |
+| Public Release Essay | `docs/public_release/ai_orientable_repositories_rcc_n.md` | active | Public explanation of AI-orientable repositories. |
+| Echo Chart | `visuals/rcc_nexus/rcc_nexus_echo_chart.svg` | active | Visual comparison chart for RCC-N vs regular README. |
+
+Update rule: if RCC-N checker logic, benchmark categories, NCI scoring, route maps, or public claims change, update these artifacts and the root README registry.

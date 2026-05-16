@@ -1,0 +1,66 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1200" height="760" viewBox="0 0 1200 760">
+  <rect width="1200" height="760" fill="white"/>
+  <text x="60" y="55" font-family="Arial" font-size="30" font-weight="bold">RCC-N Echo Benchmark</text>
+  <text x="60" y="88" font-family="Arial" font-size="18">AI-orientable repository navigation vs regular README baseline</text>
+
+  <text x="60" y="130" font-family="Arial" font-size="15" font-weight="bold">Category</text>
+  <text x="435" y="130" font-family="Arial" font-size="15" font-weight="bold">Regular README</text>
+  <text x="710" y="130" font-family="Arial" font-size="15" font-weight="bold">RCC-N README</text>
+  <text x="1010" y="130" font-family="Arial" font-size="15" font-weight="bold">Delta</text>
+
+  <line x1="60" y1="145" x2="1140" y2="145" stroke="black" stroke-width="1"/>
+
+  <g font-family="Arial" font-size="14">
+    <text x="60" y="180">Entry Orientation</text>
+    <rect x="435" y="164" width="180" height="18" fill="#d9d9d9"/><text x="625" y="180">0.60</text>
+    <rect x="710" y="164" width="300" height="18" fill="#333333"/><text x="1020" y="180">1.00</text>
+    <text x="1010" y="180">+0.40</text>
+
+    <text x="60" y="230">Meaning Map</text>
+    <rect x="435" y="214" width="105" height="18" fill="#d9d9d9"/><text x="550" y="230">0.35</text>
+    <rect x="710" y="214" width="300" height="18" fill="#333333"/><text x="1020" y="230">1.00</text>
+    <text x="1010" y="230">+0.65</text>
+
+    <text x="60" y="280">Spatial Location</text>
+    <rect x="435" y="264" width="30" height="18" fill="#d9d9d9"/><text x="475" y="280">0.10</text>
+    <rect x="710" y="264" width="300" height="18" fill="#333333"/><text x="1020" y="280">1.00</text>
+    <text x="1010" y="280">+0.90</text>
+
+    <text x="60" y="330">Echo Coverage</text>
+    <rect x="435" y="314" width="1" height="18" fill="#d9d9d9"/><text x="445" y="330">0.00</text>
+    <rect x="710" y="314" width="300" height="18" fill="#333333"/><text x="1020" y="330">1.00</text>
+    <text x="1010" y="330">+1.00</text>
+
+    <text x="60" y="380">Route Protocol</text>
+    <rect x="435" y="364" width="30" height="18" fill="#d9d9d9"/><text x="475" y="380">0.10</text>
+    <rect x="710" y="364" width="300" height="18" fill="#333333"/><text x="1020" y="380">1.00</text>
+    <text x="1010" y="380">+0.90</text>
+
+    <text x="60" y="430">Evidence Surface</text>
+    <rect x="435" y="414" width="45" height="18" fill="#d9d9d9"/><text x="490" y="430">0.15</text>
+    <rect x="710" y="414" width="270" height="18" fill="#333333"/><text x="990" y="430">0.90</text>
+    <text x="1010" y="430">+0.75</text>
+
+    <text x="60" y="480">Validation Surface</text>
+    <rect x="435" y="464" width="75" height="18" fill="#d9d9d9"/><text x="520" y="480">0.25</text>
+    <rect x="710" y="464" width="270" height="18" fill="#333333"/><text x="990" y="480">0.90</text>
+    <text x="1010" y="480">+0.65</text>
+
+    <text x="60" y="530">Claim Boundaries</text>
+    <rect x="435" y="514" width="60" height="18" fill="#d9d9d9"/><text x="505" y="530">0.20</text>
+    <rect x="710" y="514" width="300" height="18" fill="#333333"/><text x="1020" y="530">1.00</text>
+    <text x="1010" y="530">+0.80</text>
+
+    <text x="60" y="580">Agent Patch Safety</text>
+    <rect x="435" y="564" width="45" height="18" fill="#d9d9d9"/><text x="490" y="580">0.15</text>
+    <rect x="710" y="564" width="270" height="18" fill="#333333"/><text x="990" y="580">0.90</text>
+    <text x="1010" y="580">+0.75</text>
+
+    <text x="60" y="630">Drift Detection</text>
+    <rect x="435" y="614" width="1" height="18" fill="#d9d9d9"/><text x="445" y="630">0.00</text>
+    <rect x="710" y="614" width="270" height="18" fill="#333333"/><text x="990" y="630">0.90</text>
+    <text x="1010" y="630">+0.90</text>
+  </g>
+
+  <text x="60" y="700" font-family="Arial" font-size="14">Boundary: RCC-N improves repository orientation and validation routing. It does not prove code correctness, causality, mechanism, empirical validation, or AI understanding.</text>
+</svg>

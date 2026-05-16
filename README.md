@@ -605,3 +605,23 @@ Every future version must update this registry section when any of the following
 This registry improves documentation continuity and agent navigation.
 
 It does not prove code correctness, empirical validation, patch safety, causality, mechanism, production readiness, biological equivalence, physical manifold identity, or full GMN replication.
+
+---
+
+## RCC-N Benchmarks and Public Release
+
+The repository now includes public benchmark and explanation artifacts for the RCC-N repository navigation layer.
+
+| Artifact | Path | Purpose |
+|---|---|---|
+| RCC-N Echo Benchmark | `docs/benchmarks/rcc_nexus_echo_benchmark.md` | Compares RCC-N repository navigation against a regular README baseline. |
+| Benchmark Metrics CSV | `docs/benchmarks/rcc_nexus_echo_benchmark_metrics.csv` | Stores category scores for the Echo Benchmark. |
+| Public Release Essay | `docs/public_release/ai_orientable_repositories_rcc_n.md` | Explains AI-orientable repositories in public-safe language. |
+| Echo Chart SVG | `visuals/rcc_nexus/rcc_nexus_echo_chart.svg` | Visual chart comparing RCC-N and regular README orientation. |
+
+Benchmark boundary:
+
+- RCC-N benchmark scores are based on this repository's checker output and declared Nexus structure.
+- The regular README baseline is a structural comparison baseline, not a measurement of one specific external repository.
+- RCC-N improves orientation, routing, evidence linkage, and validation discipline.
+- RCC-N does not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.

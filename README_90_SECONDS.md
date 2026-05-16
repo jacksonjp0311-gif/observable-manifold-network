@@ -50,3 +50,16 @@ Canonical docs are tracked in:
 Every version must update the root README registry section named:
 
     Theory / Software Architecture / Injections Registry
+
+## RCC-N Benchmark
+
+Public benchmark artifacts:
+
+- `docs/benchmarks/rcc_nexus_echo_benchmark.md`
+- `docs/benchmarks/rcc_nexus_echo_benchmark_metrics.csv`
+- `docs/public_release/ai_orientable_repositories_rcc_n.md`
+- `visuals/rcc_nexus/rcc_nexus_echo_chart.svg`
+
+One-line result:
+
+    RCC-N turns a repository from a passive file tree into an AI-orientable environment by exposing meaning, location, routes, evidence, validation, and claim boundaries.

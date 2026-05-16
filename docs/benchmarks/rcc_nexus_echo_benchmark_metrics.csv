@@ -1,0 +1,11 @@
+category,rcc_nexus_score,regular_readme_baseline,delta
+Entry Orientation,1.00,0.60,0.40
+Meaning Map,1.00,0.35,0.65
+Spatial Location,1.00,0.10,0.90
+Echo Coverage,1.00,0.00,1.00
+Route Protocol,1.00,0.10,0.90
+Evidence Surface,0.90,0.15,0.75
+Validation Surface,0.90,0.25,0.65
+Claim Boundaries,1.00,0.20,0.80
+Agent Patch Safety,0.90,0.15,0.75
+Drift Detection,0.90,0.00,0.90
