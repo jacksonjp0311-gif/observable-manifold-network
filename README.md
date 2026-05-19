@@ -36,17 +36,26 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 
 | Surface | Current result |
 |---|---:|
-| Package / CLI | omn |
-| Runtime status | minimal local scaffold |
+| Package / CLI | `omn` |
+| Current software layer | OMN-SA v0.6 |
+| Latest public alignment patch | OMN-SA v0.6.1 |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
-| Current tests | 34 passing |
+| Evidence replay | passed |
+| Ledger integrity | passed |
+| Declared artifacts replayed | 12 / 12 |
+| Missing replay artifacts | 0 |
+| Current tests | 34 OK |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
-| RCC-N mode | self-reported repository navigation shell |
-| NCI mode | self |
+| RCC-N checker | passed |
 | NCI self | 1.0 |
-
+| Mini README coverage | 37 / 37 |
+| RCC-N effectiveness score | 1.0 |
+| Regular README baseline | 0.107 |
+| Measured RCC-N lift | +0.893 |
+| Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
+| Current README metrics patch | pending-v0.6.1 |
 ### What this is not
 
 - Not a claim to have invented GMN.
@@ -72,6 +81,47 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 8. Review `outputs/evidence/`.
 
 ---
+
+
+---
+
+## Current v0.6 Evidence Replay Metrics
+
+![OMN-SA v0.6 Evidence Replay Metrics](visuals/omn_sa/omn_sa_v0_6_evidence_replay_metrics.svg)
+
+v0.6 changed OMN-SA from evidence-emitting to evidence-replayable.
+
+Current measured state:
+
+| Surface | Result |
+|---|---:|
+| Evidence replay | passed |
+| Ledger integrity | passed |
+| Declared artifacts replayed | 12 / 12 |
+| Missing replay artifacts | 0 |
+| Unit tests | 34 OK |
+| RCC-N effectiveness | 1.0 |
+| Mini README coverage | 37 / 37 |
+| Regular README baseline | 0.107 |
+| RCC-N lift | +0.893 |
+| Topology ensemble spread | 0 |
+| Classification flip detected | false |
+
+Boundary:
+
+These metrics demonstrate local replayability, artifact continuity, repository orientation, and non-claim discipline. They do not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.
+
+## OMN-SA Natural Evolution
+
+![OMN-SA Natural Evolution Lineage](visuals/omn_sa/omn_sa_lineage_v0_6.svg)
+
+Evolution law:
+
+    Measure the missing surface.
+    Repair the drift.
+    Validate the repair.
+    Chart the benchmark.
+    Freeze the tag.
 
 # PART I - Human README
 

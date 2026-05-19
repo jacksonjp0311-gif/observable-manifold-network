@@ -190,3 +190,14 @@ Boundary: v0.5 measures stability and navigation discipline. It does not prove c
 | Replay Report | `reports/evidence_replay/latest_evidence_replay_validation.json` | active | Latest replay validation report. |
 
 Boundary: v0.6 verifies artifact continuity and local ledger integrity. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+## OMN-SA v0.6.1 README Health Snapshot and Charts
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Evidence Replay Metrics | `docs/benchmarks/omn_sa_v0_6_evidence_replay_metrics.md` | active | Public benchmark report for v0.6 evidence replay and ledger integrity. |
+| Evidence Replay Chart | `visuals/omn_sa/omn_sa_v0_6_evidence_replay_metrics.svg` | active | README chart for evidence replay, ledger integrity, RCC-N, and tests. |
+| Lineage Chart | `visuals/omn_sa/omn_sa_lineage_v0_6.svg` | active | Visual evolution path through v0.6.1. |
+| Release Note | `docs/release_notes/v0_6_1_readme_health_charts.md` | active | Records the v0.6.1 README/charts alignment patch. |
+
+Boundary: v0.6.1 improves public benchmark visibility and orientation. It does not prove correctness, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.

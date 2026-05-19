@@ -1,0 +1,45 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="430" viewBox="0 0 1040 430" role="img" aria-labelledby="title desc">
+  <title id="title">OMN-SA Evolution Lineage through v0.6</title>
+  <desc id="desc">Software architecture evolution from contract validation to evidence replay and run ledger integrity.</desc>
+
+  <rect width="1040" height="430" rx="30" fill="#0f172a"/>
+
+  <text x="52" y="60" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="31" font-weight="700">OMN-SA Natural Evolution Lineage</text>
+  <text x="52" y="92" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="15">Each version exposes a missing maturity surface, repairs it, validates it, and freezes the checkpoint.</text>
+
+  <g font-family="Segoe UI, Arial">
+    <line x1="105" y1="210" x2="900" y2="210" stroke="#475569" stroke-width="4"/>
+
+    <circle cx="105" cy="210" r="19" fill="#60a5fa"/>
+    <text x="74" y="260" fill="#f8fafc" font-size="14" font-weight="700">v0.2</text>
+    <text x="45" y="284" fill="#cbd5e1" font-size="12">contracts</text>
+
+    <circle cx="240" cy="210" r="19" fill="#34d399"/>
+    <text x="209" y="260" fill="#f8fafc" font-size="14" font-weight="700">v0.3</text>
+    <text x="190" y="284" fill="#cbd5e1" font-size="12">modular core</text>
+
+    <circle cx="375" cy="210" r="19" fill="#fbbf24"/>
+    <text x="344" y="260" fill="#f8fafc" font-size="14" font-weight="700">v0.4</text>
+    <text x="324" y="284" fill="#cbd5e1" font-size="12">graph engine</text>
+
+    <circle cx="510" cy="210" r="19" fill="#f472b6"/>
+    <text x="479" y="260" fill="#f8fafc" font-size="14" font-weight="700">v0.5</text>
+    <text x="448" y="284" fill="#cbd5e1" font-size="12">RCC-N metrics</text>
+
+    <circle cx="645" cy="210" r="19" fill="#a78bfa"/>
+    <text x="607" y="260" fill="#f8fafc" font-size="14" font-weight="700">v0.5.1</text>
+    <text x="588" y="284" fill="#cbd5e1" font-size="12">README repair</text>
+
+    <circle cx="780" cy="210" r="19" fill="#22c55e"/>
+    <text x="749" y="260" fill="#f8fafc" font-size="14" font-weight="700">v0.6</text>
+    <text x="721" y="284" fill="#cbd5e1" font-size="12">evidence replay</text>
+
+    <circle cx="900" cy="210" r="19" fill="#38bdf8"/>
+    <text x="865" y="260" fill="#f8fafc" font-size="14" font-weight="700">v0.6.1</text>
+    <text x="847" y="284" fill="#cbd5e1" font-size="12">public metrics</text>
+  </g>
+
+  <rect x="52" y="330" width="884" height="48" rx="14" fill="#111827" stroke="#334155"/>
+  <text x="74" y="360" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="16" font-weight="700">Evolution law:</text>
+  <text x="200" y="360" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="15">Measure the missing surface → repair the drift → validate the repair → chart the benchmark → freeze the tag.</text>
+</svg>

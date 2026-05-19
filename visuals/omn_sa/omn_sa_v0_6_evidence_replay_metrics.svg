@@ -1,0 +1,62 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+  <title id="title">OMN-SA v0.6 Evidence Replay Metrics</title>
+  <desc id="desc">Evidence replay, ledger integrity, RCC-N, mini README coverage, topology ensemble, and validation metrics.</desc>
+
+  <rect width="1040" height="620" rx="30" fill="#0f172a"/>
+
+  <text x="52" y="60" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">OMN-SA v0.6 Evidence Replay Metrics</text>
+  <text x="52" y="92" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="15">Evidence replay + run ledger integrity + RCC-N coverage + topology stability</text>
+
+  <g transform="translate(52,128)">
+    <rect x="0" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="22" y="34" fill="#93c5fd" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Evidence Replay</text>
+    <text x="22" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">12 / 12</text>
+    <text x="22" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">declared artifacts replayed</text>
+
+    <rect x="318" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="340" y="34" fill="#86efac" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Run Ledger</text>
+    <text x="340" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">passed</text>
+    <text x="340" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">hash-chain integrity verified</text>
+
+    <rect x="636" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="658" y="34" fill="#fcd34d" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Unit Tests</text>
+    <text x="658" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">34 OK</text>
+    <text x="658" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">implementation-health surface</text>
+  </g>
+
+  <g transform="translate(70,310)" font-family="Segoe UI, Arial, sans-serif">
+    <text x="0" y="-30" fill="#f8fafc" font-size="19" font-weight="700">Coverage + Stability Surfaces</text>
+
+    <text x="0" y="22" fill="#cbd5e1" font-size="14">RCC-N effectiveness</text>
+    <rect x="190" y="4" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="190" y="4" width="520" height="24" rx="8" fill="#38bdf8"/>
+    <text x="730" y="22" fill="#f8fafc" font-size="14">1.00</text>
+
+    <text x="0" y="68" fill="#cbd5e1" font-size="14">Mini README coverage</text>
+    <rect x="190" y="50" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="190" y="50" width="520" height="24" rx="8" fill="#34d399"/>
+    <text x="730" y="68" fill="#f8fafc" font-size="14">37 / 37</text>
+
+    <text x="0" y="114" fill="#cbd5e1" font-size="14">Topology stability</text>
+    <rect x="190" y="96" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="190" y="96" width="520" height="24" rx="8" fill="#fbbf24"/>
+    <text x="730" y="114" fill="#f8fafc" font-size="14">spread 0</text>
+
+    <text x="0" y="160" fill="#cbd5e1" font-size="14">Evidence missing artifacts</text>
+    <rect x="190" y="142" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="190" y="142" width="520" height="24" rx="8" fill="#a78bfa"/>
+    <text x="730" y="160" fill="#f8fafc" font-size="14">0 missing</text>
+
+    <text x="0" y="206" fill="#cbd5e1" font-size="14">Regular README baseline</text>
+    <rect x="190" y="188" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="190" y="188" width="56" height="24" rx="8" fill="#64748b"/>
+    <text x="730" y="206" fill="#f8fafc" font-size="14">0.107</text>
+
+    <text x="0" y="252" fill="#cbd5e1" font-size="14">Measured RCC-N lift</text>
+    <rect x="190" y="234" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="190" y="234" width="464" height="24" rx="8" fill="#22c55e"/>
+    <text x="730" y="252" fill="#f8fafc" font-size="14">+0.893</text>
+  </g>
+
+  <text x="52" y="585" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="12">Boundary: metrics show local replayability, repository orientation, and continuity discipline. They do not prove correctness, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.</text>
+</svg>
