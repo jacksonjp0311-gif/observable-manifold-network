@@ -7,7 +7,7 @@
 | Check | Result |
 |---|---:|
 | health_snapshot_current_layer_present | True |
-| health_snapshot_not_pending_commit | False |
+| health_snapshot_not_pending_commit | True |
 | no_expected_tests_wording | True |
 | ai_tracking_present | True |
 | rcc_v17_visible | True |
@@ -19,7 +19,6 @@
 
 ## Missing
 
-- health_snapshot_not_pending_commit
 - v071_profile_still_visible
 
 ## Boundary

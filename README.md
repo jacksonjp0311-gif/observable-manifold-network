@@ -916,7 +916,7 @@ Historical checkpoint at that version:
 | Unit tests | 13 passing |
 | Runtime seed | synthetic-toy runtime-validated |
 | Evidence validation | valid |
-| Current main commit | 6b831c6 |
+| Release reference | v0.8.2 README lineage policy repair |
 | Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
 
 Validation commands:
@@ -953,7 +953,7 @@ Historical checkpoint at that version:
 | Graph observables | 3 |
 | Graph edges | 6 |
 | Graph parity | passed |
-| Current main commit | 6b831c6 |
+| Release reference | v0.8.2 README lineage policy repair |
 | Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
 
 v0.4 law:
@@ -1279,10 +1279,10 @@ Boundary:
 
 Evidence drift comparison measures run-to-run continuity, artifact replay status, claim-status stability, artifact-count stability, load integrity, and metric availability. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
 
-Current architecture chain extension: OMN-SA v0.8 metric availability and residual field hardening.
 
 
-Current architecture chain extension: OMN-SA v0.8.1 validation compatibility repair.
+
+
 
 ---
 
