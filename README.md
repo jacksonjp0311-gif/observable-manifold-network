@@ -928,7 +928,7 @@ Historical checkpoint at that version:
 | Runtime seed | synthetic-toy runtime-validated |
 | Evidence validation | valid |
 | Release reference | v0.8.2 README lineage policy repair |
-| Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
+| Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
 
 Validation commands:
 
@@ -965,7 +965,7 @@ Historical checkpoint at that version:
 | Graph edges | 6 |
 | Graph parity | passed |
 | Release reference | v0.8.2 README lineage policy repair |
-| Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
+| Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
 
 v0.4 law:
 
