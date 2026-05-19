@@ -55,7 +55,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.893 |
 | Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
-| Current README metrics patch | pending-v0.6.1 |
+| Current README metrics patch | v0.6.1 |
 ### What this is not
 
 - Not a claim to have invented GMN.
