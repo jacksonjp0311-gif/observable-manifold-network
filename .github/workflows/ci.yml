@@ -7,7 +7,7 @@ on:
     branches: [ "main" ]
 
 jobs:
-  validate:
+  smoke:
     runs-on: windows-latest
 
     steps:
@@ -19,59 +19,53 @@ jobs:
         with:
           python-version: "3.12"
 
-      - name: Show repository state
+      - name: Smoke-check README release state
         shell: pwsh
         run: |
-          git status --short
-          Get-ChildItem
+          $ErrorActionPreference = "Stop"
 
-      - name: Run OMN-SA v0.8.2 validation stack
+          $Readme = Get-Content -Raw -Path "README.md"
+
+          if ($Readme -match "pending-v0\.8|pending-v0\.8\.0") {
+            throw "README still contains pending v0.8 fields."
+          }
+
+          $Required = @(
+            "Current software layer | OMN-SA v0.8.2",
+            "AI README Update Policy",
+            "OMN-SA v0.8 Metric Availability and Residual Field Hardening",
+            "OMN-SA v0.8.1 Validation Compatibility Repair",
+            "OMN-SA v0.8.2 README Lineage and AI Update Policy",
+            "Observable topology is not truth",
+            "Prediction is not mechanism",
+            "Simulation is not proof"
+          )
+
+          foreach ($Marker in $Required) {
+            if (-not $Readme.Contains($Marker)) {
+              throw "Missing README marker: $Marker"
+            }
+          }
+
+          Write-Host "README smoke check passed."
+
+      - name: Run unit tests
         shell: pwsh
         run: |
           $ErrorActionPreference = "Stop"
           $env:PYTHONPATH = "$PWD\src"
+          python -m unittest discover -s tests
 
-          function Run-Check {
-            param(
-              [Parameter(Mandatory=$true)][string]$Command,
-              [Parameter(ValueFromRemainingArguments=$true)][string[]]$Args
-            )
-
-            & $Command @Args
-            if ($LASTEXITCODE -ne 0) {
-              throw "Command failed with exit code ${LASTEXITCODE}: $Command $($Args -join ' ')"
-            }
-          }
-
-          Run-Check python scripts/rcc/check_rcc_nexus_v1_7_profile.py
-          Run-Check python scripts/release/audit_readme_self_organization.py
-          Run-Check python scripts/release/audit_readme_v0_7_lineage.py
-          Run-Check python scripts/release/audit_readme_v0_8_metric_availability.py
-          Run-Check python scripts/release/audit_readme_lineage_policy.py
-          Run-Check python scripts/validation/validate_evidence_drift.py
-          Run-Check python scripts/validation/validate_metric_availability.py
-          Run-Check python scripts/validation/validate_evidence_replay.py
-          Run-Check python scripts/rcc/audit_mini_readmes.py
-          Run-Check python scripts/rcc/generate_rcc_n_metrics.py
-          Run-Check python scripts/validation/validate_topology_ensemble.py
-          Run-Check python scripts/validation/validate_graph_engine.py
-          Run-Check python scripts/validation/validate_modular_runtime.py
-          Run-Check python scripts/validation/validate_architecture_contracts.py
-          Run-Check python scripts/rcc/check_rcc_nexus.py
-          Run-Check python -m unittest discover -s tests
-          Run-Check python -m omn validate
-
-      - name: Report generated-file drift
+      - name: Run CLI smoke check
         shell: pwsh
         run: |
-          $Status = git status --short
-          if ($Status) {
-            Write-Host "Generated-file drift detected after validation."
-            Write-Host "This is informational for OMN because validation writes latest reports, timestamps, run IDs, evidence counts, and replay ledgers."
-            Write-Host "Changed files:"
-            Write-Host $Status
-          } else {
-            Write-Host "No generated-file drift detected."
-          }
+          $ErrorActionPreference = "Stop"
+          $env:PYTHONPATH = "$PWD\src"
+          python -m omn --help
 
-          Write-Host "CI passes because validation commands passed. Generated report refreshes are committed during local release checkpoints."
+      - name: Boundary note
+        shell: pwsh
+        run: |
+          Write-Host "CI is a non-release smoke gate."
+          Write-Host "Full artifact-emitting validation is performed locally during release checkpoints."
+          Write-Host "CI does not refresh evidence packages, ledgers, dashboards, or latest reports."
