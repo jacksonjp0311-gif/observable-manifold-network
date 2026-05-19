@@ -1,0 +1,90 @@
+{
+  "schema": "RCC-N-v1.7-profile-config",
+  "repository": {
+    "name": "observable-manifold-network",
+    "root": ".",
+    "rcc_base": "RCC-v1.3",
+    "nexus_version": "RCC-N-v1.7",
+    "adoption_profile": "Full",
+    "verification_mode": "self",
+    "checker_maturity": "Q2-profile-utility-skeleton"
+  },
+  "profile_selection": {
+    "risk": 0.55,
+    "complexity": 0.70,
+    "validation_need": 0.65,
+    "federation_need": 0.20,
+    "public_claim_surface": 0.60,
+    "governance_need_score": 0.5375,
+    "selected_profile": "Full",
+    "selection_reason": "OMN-SA has evidence packages, evidence replay, evidence drift comparison, RCC-N metrics, mini README coverage, validation stack, and public charts.",
+    "lightest_sufficient_profile": true
+  },
+  "minimal_viable_rccn": {
+    "public_spine_present": true,
+    "readme_trisection_present": true,
+    "ai_agent_section_present": true,
+    "major_echo_locations_present": true,
+    "validation_commands_declared": true,
+    "non_claim_locks_present": true,
+    "done_criteria_present": true
+  },
+  "utility_evidence": {
+    "claims_rccn_improves_maintenance": false,
+    "baseline_comparison_present": true,
+    "task_trace_present": false,
+    "validation_outcome_present": true,
+    "cost_accounting_present": false,
+    "utility_status": "candidate"
+  },
+  "governance_cost": {
+    "documentation_burden": null,
+    "json_artifact_burden": null,
+    "review_burden": null,
+    "checker_burden": null,
+    "repair_burden": null,
+    "mixed_utility_disclosure_required": false
+  },
+  "computed_sup": {
+    "enabled": true,
+    "manual_inputs_allowed_with_disclosure": true,
+    "manual_inputs_disclosed": [
+      "schema_pressure",
+      "profile_pressure",
+      "compatibility_pressure",
+      "overclaim_pressure"
+    ]
+  },
+  "corrective_governance": {
+    "correction_is_not_deletion": true,
+    "history_must_be_preserved": true,
+    "decisions_enabled": [
+      "no_version_change",
+      "profile_update",
+      "compatibility_bridge",
+      "rule_registry_update",
+      "standard_correction",
+      "feature_downgrade",
+      "rule_deprecation",
+      "profile_retraction",
+      "claim_boundary_tightening",
+      "minor_version_candidate",
+      "major_version_review"
+    ]
+  },
+  "gen_boundary": {
+    "rccn_is_repository_profile": true,
+    "gen_profile_name": "GEN-R",
+    "rccn_v1_7_is_not_gen_v1_0": true,
+    "claims_full_gen_v1_0": false
+  },
+  "non_claim_locks": {
+    "profile_adoption_is_not_validation": true,
+    "minimal_compliance_is_not_full_compliance": true,
+    "utility_claims_require_baseline_comparison": true,
+    "governance_cost_must_be_disclosed_for_utility_claims": true,
+    "correction_is_not_deletion": true,
+    "rccn_is_repository_profile_not_full_gen": true,
+    "validation_remains_required": true
+  }
+}

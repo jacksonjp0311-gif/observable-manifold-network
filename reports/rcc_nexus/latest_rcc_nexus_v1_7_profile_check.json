@@ -1,0 +1,18 @@
+{
+  "schema": "RCC-N-v1.7-profile-check-report",
+  "repository": "observable-manifold-network",
+  "timestamp": "2026-05-19T13:15:24.290788+00:00",
+  "status": "pass",
+  "passed": true,
+  "declared_profile": "Full",
+  "computed_governance_need": 0.5375,
+  "recommended_profile": "Full",
+  "lightest_sufficient_profile": true,
+  "minimal_viable_rccn_passed": true,
+  "utility_status": "candidate",
+  "claims_rccn_improves_maintenance": false,
+  "gen_boundary": "GEN-R",
+  "rccn_v1_7_is_not_gen_v1_0": true,
+  "findings": [],
+  "non_claim_boundary": "RCC-N v1.7 profile checks verify profile declaration, minimal viable RCC-N, utility-evidence boundaries, corrective governance, and GEN-R boundary. They do not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, GMN replication, or full GEN v1.0."
+}

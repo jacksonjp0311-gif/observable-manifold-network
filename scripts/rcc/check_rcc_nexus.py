@@ -80,7 +80,7 @@ def main():
     route_ok = False
     try:
         data = json.loads((ROOT / "docs/context/rcc_nexus_index.json").read_text(encoding="utf-8"))
-        index_ok = data.get("schema") == "RCC-N-v1.0-nexus-index"
+        index_ok = data.get("schema") in {"RCC-N-v1.0-nexus-index", "RCC-N-v1.7-nexus-index"}
     except Exception:
         index_ok = False
 

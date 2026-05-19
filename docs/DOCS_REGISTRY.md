@@ -216,3 +216,20 @@ Boundary: v0.6.1 improves public benchmark visibility and orientation. It does n
 | Dashboard | `visuals/omn_sa/omn_sa_v0_7_evidence_drift_dashboard.svg` | active | Public v0.7 evidence drift chart. |
 
 Boundary: v0.7 compares evidence packages across runs. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+## OMN-SA v0.7.1 RCC-N v1.7 Adoption Profile Injection
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Injected Theory | `docs/injected_theory/rcc_n_v1_7_adoption_profiles.md` | active | RCC-N v1.7 adoption-profile and utility-evidence theory record. |
+| Injection Record | `docs/injections/rcc_n_v1_7_injection_record.md` | active | HYDRA-style injection record for RCC-N v1.7. |
+| Software Architecture | `docs/software_architecture/omn_sa_v0_7_1_rcc_n_v1_7_profile_injection.md` | active | OMN-SA v0.7.1 profile injection architecture. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_7_1_rcc_n_profile_injection_change.md` | active | Records v0.7.1 governance profile injection. |
+| Release Note | `docs/release_notes/v0_7_1_rcc_n_v1_7_profile_injection.md` | active | Records the v0.7.1 release. |
+| Profile Config | `docs/context/rcc_nexus_profile_v1_7.json` | active | Machine-readable RCC-N v1.7 profile declaration. |
+| Profile Checker | `scripts/rcc/check_rcc_nexus_v1_7_profile.py` | active | Validates adoption profile, minimal viable RCC-N, utility locks, and GEN boundary. |
+| Profile Report | `reports/rcc_nexus/latest_rcc_nexus_v1_7_profile_check.json` | active | Latest RCC-N v1.7 profile check report. |
+| Profile Chart | `visuals/omn_sa/omn_sa_v0_7_1_rcc_n_v1_7_profile.svg` | active | Public profile governance chart. |
+| Benchmark Report | `docs/benchmarks/omn_sa_v0_7_1_rcc_n_v1_7_profile_metrics.md` | active | Public profile metrics report. |
+
+Boundary: v0.7.1 adds profile-aware governance. It does not prove correctness, empirical validation, causality, mechanism, AI understanding, production readiness, GMN replication, or full GEN v1.0.

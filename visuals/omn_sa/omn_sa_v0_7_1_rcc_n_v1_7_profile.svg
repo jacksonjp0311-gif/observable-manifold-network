@@ -1,0 +1,56 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+  <title id="title">OMN-SA v0.7.1 RCC-N v1.7 Profile Injection</title>
+  <desc id="desc">Governance need score, selected profile, minimal viable RCC-N, utility lock, and GEN-R boundary.</desc>
+  <rect width="1040" height="620" rx="30" fill="#0f172a"/>
+
+  <text x="52" y="60" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">OMN-SA v0.7.1 RCC-N v1.7 Profile Injection</text>
+  <text x="52" y="92" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="15">Profiled geometry is adoptable governance: lightest sufficient RCC-N profile for the repository.</text>
+
+  <g transform="translate(52,128)">
+    <rect x="0" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="22" y="34" fill="#93c5fd" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Selected Profile</text>
+    <text x="22" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">Full</text>
+    <text x="22" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">not Federated, not Critical</text>
+
+    <rect x="318" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="340" y="34" fill="#86efac" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Governance Need</text>
+    <text x="340" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">0.5375</text>
+    <text x="340" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">recommended profile: Full</text>
+
+    <rect x="636" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="658" y="34" fill="#fcd34d" font-family="Segoe UI, Arial" font-size="15" font-weight="700">GEN Boundary</text>
+    <text x="658" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">GEN-R</text>
+    <text x="658" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">not full GEN v1.0</text>
+  </g>
+
+  <g transform="translate(70,310)" font-family="Segoe UI, Arial">
+    <text x="0" y="-30" fill="#f8fafc" font-size="19" font-weight="700">Profile-Gated Governance Surfaces</text>
+
+    <text x="0" y="22" fill="#cbd5e1" font-size="14">Minimal viable RCC-N</text>
+    <rect x="230" y="4" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="230" y="4" width="520" height="24" rx="8" fill="#38bdf8"/>
+    <text x="770" y="22" fill="#f8fafc" font-size="14">passed</text>
+
+    <text x="0" y="68" fill="#cbd5e1" font-size="14">Profile declaration</text>
+    <rect x="230" y="50" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="230" y="50" width="520" height="24" rx="8" fill="#34d399"/>
+    <text x="770" y="68" fill="#f8fafc" font-size="14">Full</text>
+
+    <text x="0" y="114" fill="#cbd5e1" font-size="14">Utility claim lock</text>
+    <rect x="230" y="96" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="230" y="96" width="520" height="24" rx="8" fill="#fbbf24"/>
+    <text x="770" y="114" fill="#f8fafc" font-size="14">candidate only</text>
+
+    <text x="0" y="160" fill="#cbd5e1" font-size="14">Governance cost accounting</text>
+    <rect x="230" y="142" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="230" y="142" width="390" height="24" rx="8" fill="#a78bfa"/>
+    <text x="770" y="160" fill="#f8fafc" font-size="14">placeholder</text>
+
+    <text x="0" y="206" fill="#cbd5e1" font-size="14">Corrective governance</text>
+    <rect x="230" y="188" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="230" y="188" width="520" height="24" rx="8" fill="#22c55e"/>
+    <text x="770" y="206" fill="#f8fafc" font-size="14">enabled</text>
+  </g>
+
+  <text x="52" y="585" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="12">Boundary: profile adoption is not validation; utility claims require baseline and cost; RCC-N v1.7 is GEN-R boundary, not full GEN v1.0.</text>
+</svg>
