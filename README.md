@@ -60,8 +60,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | RCC-N effectiveness score | 0.9822222222 |
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.8752222222 |
-| Current tag | pending-v0.8.0 |
-| Current main commit | pending-v0.8.0 |
+| Current tag | v0.8.0-omn-sa-metric-availability-residual-hardening |
+| Current main commit | faef7dc |
 
 ### What this is not
 
