@@ -37,8 +37,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Surface | Current result |
 |---|---:|
 | Package / CLI | `omn` |
-| Current software layer | OMN-SA v0.8 |
-| Latest public alignment patch | OMN-SA v0.8 |
+| Current software layer | OMN-SA v0.8.2 |
+| Latest public alignment patch | OMN-SA v0.8.2 README lineage policy repair |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
 | Evidence replay | passed |
@@ -47,7 +47,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Ledger integrity | passed |
 | Declared artifacts replayed | 12 / 12 |
 | Missing replay artifacts | 0 |
-| Current tests | pending-v0.8 |
+| Current tests | 53 OK |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N checker | passed |
@@ -60,8 +60,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | RCC-N effectiveness score | 0.9822222222 |
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.8752222222 |
-| Current tag | pending-v0.8.0 |
-| Current main commit | pending-v0.8.0 |
+| Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
+| Release reference | v0.8.2 README lineage policy repair |
 
 ### What this is not
 
