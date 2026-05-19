@@ -325,3 +325,18 @@ Boundary: v0.9.0 improves deterministic execution and release discipline. It doe
 | Test | `tests/test_omn_sa_v0_9_1_stable_evidence_index.py` | active | Verifies evidence index and latest CI fixture pointer. |
 
 Boundary: v0.9.1 improves evidence selection and reproducibility discipline. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+## OMN-SA v0.9.2 Public Metrics Dashboard Hardening
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_9_2_public_metrics_dashboard.md` | active | Defines public metrics dashboard hardening. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_9_2_public_metrics_dashboard_change.md` | active | Records public metric-surface hardening. |
+| Release Note | `docs/release_notes/v0_9_2_public_metrics_dashboard.md` | active | Records the v0.9.2 checkpoint. |
+| Dashboard | `docs/benchmarks/current_public_metrics.md` | active | Current public benchmark surface. |
+| Chart | `visuals/omn_sa/current_public_metrics.svg` | active | README-visible metrics chart. |
+| Test | `tests/test_omn_sa_v0_9_2_public_metrics_dashboard.py` | active | Verifies dashboard/chart presence and boundaries. |
+
+Boundary: v0.9.2 improves public interpretability and benchmark visibility. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
