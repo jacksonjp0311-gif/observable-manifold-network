@@ -693,7 +693,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.8.1.
+- Current software architecture layer: OMN-SA v0.8.2.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -719,6 +719,45 @@ Any AI agent reading or modifying this repository must follow this order:
 11. Patch the smallest necessary surface.
 12. Run relevant validation commands before claiming behavior changed.
 13. Update README, RCC, RCC-N, reports, charts, and Echo Location records if geometry or evidence changed.
+
+
+## AI README Update Policy
+
+When the repository versions, the AI agent must update the root README in all required zones. Do not update only the top dashboard.
+
+Required root README update zones:
+
+| Zone | Section | Required update |
+|---|---|---|
+| 1 | Human Director Box / Current health snapshot | Current software layer, latest patch, tests, tag or release reference, metric status. |
+| 2 | Current visual/dashboard section | Add or update the current version section and chart. |
+| 3 | PART III - AI Agent README / AI Version Tracking Contract | Current software architecture layer and runtime status. |
+| 4 | AI README Update Policy | Add new zones if the README structure changes. |
+| 5 | Theory / Software Architecture / Injections Registry | Current file rows and documentation lanes. |
+| 6 | Current Versioned Documentation Stack | Active architecture, prior architecture, benchmarks, release notes, reports. |
+| 7 | Current Architecture Chain | Append the new version in sequence. |
+| 8 | Bottom historical lineage | Add a full section for the completed version, not only a one-line extension. |
+| 9 | Validation commands | Update commands if validation surface changed. |
+| 10 | Boundary / non-claim locks | Preserve or strengthen boundaries; never weaken them. |
+
+AI update rule:
+
+    Top dashboard without bottom lineage is incomplete.
+    Bottom lineage without current health is stale.
+    Current version without documentation-stack update is drift.
+    README completion requires all three: current state, registry state, historical lineage.
+
+Before claiming README completion, run:
+
+    python scripts/release/audit_readme_self_organization.py
+    python scripts/release/audit_readme_v0_7_lineage.py
+    python scripts/release/audit_readme_v0_8_metric_availability.py
+    python scripts/release/audit_readme_lineage_policy.py
+    python -m unittest discover -s tests
+
+Boundary:
+
+This policy improves AI repository navigation and README maintenance. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
 
 ## AI File Routing Guide
 
@@ -821,21 +860,21 @@ This section is a permanent root README registry. It must be updated every time 
 | Layer | Current file | Status | Notes |
 |---|---|---|---|
 | Theory | `docs/theory/omn_v1_1_theory_bridge.md` | active | OMN v1.1 minimal runtime bridge and adoption layer. |
-| Software Architecture | `docs/software_architecture/omn_sa_v0_7_2_readme_self_organization.md` | active | README self-organization and current-state canonicalization. |
-| Prior Software Architecture | `docs/software_architecture/omn_sa_v0_7_1_rcc_n_v1_7_profile_injection.md` | active | RCC-N v1.7 profile injection layer. |
+| Software Architecture | `docs/software_architecture/omn_sa_v0_8_2_readme_lineage_policy.md` | active | README lineage and AI update-policy repair. |
+| Prior Software Architecture | `docs/software_architecture/omn_sa_v0_8_1_validation_compatibility_repair.md` | active | Validation compatibility and lineage audit repair. |
+| Metric Architecture | `docs/software_architecture/omn_sa_v0_8_metric_availability_residual_hardening.md` | active | Metric availability and residual field hardening. |
 | Source Boundary | `docs/architecture/source_boundary.md` | active | GMN authorship and non-invention boundary. |
 | Docs Registry | `docs/DOCS_REGISTRY.md` | active | Canonical map of theory, architecture, injections, metrics, and future docs. |
 | Injection Records | `docs/injections/rcc_n_v1_7_injection_record.md` | active | RCC-N v1.7 HYDRA-style injection record. |
 | Injected Theory | `docs/injected_theory/rcc_n_v1_7_adoption_profiles.md` | active | RCC-N v1.7 adoption-profile theory record. |
-| Benchmarks | `docs/benchmarks/omn_sa_v0_7_1_rcc_n_v1_7_profile_metrics.md` | active | v0.7.1 profile metrics. |
-| Self-Organization | `reports/self_organization/latest_readme_self_organization_audit.md` | active | v0.7.2 README self-organization audit. |
-| Release Notes | `docs/release_notes/v0_7_2_readme_self_organization.md` | active | v0.7.2 version checkpoint. |
+| Benchmarks | `docs/benchmarks/omn_sa_v0_8_metric_availability_metrics.md` | active | v0.8 metric availability benchmark. |
+| Self-Organization | `reports/self_organization/latest_readme_self_organization_audit.md` | active | Current README self-organization audit. |
+| README Policy | `reports/readme_policy/latest_readme_lineage_policy_audit.md` | active | v0.8.2 README lineage-policy audit. |
+| Release Notes | `docs/release_notes/v0_8_2_readme_lineage_policy.md` | active | v0.8.2 README lineage-policy checkpoint. |
 | RCC-N Context | `docs/context/rcc_nexus_index.json` and `docs/context/rcc_nexus_profile_v1_7.json` | active | Repository navigation and profile-gated governance. |
-|
-
 ### Current Architecture Chain
 
-OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization -> OMN-SA v0.7.3 README lineage completion -> OMN-SA v0.8 metric availability and residual field hardening -> OMN-SA v0.8.1 validation compatibility repair
+OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization -> OMN-SA v0.7.3 README lineage completion -> OMN-SA v0.8 metric availability and residual field hardening -> OMN-SA v0.8.1 validation compatibility repair -> OMN-SA v0.8.2 README lineage and AI update policy
 
 ### Version Update Obligation
 
@@ -1244,3 +1283,112 @@ Current architecture chain extension: OMN-SA v0.8 metric availability and residu
 
 
 Current architecture chain extension: OMN-SA v0.8.1 validation compatibility repair.
+
+---
+
+## OMN-SA v0.8 Metric Availability and Residual Field Hardening
+
+v0.8 repaired the measured weakness exposed by v0.7 evidence drift comparison: residual metrics existed in runtime but were not available where the evidence drift comparator expected them.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.8 architecture | `docs/software_architecture/omn_sa_v0_8_metric_availability_residual_hardening.md` | Defines metric availability and residual field hardening. |
+| Metric validator | `scripts/validation/validate_metric_availability.py` | Validates residual metric availability across recent evidence packages. |
+| Metric report | `reports/metric_availability/latest_metric_availability_report.json` | Machine-readable metric availability report. |
+| Metric benchmark | `docs/benchmarks/omn_sa_v0_8_metric_availability_metrics.md` | Public benchmark summary for v0.8 metric availability. |
+| Metric chart | `visuals/omn_sa/omn_sa_v0_8_metric_availability.svg` | Public README chart for residual metric availability. |
+| Runtime evidence schema | `src/omn/core/runtime.py` | Emits canonical `metrics.validation` and `metrics.baseline` blocks. |
+| Evidence drift reader | `src/omn/core/evidence_drift.py` | Reads v0.8 canonical metrics with legacy fallback. |
+| v0.8 tests | `tests/test_omn_sa_v0_8_metric_availability.py` | Verifies metric block emission, validator pass, and README audit. |
+
+v0.8 measured checkpoint:
+
+| Metric | Availability |
+|---|---:|
+| `rmse` | 8 / 8 |
+| `mae` | 8 / 8 |
+| `delta_phi_residual` | 8 / 8 |
+| `omega_residual_weight` | 8 / 8 |
+
+v0.8 law:
+
+    A metric is not available until the evidence package exposes it where validators expect it.
+    A residual is not mature until it is named consistently across runtime, evidence, drift, and report surfaces.
+
+Boundary:
+
+Metric availability means residual fields are exposed for comparison. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+---
+
+## OMN-SA v0.8.1 Validation Compatibility Repair
+
+v0.8.1 repaired the validation stack after v0.8. The metric layer was working, but older README audits and runtime tests still encoded pre-v0.8 assumptions.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.8.1 architecture | `docs/software_architecture/omn_sa_v0_8_1_validation_compatibility_repair.md` | Defines validation compatibility and lineage audit repair. |
+| v0.8.1 architecture change | `docs/architecture_changes/omn_sa_v0_8_1_validation_compatibility_repair_change.md` | Records post-v0.8 validation repair. |
+| v0.8.1 release note | `docs/release_notes/v0_8_1_validation_compatibility_repair.md` | Records the v0.8.1 checkpoint. |
+| Self-organization audit | `scripts/release/audit_readme_self_organization.py` | Version-aware README self-organization audit. |
+| v0.7 lineage audit | `scripts/release/audit_readme_v0_7_lineage.py` | Historical v0.7 lineage audit decoupled from old current test count. |
+| Runtime test repair | `tests/test_runtime.py` | Accepts v0.8 evidence schema and checks canonical metrics. |
+
+v0.8.1 measured checkpoint:
+
+| Surface | Result |
+|---|---:|
+| README self-organization audit | passed |
+| README v0.7 lineage audit | passed |
+| README v0.8 metric availability audit | passed |
+| RCC-N v1.7 profile checker | passed |
+| RCC-N checker | passed |
+| Unit tests | 50 OK |
+| Evidence drift | passed |
+| Metric availability | passed |
+| Evidence replay | passed |
+| Mini README coverage | 37 / 37 |
+| NCI self | 1.0 |
+| RCC-N effectiveness score | 0.9822222222 |
+
+v0.8.1 law:
+
+    Historical audits validate lineage.
+    Current audits validate the active stack.
+    README metadata must not chase its own commit hash.
+    Release references must remain stable and validation-bound.
+
+Boundary:
+
+v0.8.1 repairs README validation compatibility and release-reference clarity. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+---
+
+## OMN-SA v0.8.2 README Lineage and AI Update Policy
+
+v0.8.2 repaired the README itself by adding the missing bottom historical sections for v0.8 and v0.8.1 and by adding the AI README Update Policy.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.8.2 architecture | `docs/software_architecture/omn_sa_v0_8_2_readme_lineage_policy.md` | Defines README lineage and AI update-policy repair. |
+| v0.8.2 architecture change | `docs/architecture_changes/omn_sa_v0_8_2_readme_lineage_policy_change.md` | Records README lineage-policy repair. |
+| v0.8.2 release note | `docs/release_notes/v0_8_2_readme_lineage_policy.md` | Records the v0.8.2 checkpoint. |
+| README lineage-policy audit | `scripts/release/audit_readme_lineage_policy.py` | Validates required README update zones and lower lineage sections. |
+| README lineage-policy test | `tests/test_omn_sa_v0_8_2_readme_lineage_policy.py` | Verifies v0.8/v0.8.1 bottom sections and AI policy presence. |
+
+v0.8.2 law:
+
+    Top dashboard without bottom lineage is incomplete.
+    Bottom lineage without current health is stale.
+    Current version without documentation-stack update is drift.
+    README completion requires current state, registry state, and historical lineage.
+
+Boundary:
+
+v0.8.2 improves README maintenance, AI orientation, and version-lineage continuity. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

@@ -1,25 +1,26 @@
 # OMN-SA README Self-Organization Audit
 
-- Passed: True
+- Passed: False
 
 ## Checks
 
 | Check | Result |
 |---|---:|
 | health_snapshot_current_layer_present | True |
-| health_snapshot_not_pending_commit | True |
+| health_snapshot_not_pending_commit | False |
 | no_expected_tests_wording | True |
 | ai_tracking_present | True |
 | rcc_v17_visible | True |
 | self_org_section_present | True |
 | current_stack_present | True |
-| v071_profile_still_visible | True |
+| v071_profile_still_visible | False |
 | v08_metric_layer_visible | True |
 | archived_v04_not_current | True |
 
 ## Missing
 
-- None
+- health_snapshot_not_pending_commit
+- v071_profile_still_visible
 
 ## Boundary
 

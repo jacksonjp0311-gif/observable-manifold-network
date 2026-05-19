@@ -274,3 +274,16 @@ Boundary: v0.8 makes residual metrics available for comparison. It does not prov
 | Runtime Test | `tests/test_runtime.py` | active | Accepts v0.8 evidence schema and checks canonical metrics. |
 
 Boundary: v0.8.1 repairs validation compatibility. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+## OMN-SA v0.8.2 README Lineage and AI Update Policy
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_8_2_readme_lineage_policy.md` | active | Defines README lineage and AI update-policy repair. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_8_2_readme_lineage_policy_change.md` | active | Records README lineage-policy repair. |
+| Release Note | `docs/release_notes/v0_8_2_readme_lineage_policy.md` | active | Records v0.8.2 checkpoint. |
+| Audit Script | `scripts/release/audit_readme_lineage_policy.py` | active | Validates README current-state, registry-state, AI policy, and bottom lineage. |
+| Audit Report | `reports/readme_policy/latest_readme_lineage_policy_audit.md` | active | Human-readable v0.8.2 README lineage-policy audit. |
+| Tests | `tests/test_omn_sa_v0_8_2_readme_lineage_policy.py` | active | Verifies AI policy and v0.8/v0.8.1/v0.8.2 bottom lineage sections. |
+
+Boundary: v0.8.2 improves README maintenance and AI orientation. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
