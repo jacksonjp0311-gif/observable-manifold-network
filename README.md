@@ -60,7 +60,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.8752222222 |
 | Current tag | v0.7.2-omn-sa-readme-self-organization |
-| Current main commit | d11768f |
+| Current main commit | a5d73d2 |
 
 ### What this is not
 
