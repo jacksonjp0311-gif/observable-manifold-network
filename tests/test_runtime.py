@@ -13,7 +13,7 @@ from omn.core.runtime import run, validate_evidence
 class TestOMNRuntime(unittest.TestCase):
     def test_synthetic_toy_run_emits_evidence(self):
         evidence = run("synthetic-toy", str(ROOT))
-        self.assertIn(evidence["schema"], ["OMN-SA-v0.1-evidence-package", "OMN-SA-v0.8-evidence-package"])
+        self.assertIn(evidence["schema"], ["OMN-SA-v0.1-evidence-package", "OMN-SA-v0.8-evidence-package", "OMN-SA-v0.9-evidence-package"])
         self.assertTrue(Path(evidence["artifacts"]["state"]).exists())
         self.assertTrue(Path(evidence["artifacts"]["graph_contract"]).exists())
         self.assertTrue(Path(evidence["artifacts"]["generated_state"]).exists())

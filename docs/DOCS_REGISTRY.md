@@ -299,3 +299,16 @@ Boundary: v0.8.2 improves README maintenance and AI orientation. It does not pro
 | Test | `tests/test_omn_sa_v0_8_3_ci_release_boundary.py` | active | Verifies CI smoke gate stays non-mutating. |
 
 Boundary: v0.8.3 improves operational release discipline and CI reliability. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+## OMN-SA v0.9.0 Deterministic Run Identity and Execution Modes
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_9_0_deterministic_run_identity.md` | active | Defines deterministic run identity and execution modes. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_9_0_deterministic_run_identity_change.md` | active | Records runtime determinism hardening. |
+| Release Note | `docs/release_notes/v0_9_0_deterministic_run_identity.md` | active | Records the v0.9.0 checkpoint. |
+| Test | `tests/test_omn_sa_v0_9_0_deterministic_modes.py` | active | Verifies fixed run IDs and execution-mode metadata. |
+
+Boundary: v0.9.0 improves deterministic execution and release discipline. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

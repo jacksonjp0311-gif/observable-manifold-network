@@ -8,17 +8,20 @@ ROOT = Path(__file__).resolve().parents[2]
 README = ROOT / "README.md"
 
 NON_CLAIM_BOUNDARY = (
-    "README v0.8 metric availability audit checks current-state orientation and metric dashboard presence. "
+    "README v0.8 metric availability audit checks current-state compatibility and metric dashboard presence. "
     "It does not prove code correctness, empirical validation, causality, mechanism, production readiness, "
     "AI understanding, or GMN replication."
 )
-
 
 def main() -> int:
     text = README.read_text(encoding="utf-8", errors="ignore")
 
     checks = {
-        "current_layer_v08": "Current software layer | OMN-SA v0.8" in text,
+        "current_layer_v08_or_newer": (
+            "Current software layer | OMN-SA v0.8" in text
+            or "Current software layer | OMN-SA v0.9" in text
+            or "Current software layer | OMN-SA v1." in text
+        ),
         "metric_availability_section_present": "Current v0.8 Metric Availability and Residual Field Hardening" in text,
         "metric_chart_present": "visuals/omn_sa/omn_sa_v0_8_metric_availability.svg" in text,
         "rmse_path_present": "metrics.validation.rmse" in text,
@@ -41,7 +44,6 @@ def main() -> int:
 
     out_dir = ROOT / "reports" / "metric_availability"
     out_dir.mkdir(parents=True, exist_ok=True)
-
     (out_dir / "latest_readme_v0_8_metric_availability_audit.json").write_text(json.dumps(report, indent=2), encoding="utf-8")
 
     lines = [
@@ -54,25 +56,18 @@ def main() -> int:
         "| Check | Result |",
         "|---|---:|",
     ]
-
     for key, value in checks.items():
         lines.append(f"| {key} | {value} |")
-
     lines.extend(["", "## Missing", ""])
-
     if missing:
-        for item in missing:
-            lines.append(f"- {item}")
+        lines.extend([f"- {item}" for item in missing])
     else:
         lines.append("- None")
-
     lines.extend(["", "## Boundary", "", NON_CLAIM_BOUNDARY, ""])
-
     (out_dir / "latest_readme_v0_8_metric_availability_audit.md").write_text("\n".join(lines), encoding="utf-8")
 
     print(json.dumps(report, indent=2))
     return 0 if report["passed"] else 1
-
 
 if __name__ == "__main__":
     raise SystemExit(main())

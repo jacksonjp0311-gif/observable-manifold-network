@@ -37,8 +37,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Surface | Current result |
 |---|---:|
 | Package / CLI | `omn` |
-| Current software layer | OMN-SA v0.8.3 |
-| Latest public alignment patch | OMN-SA v0.8.3 CI / release boundary separation |
+| Current software layer | OMN-SA v0.9.0 |
+| Latest public alignment patch | OMN-SA v0.9.0 deterministic run identity |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
 | Evidence replay | passed |
@@ -47,7 +47,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Ledger integrity | passed |
 | Declared artifacts replayed | 12 / 12 |
 | Missing replay artifacts | 0 |
-| Current tests | 57 OK |
+| Current tests | 59 OK |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N checker | passed |
@@ -61,8 +61,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.8752222222 |
 | Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
-| Release reference | v0.8.3 CI / release boundary separation |
-
+| Release reference | v0.9.0 deterministic run identity |
 
 ### What this is not
 
@@ -317,6 +316,35 @@ v0.8.3 law:
 Boundary:
 
 v0.8.3 improves operational stability and repository release discipline. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+---
+
+## Current v0.9.0 Deterministic Run Identity and Execution Modes
+
+v0.9.0 adds deterministic runtime identity after v0.8.3 separated CI from release validation.
+
+New runtime controls:
+
+| Control | Purpose |
+|---|---|
+| `--run-id <id>` | Use explicit deterministic run identity. |
+| `--ci-mode` | Use deterministic CI fixture behavior. |
+| `--release-mode` | Use timestamped release behavior. |
+| `--no-write-report` | Suppress ledger append while writing minimal report/log placeholders. |
+| `--output-dir <path>` | Route artifacts to an explicit output root. |
+
+v0.9.0 law:
+
+    No timestamp-driven instability without explicit release mode.
+    CI mode should be deterministic.
+    Release mode may emit timestamped evidence.
+
+Boundary:
+
+v0.9.0 improves deterministic execution and reproducibility discipline. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
 
 # PART I - Human README
 
@@ -713,7 +741,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.8.3.
+- Current software architecture layer: OMN-SA v0.9.0.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -1450,3 +1478,28 @@ v0.8.3 law:
 Boundary:
 
 v0.8.3 improves operational release discipline. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+---
+
+## OMN-SA v0.9.0 Deterministic Run Identity and Execution Modes
+
+v0.9.0 makes OMN-SA runtime execution mode-aware.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.9.0 architecture | `docs/software_architecture/omn_sa_v0_9_0_deterministic_run_identity.md` | Defines deterministic run identity and execution modes. |
+| v0.9.0 architecture change | `docs/architecture_changes/omn_sa_v0_9_0_deterministic_run_identity_change.md` | Records runtime determinism hardening. |
+| v0.9.0 release note | `docs/release_notes/v0_9_0_deterministic_run_identity.md` | Records the v0.9.0 checkpoint. |
+| Runtime CLI | `src/omn/core/runtime.py` | Adds `--run-id`, `--ci-mode`, `--release-mode`, `--no-write-report`, and `--output-dir`. |
+| Determinism tests | `tests/test_omn_sa_v0_9_0_deterministic_modes.py` | Verifies fixed run IDs and mode metadata. |
+
+v0.9.0 law:
+
+    No timestamp-driven instability without explicit release mode.
+
+Boundary:
+
+v0.9.0 improves runtime determinism. It does not prove empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

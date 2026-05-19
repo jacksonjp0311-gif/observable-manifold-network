@@ -393,9 +393,19 @@ def append_ledger(path, record):
         f.write(json.dumps(record) + "\n")
 
 
-def run(seed="synthetic-toy", root="."):
+def normalize_run_id(seed, run_id=None, mode="release"):
+    if run_id:
+        return run_id
+    safe_seed = seed.replace("-", "_")
+    if mode == "ci":
+        return f"omn_{safe_seed}_ci_fixture"
+    return f"omn_{safe_seed}_{utc_stamp()}"
+
+
+def run(seed="synthetic-toy", root=".", run_id=None, mode="release", write_reports=True, output_dir="outputs"):
     root = Path(root).resolve()
-    run_id = f"omn_{seed.replace('-', '_')}_{utc_stamp()}"
+    run_id = normalize_run_id(seed, run_id=run_id, mode=mode)
+    output_root = Path(output_dir)
     rows, benchmark_class = load_seed(seed)
     cols, matrix = interaction_matrix(rows)
     nodes = observable_nodes(cols, seed)
@@ -411,20 +421,20 @@ def run(seed="synthetic-toy", root="."):
     topo = topology_sensitivity(rows)
 
     paths = {
-        "state": root / "outputs" / "state" / f"{run_id}_state.json",
-        "observables": root / "outputs" / "state" / f"observables_{run_id}.json",
-        "matrix": root / "outputs" / "state" / f"interaction_matrix_{run_id}.csv",
-        "graph": root / "outputs" / "state" / f"graph_contract_{run_id}.json",
-        "generated": root / "outputs" / "state" / f"generated_state_{run_id}.csv",
-        "residuals": root / "outputs" / "state" / f"validation_residuals_{run_id}.csv",
-        "attribution": root / "outputs" / "state" / f"residual_attribution_{run_id}.json",
-        "evidence": root / "outputs" / "evidence" / f"{run_id}_evidence_package.json",
-        "report": root / "outputs" / "reports" / f"{run_id}_report.md",
-        "plot_generated": root / "outputs" / "plots" / f"generated_vs_observed_{run_id}.svg",
-        "plot_residuals": root / "outputs" / "plots" / f"residuals_{run_id}.svg",
-        "plot_matrix": root / "outputs" / "plots" / f"interaction_matrix_{run_id}.svg",
-        "log": root / "outputs" / "logs" / f"{run_id}.log",
-        "ledger": root / "outputs" / "ledger" / "omn_ledger.jsonl",
+        "state": root / output_root / "state" / f"{run_id}_state.json",
+        "observables": root / output_root / "state" / f"observables_{run_id}.json",
+        "matrix": root / output_root / "state" / f"interaction_matrix_{run_id}.csv",
+        "graph": root / output_root / "state" / f"graph_contract_{run_id}.json",
+        "generated": root / output_root / "state" / f"generated_state_{run_id}.csv",
+        "residuals": root / output_root / "state" / f"validation_residuals_{run_id}.csv",
+        "attribution": root / output_root / "state" / f"residual_attribution_{run_id}.json",
+        "evidence": root / output_root / "evidence" / f"{run_id}_evidence_package.json",
+        "report": root / output_root / "reports" / f"{run_id}_report.md",
+        "plot_generated": root / output_root / "plots" / f"generated_vs_observed_{run_id}.svg",
+        "plot_residuals": root / output_root / "plots" / f"residuals_{run_id}.svg",
+        "plot_matrix": root / output_root / "plots" / f"interaction_matrix_{run_id}.svg",
+        "log": root / output_root / "logs" / f"{run_id}.log",
+        "ledger": root / output_root / "ledger" / "omn_ledger.jsonl",
     }
 
     write_json(paths["observables"], nodes)
@@ -437,14 +447,22 @@ def run(seed="synthetic-toy", root="."):
     gate = claim_gate(contract["valid"], True, benchmark_class)
 
     state = {
-        "schema": "OMN-SA-v0.8-state",
+        "schema": "OMN-SA-v0.9-state",
         "run_id": run_id,
         "seed": seed,
         "timestamp": utc_iso(),
+        "execution_mode": {
+            "mode": mode,
+            "write_reports": write_reports,
+            "output_dir": str(output_root),
+            "deterministic_run_id": bool(mode == "ci" or run_id),
+            "run_identity_policy": "explicit --run-id, deterministic ci fixture, or timestamped release run",
+            "non_claim_boundary": "Execution mode improves reproducibility discipline. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+        },
         "source_boundary": {
             "primary_source": "Park et al. GMN paper",
             "source_method": "Generative Manifold Networks",
-            "codex_architecture": "OMN-SA v0.8",
+            "codex_architecture": "OMN-SA v0.9",
             "gmns_not_renamed_as_codex_invention": True
         },
         "observables": {"count": len(nodes), "path": str(paths["observables"])},
@@ -497,12 +515,20 @@ def run(seed="synthetic-toy", root="."):
     }
 
     evidence = {
-        "schema": "OMN-SA-v0.8-evidence-package",
+        "schema": "OMN-SA-v0.9-evidence-package",
         "run_id": run_id,
         "seed": seed,
         "benchmark_class": benchmark_class,
         "claim_status": gate,
         "source_boundary": state["source_boundary"],
+        "execution_mode": {
+            "mode": mode,
+            "write_reports": write_reports,
+            "output_dir": str(output_root),
+            "deterministic_run_id": bool(mode == "ci" or run_id),
+            "run_identity_policy": "explicit --run-id, deterministic ci fixture, or timestamped release run",
+            "non_claim_boundary": "Execution mode improves reproducibility discipline. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+        },
         "metrics": metrics_block,
         "artifacts": {
             "state": str(paths["state"]),
@@ -533,6 +559,9 @@ def run(seed="synthetic-toy", root="."):
         "failure_flags": [],
         "next_action": "Inspect evidence package and compare seeds."
     }
+
+    if not write_reports:
+        evidence["artifacts"].pop("ledger", None)
 
     report = f"""# OMN Run Report
 
@@ -566,9 +595,13 @@ Claim status: {gate["computed_status"]}
 
 Evidence package: {paths["evidence"]}
 """
-    write_text(paths["report"], report)
-    write_text(paths["log"], f"{utc_iso()} completed {run_id}\n")
-    append_ledger(paths["ledger"], {"run_id": run_id, "timestamp": utc_iso(), "seed": seed, "evidence": str(paths["evidence"]), "status": gate["computed_status"]})
+    if write_reports:
+        write_text(paths["report"], report)
+        write_text(paths["log"], f"{utc_iso()} completed {run_id}\n")
+        append_ledger(paths["ledger"], {"run_id": run_id, "timestamp": utc_iso(), "seed": seed, "evidence": str(paths["evidence"]), "status": gate["computed_status"], "mode": mode})
+    else:
+        write_text(paths["report"], "# OMN Report Suppressed\n\nReport writing was suppressed by --no-write-report.\n")
+        write_text(paths["log"], f"{utc_iso()} completed {run_id} with report suppression\n")
 
     declared_paths = []
     for value in evidence["artifacts"].values():
@@ -585,9 +618,9 @@ Evidence package: {paths["evidence"]}
     return evidence
 
 
-def latest_evidence(root="."):
-    evidence_dir = Path(root) / "outputs" / "evidence"
-    files = sorted(evidence_dir.glob("*_evidence_package.json"), key=lambda p: p.stat().st_mtime, reverse=True)
+def latest_evidence(root=".", output_dir="outputs"):
+    evidence_dir = Path(root) / output_dir / "evidence"
+    files = sorted(evidence_dir.glob("*_evidence_package.json"), key=lambda p: (p.stat().st_mtime, p.name), reverse=True)
     return files[0] if files else None
 
 
@@ -610,26 +643,44 @@ def main(argv=None):
 
     run_p = sub.add_parser("run", help="run a seed")
     run_p.add_argument("--seed", choices=["synthetic-toy", "lorenz", "artifact-graph"], default="synthetic-toy")
+    run_p.add_argument("--run-id", default=None, help="explicit deterministic run id")
+    run_p.add_argument("--ci-mode", action="store_true", help="use deterministic CI fixture run identity")
+    run_p.add_argument("--release-mode", action="store_true", help="use timestamped release run identity")
+    run_p.add_argument("--no-write-report", action="store_true", help="suppress ledger append while writing minimal report/log placeholders")
+    run_p.add_argument("--output-dir", default="outputs", help="artifact output root")
 
     val_p = sub.add_parser("validate", help="validate an evidence package")
     val_p.add_argument("--run", required=False)
+    val_p.add_argument("--output-dir", default="outputs", help="artifact output root")
 
-    sub.add_parser("report-latest", help="print latest evidence path")
+    latest_p = sub.add_parser("report-latest", help="print latest evidence path")
+    latest_p.add_argument("--output-dir", default="outputs", help="artifact output root")
 
     args = parser.parse_args(argv)
 
     if args.cmd == "run":
-        evidence = run(args.seed, ".")
+        mode = "ci" if args.ci_mode else "release"
+        if args.release_mode:
+            mode = "release"
+        evidence = run(
+            args.seed,
+            ".",
+            run_id=args.run_id,
+            mode=mode,
+            write_reports=not args.no_write_report,
+            output_dir=args.output_dir,
+        )
         print(json.dumps({
             "run_id": evidence["run_id"],
             "seed": evidence["seed"],
             "claim_status": evidence["claim_status"]["computed_status"],
-            "evidence_package": str(Path("outputs") / "evidence" / f'{evidence["run_id"]}_evidence_package.json')
+            "execution_mode": evidence.get("execution_mode", {}),
+            "evidence_package": str(Path(args.output_dir) / "evidence" / f'{evidence["run_id"]}_evidence_package.json')
         }, indent=2))
         return 0
 
     if args.cmd == "validate":
-        target = args.run or latest_evidence(".")
+        target = args.run or latest_evidence(".", output_dir=args.output_dir)
         if not target:
             print("No evidence package found.")
             return 1
@@ -637,7 +688,7 @@ def main(argv=None):
         return 0
 
     if args.cmd == "report-latest":
-        target = latest_evidence(".")
+        target = latest_evidence(".", output_dir=args.output_dir)
         print(str(target) if target else "No evidence package found.")
         return 0
 

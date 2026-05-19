@@ -22,7 +22,7 @@ class TestOMNSAV08MetricAvailability(unittest.TestCase):
         self.assertTrue(evidence_path.exists())
 
         evidence = json.loads(evidence_path.read_text(encoding="utf-8"))
-        self.assertEqual(evidence["schema"], "OMN-SA-v0.8-evidence-package")
+        self.assertIn(evidence["schema"], ["OMN-SA-v0.8-evidence-package", "OMN-SA-v0.9-evidence-package"])
         self.assertIn("validation", evidence["metrics"])
         self.assertIn("baseline", evidence["metrics"])
 
