@@ -61,7 +61,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.8752222222 |
 | Current tag | pending-v0.8.0 |
-| Current main commit | pending-v0.8.0 |
+| Current main commit | bf44774 |
 
 ### What this is not
 
