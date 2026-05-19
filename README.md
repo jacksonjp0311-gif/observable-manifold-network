@@ -655,7 +655,7 @@ Current clean checkpoint:
 | Unit tests | 13 passing |
 | Runtime seed | synthetic-toy runtime-validated |
 | Evidence validation | valid |
-| Current main commit | pending-v0.6 |
+| Current main commit | 6b831c6 |
 | Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
 
 Validation commands:
@@ -692,7 +692,7 @@ Current clean checkpoint:
 | Graph observables | 3 |
 | Graph edges | 6 |
 | Graph parity | passed |
-| Current main commit | pending-v0.6 |
+| Current main commit | 6b831c6 |
 | Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
 
 v0.4 law:
