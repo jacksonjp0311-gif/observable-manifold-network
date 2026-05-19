@@ -3,7 +3,7 @@
 ## Summary
 
 - Passed: True
-- Evidence packages found: 142
+- Evidence packages found: 151
 - Evidence packages compared: 8
 - Seeds seen: artifact-graph, lorenz, synthetic-toy
 - Claim statuses seen: runtime-validated
@@ -25,14 +25,14 @@
 
 | Run ID | Seed | Claim status | Benchmark | Artifact count |
 |---|---|---|---|---:|
-| omn_synthetic_toy_20260519_134212 | synthetic-toy | runtime-validated | S0 | 12 |
-| omn_lorenz_20260519_134213 | lorenz | runtime-validated | S1 | 12 |
-| omn_artifact_graph_20260519_134213 | artifact-graph | runtime-validated | S3 | 12 |
-| omn_synthetic_toy_20260519_134213 | synthetic-toy | runtime-validated | S0 | 12 |
-| omn_synthetic_toy_20260519_134214 | synthetic-toy | runtime-validated | S0 | 12 |
-| omn_synthetic_toy_20260519_134215 | synthetic-toy | runtime-validated | S0 | 12 |
-| omn_lorenz_20260519_134215 | lorenz | runtime-validated | S1 | 12 |
-| omn_artifact_graph_20260519_134215 | artifact-graph | runtime-validated | S3 | 12 |
+| omn_artifact_graph_20260519_134216 | artifact-graph | runtime-validated | S3 | 12 |
+| omn_synthetic_toy_20260519_134536 | synthetic-toy | runtime-validated | S0 | 12 |
+| omn_lorenz_20260519_134536 | lorenz | runtime-validated | S1 | 12 |
+| omn_artifact_graph_20260519_134536 | artifact-graph | runtime-validated | S3 | 12 |
+| omn_synthetic_toy_20260519_134537 | synthetic-toy | runtime-validated | S0 | 12 |
+| omn_synthetic_toy_20260519_134538 | synthetic-toy | runtime-validated | S0 | 12 |
+| omn_lorenz_20260519_134538 | lorenz | runtime-validated | S1 | 12 |
+| omn_artifact_graph_20260519_134538 | artifact-graph | runtime-validated | S3 | 12 |
 
 ## Failure Flags
 
