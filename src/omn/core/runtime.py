@@ -614,13 +614,171 @@ Evidence package: {paths["evidence"]}
     evidence["audit"]["passed"] = evidence["audit"]["declared_artifact_paths_exist"] and contract["valid"]
 
     write_json(paths["evidence"], evidence)
+    write_evidence_index(root, output_dir=output_dir)
 
     return evidence
 
 
-def latest_evidence(root=".", output_dir="outputs"):
-    evidence_dir = Path(root) / output_dir / "evidence"
+def evidence_dir_for(root=".", output_dir="outputs"):
+    return Path(root) / output_dir / "evidence"
+
+
+def relative_to_root(path, root="."):
+    p = Path(path)
+    try:
+        return str(p.resolve().relative_to(Path(root).resolve()))
+    except Exception:
+        return str(p)
+
+
+def load_evidence_record(path, root="."):
+    p = Path(path)
+    try:
+        data = json.loads(p.read_text(encoding="utf-8"))
+    except Exception as exc:
+        return {
+            "path": relative_to_root(p, root),
+            "load_error": str(exc),
+            "valid": False,
+        }
+
+    execution_mode = data.get("execution_mode", {})
+    metrics = data.get("metrics", {}).get("validation", {})
+    return {
+        "run_id": data.get("run_id"),
+        "seed": data.get("seed"),
+        "benchmark_class": data.get("benchmark_class"),
+        "claim_status": data.get("claim_status", {}).get("computed_status"),
+        "mode": execution_mode.get("mode", "release"),
+        "deterministic_run_id": execution_mode.get("deterministic_run_id", False),
+        "write_reports": execution_mode.get("write_reports"),
+        "path": relative_to_root(p, root),
+        "modified_time": p.stat().st_mtime,
+        "metrics": {
+            "rmse": metrics.get("rmse"),
+            "mae": metrics.get("mae"),
+            "delta_phi_residual": metrics.get("delta_phi_residual"),
+            "omega_residual_weight": metrics.get("omega_residual_weight"),
+        },
+        "valid": True,
+        "non_claim_boundary": "Evidence index entries summarize local evidence packages. They do not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+    }
+
+
+def evidence_sort_key(record):
+    return (
+        str(record.get("mode", "")),
+        str(record.get("seed", "")),
+        str(record.get("run_id", "")),
+        str(record.get("path", "")),
+    )
+
+
+def build_evidence_index(root=".", output_dir="outputs"):
+    root_path = Path(root).resolve()
+    evidence_dir = evidence_dir_for(root_path, output_dir)
+    files = sorted(evidence_dir.glob("*_evidence_package.json"), key=lambda p: p.name)
+    records = [load_evidence_record(p, root_path) for p in files]
+    records = sorted(records, key=evidence_sort_key)
+
+    latest_by_mode = {}
+    for mode in ["ci", "release"]:
+        candidates = [r for r in records if r.get("valid") and r.get("mode") == mode]
+        if candidates:
+            latest_by_mode[mode] = sorted(
+                candidates,
+                key=lambda r: (r.get("modified_time", 0), str(r.get("run_id", "")), str(r.get("path", ""))),
+                reverse=True
+            )[0]
+
+    valid_candidates = [r for r in records if r.get("valid")]
+    latest_any = None
+    if valid_candidates:
+        latest_any = sorted(
+            valid_candidates,
+            key=lambda r: (r.get("modified_time", 0), str(r.get("run_id", "")), str(r.get("path", ""))),
+            reverse=True
+        )[0]
+
+    return {
+        "schema": "OMN-SA-v0.9.1-evidence-index",
+        "output_dir": str(output_dir),
+        "generated_at": utc_iso(),
+        "record_count": len(records),
+        "modes_seen": sorted({r.get("mode", "unknown") for r in records if r.get("valid")}),
+        "latest": {
+            "any": latest_any,
+            "ci": latest_by_mode.get("ci"),
+            "release": latest_by_mode.get("release"),
+        },
+        "records": records,
+        "non_claim_boundary": "The evidence index makes evidence selection explicit. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+    }
+
+
+def write_evidence_index(root=".", output_dir="outputs"):
+    root_path = Path(root).resolve()
+    evidence_dir = evidence_dir_for(root_path, output_dir)
+    ensure_dir(evidence_dir)
+
+    index = build_evidence_index(root_path, output_dir)
+    write_json(evidence_dir / "evidence_index.json", index)
+
+    pointer_schema = "OMN-SA-v0.9.1-evidence-pointer"
+    pointer_boundary = "Evidence pointers identify selected local evidence packages. They do not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+
+    def pointer(record, pointer_type):
+        return {
+            "schema": pointer_schema,
+            "pointer_type": pointer_type,
+            "output_dir": str(output_dir),
+            "generated_at": utc_iso(),
+            "evidence_path": record.get("path") if record else None,
+            "run_id": record.get("run_id") if record else None,
+            "seed": record.get("seed") if record else None,
+            "mode": record.get("mode") if record else None,
+            "valid": bool(record),
+            "non_claim_boundary": pointer_boundary,
+        }
+
+    write_json(evidence_dir / "latest_evidence.json", pointer(index["latest"].get("any"), "any"))
+    write_json(evidence_dir / "latest_ci_fixture.json", pointer(index["latest"].get("ci"), "ci"))
+    write_json(evidence_dir / "latest_release_evidence.json", pointer(index["latest"].get("release"), "release"))
+    return index
+
+
+def evidence_from_pointer(root=".", output_dir="outputs", mode=None):
+    evidence_dir = evidence_dir_for(root, output_dir)
+    if mode == "ci":
+        pointer_path = evidence_dir / "latest_ci_fixture.json"
+    elif mode == "release":
+        pointer_path = evidence_dir / "latest_release_evidence.json"
+    else:
+        pointer_path = evidence_dir / "latest_evidence.json"
+
+    if not pointer_path.exists():
+        return None
+    pointer = json.loads(pointer_path.read_text(encoding="utf-8"))
+    evidence_path = pointer.get("evidence_path")
+    if not evidence_path:
+        return None
+    return Path(root) / evidence_path
+
+
+def latest_evidence(root=".", output_dir="outputs", mode=None):
+    pointed = evidence_from_pointer(root=root, output_dir=output_dir, mode=mode)
+    if pointed and pointed.exists():
+        return pointed
+
+    evidence_dir = evidence_dir_for(root, output_dir)
     files = sorted(evidence_dir.glob("*_evidence_package.json"), key=lambda p: (p.stat().st_mtime, p.name), reverse=True)
+    if mode:
+        filtered = []
+        for p in files:
+            rec = load_evidence_record(p, root)
+            if rec.get("mode") == mode:
+                filtered.append(p)
+        files = filtered
     return files[0] if files else None
 
 
@@ -652,9 +810,14 @@ def main(argv=None):
     val_p = sub.add_parser("validate", help="validate an evidence package")
     val_p.add_argument("--run", required=False)
     val_p.add_argument("--output-dir", default="outputs", help="artifact output root")
+    val_p.add_argument("--mode", choices=["ci", "release"], default=None, help="select evidence pointer mode")
 
     latest_p = sub.add_parser("report-latest", help="print latest evidence path")
     latest_p.add_argument("--output-dir", default="outputs", help="artifact output root")
+    latest_p.add_argument("--mode", choices=["ci", "release"], default=None, help="select evidence pointer mode")
+
+    index_p = sub.add_parser("index-evidence", help="write stable evidence index and pointer files")
+    index_p.add_argument("--output-dir", default="outputs", help="artifact output root")
 
     args = parser.parse_args(argv)
 
@@ -680,7 +843,7 @@ def main(argv=None):
         return 0
 
     if args.cmd == "validate":
-        target = args.run or latest_evidence(".", output_dir=args.output_dir)
+        target = args.run or latest_evidence(".", output_dir=args.output_dir, mode=args.mode)
         if not target:
             print("No evidence package found.")
             return 1
@@ -688,8 +851,21 @@ def main(argv=None):
         return 0
 
     if args.cmd == "report-latest":
-        target = latest_evidence(".", output_dir=args.output_dir)
+        target = latest_evidence(".", output_dir=args.output_dir, mode=args.mode)
         print(str(target) if target else "No evidence package found.")
+        return 0
+
+    if args.cmd == "index-evidence":
+        index = write_evidence_index(".", output_dir=args.output_dir)
+        print(json.dumps({
+            "schema": index["schema"],
+            "output_dir": index["output_dir"],
+            "record_count": index["record_count"],
+            "modes_seen": index["modes_seen"],
+            "index_path": str(Path(args.output_dir) / "evidence" / "evidence_index.json"),
+            "latest_ci_fixture": str(Path(args.output_dir) / "evidence" / "latest_ci_fixture.json"),
+            "latest_release_evidence": str(Path(args.output_dir) / "evidence" / "latest_release_evidence.json"),
+        }, indent=2))
         return 0
 
     parser.print_help()

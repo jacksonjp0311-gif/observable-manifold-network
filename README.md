@@ -37,17 +37,18 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Surface | Current result |
 |---|---:|
 | Package / CLI | `omn` |
-| Current software layer | OMN-SA v0.9.0 |
-| Latest public alignment patch | OMN-SA v0.9.0 deterministic run identity |
+| Current software layer | OMN-SA v0.9.1 |
+| Latest public alignment patch | OMN-SA v0.9.1 stable evidence index |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
 | Evidence replay | passed |
 | Evidence drift comparison | passed |
 | Metric availability | passed |
 | Ledger integrity | passed |
+| Stable evidence index | passed |
 | Declared artifacts replayed | 12 / 12 |
 | Missing replay artifacts | 0 |
-| Current tests | 59 OK |
+| Current tests | 61 OK |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N checker | passed |
@@ -61,7 +62,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.8752222222 |
 | Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
-| Release reference | v0.9.0 deterministic run identity |
+| Release reference | v0.9.1 stable evidence index |
+
 
 ### What this is not
 
@@ -346,6 +348,33 @@ Boundary:
 v0.9.0 improves deterministic execution and reproducibility discipline. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
 
 
+
+
+---
+
+## Current v0.9.1 Stable Evidence Index and Latest Pointer System
+
+v0.9.1 adds explicit evidence indexes and latest pointer files after v0.9.0 made run identity deterministic.
+
+New evidence-selection surfaces:
+
+| Surface | Purpose |
+|---|---|
+| `evidence_index.json` | Stable machine-readable list of evidence packages. |
+| `latest_evidence.json` | Explicit pointer to latest selected evidence package. |
+| `latest_ci_fixture.json` | Explicit pointer to latest CI fixture evidence. |
+| `latest_release_evidence.json` | Explicit pointer to latest release evidence. |
+| `index-evidence` | CLI command to rebuild the evidence index and pointers. |
+
+v0.9.1 law:
+
+    No latest evidence without an explicit pointer.
+
+Boundary:
+
+v0.9.1 improves evidence selection and reproducibility discipline. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
 # PART I - Human README
 
 ## Current Identity
@@ -388,7 +417,9 @@ Run seed examples:
 Run deterministic CI-style fixture:
 
     python -m omn run --seed synthetic-toy --ci-mode --run-id omn_ci_smoke --output-dir outputs_ci --no-write-report
-    python -m omn validate --output-dir outputs_ci
+    python -m omn index-evidence --output-dir outputs_ci
+    python -m omn report-latest --output-dir outputs_ci --mode ci
+    python -m omn validate --output-dir outputs_ci --mode ci
 
 Validate latest release evidence:
 
@@ -754,7 +785,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.9.0.
+- Current software architecture layer: OMN-SA v0.9.1.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -923,8 +954,9 @@ This section is a permanent root README registry. It must be updated every time 
 | Layer | Current file | Status | Notes |
 |---|---|---|---|
 | Theory | `docs/theory/omn_v1_1_theory_bridge.md` | active | OMN v1.1 minimal runtime bridge and adoption layer. |
-| Software Architecture | `docs/software_architecture/omn_sa_v0_9_0_deterministic_run_identity.md` | active | Deterministic run identity and execution-mode hardening. |
-| Prior Software Architecture | `docs/software_architecture/omn_sa_v0_8_3_ci_release_boundary_separation.md` | active | CI / release boundary separation. |
+| Software Architecture | `docs/software_architecture/omn_sa_v0_9_1_stable_evidence_index.md` | active | Stable evidence index and latest pointer system. |
+| Prior Software Architecture | `docs/software_architecture/omn_sa_v0_9_0_deterministic_run_identity.md` | active | Deterministic run identity and execution-mode hardening. |
+| CI / Release Architecture | `docs/software_architecture/omn_sa_v0_8_3_ci_release_boundary_separation.md` | active | CI / release boundary separation. |
 | README Policy Architecture | `docs/software_architecture/omn_sa_v0_8_2_readme_lineage_policy.md` | active | README lineage and AI update-policy repair. |
 | Metric Architecture | `docs/software_architecture/omn_sa_v0_8_metric_availability_residual_hardening.md` | active | Metric availability and residual field hardening. |
 | Source Boundary | `docs/architecture/source_boundary.md` | active | GMN authorship and non-invention boundary. |
@@ -934,7 +966,7 @@ This section is a permanent root README registry. It must be updated every time 
 | Benchmarks | `docs/benchmarks/omn_sa_v0_8_metric_availability_metrics.md` | active | v0.8 metric availability benchmark. |
 | Self-Organization | `reports/self_organization/latest_readme_self_organization_audit.md` | active | Current README self-organization audit. |
 | README Policy | `reports/readme_policy/latest_readme_lineage_policy_audit.md` | active | Version-aware README lineage-policy audit. |
-| Release Notes | `docs/release_notes/v0_9_0_deterministic_run_identity.md` | active | v0.9.0 deterministic run identity checkpoint. |
+| Release Notes | `docs/release_notes/v0_9_1_stable_evidence_index.md` | active | v0.9.1 stable evidence index checkpoint. |
 | RCC-N Context | `docs/context/rcc_nexus_index.json` and `docs/context/rcc_nexus_profile_v1_7.json` | active | Repository navigation and profile-gated governance. |
 
 
@@ -950,7 +982,7 @@ Boundary: this marker preserves historical README lineage. It does not prove cod
 
 ### Current Architecture Chain
 
-OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization -> OMN-SA v0.7.3 README lineage completion -> OMN-SA v0.8 metric availability and residual field hardening -> OMN-SA v0.8.1 validation compatibility repair -> OMN-SA v0.8.2 README lineage and AI update policy -> OMN-SA v0.8.3 CI / release boundary separation -> OMN-SA v0.9.0 deterministic run identity and execution modes
+OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization -> OMN-SA v0.7.3 README lineage completion -> OMN-SA v0.8 metric availability and residual field hardening -> OMN-SA v0.8.1 validation compatibility repair -> OMN-SA v0.8.2 README lineage and AI update policy -> OMN-SA v0.8.3 CI / release boundary separation -> OMN-SA v0.9.0 deterministic run identity and execution modes -> OMN-SA v0.9.1 stable evidence index and latest pointer system
 
 
 ### Version Update Obligation
@@ -971,7 +1003,8 @@ Every future version must update this registry section when any of the following
 - release status,
 - execution mode behavior,
 - deterministic run identity behavior,
-- old audits that may accidentally freeze older current-state assumptions.
+- old audits that may accidentally freeze older current-state assumptions,
+- evidence pointer/index behavior and latest-evidence selection rules.
 
 ### Boundary
 
@@ -1524,3 +1557,29 @@ v0.9.0 law:
 Boundary:
 
 v0.9.0 improves runtime determinism. It does not prove empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+---
+
+## OMN-SA v0.9.1 Stable Evidence Index and Latest Pointer System
+
+v0.9.1 makes latest-evidence selection explicit instead of relying on filesystem ordering.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.9.1 architecture | `docs/software_architecture/omn_sa_v0_9_1_stable_evidence_index.md` | Defines stable evidence index and pointer surfaces. |
+| v0.9.1 architecture change | `docs/architecture_changes/omn_sa_v0_9_1_stable_evidence_index_change.md` | Records evidence-selection hardening. |
+| v0.9.1 release note | `docs/release_notes/v0_9_1_stable_evidence_index.md` | Records the v0.9.1 checkpoint. |
+| Runtime CLI | `src/omn/core/runtime.py` | Adds `index-evidence`, pointer writes, and mode-aware latest selection. |
+| Evidence-index tests | `tests/test_omn_sa_v0_9_1_stable_evidence_index.py` | Verifies evidence index and latest CI fixture pointer. |
+
+v0.9.1 law:
+
+    No latest evidence without an explicit pointer.
+
+Boundary:
+
+v0.9.1 improves evidence navigation. It does not prove empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

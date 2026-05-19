@@ -31,16 +31,17 @@ jobs:
           }
 
           $Required = @(
-            "Current software layer | OMN-SA v0.9.0",
-            "Latest public alignment patch | OMN-SA v0.9.0 deterministic run identity",
-            "Current tests | 59 OK",
-            "Release reference | v0.9.0 deterministic run identity",
+            "Current software layer | OMN-SA v0.9.1",
+            "Latest public alignment patch | OMN-SA v0.9.1 stable evidence index",
+            "Current tests | 61 OK",
+            "Release reference | v0.9.1 stable evidence index",
             "AI README Update Policy",
             "OMN-SA v0.8 Metric Availability and Residual Field Hardening",
             "OMN-SA v0.8.1 Validation Compatibility Repair",
             "OMN-SA v0.8.2 README Lineage and AI Update Policy",
             "OMN-SA v0.8.3 CI / Release Boundary Separation",
             "OMN-SA v0.9.0 Deterministic Run Identity and Execution Modes",
+            "OMN-SA v0.9.1 Stable Evidence Index and Latest Pointer System",
             "Observable topology is not truth",
             "Prediction is not mechanism",
             "Simulation is not proof"

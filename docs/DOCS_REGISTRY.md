@@ -312,3 +312,16 @@ Boundary: v0.8.3 improves operational release discipline and CI reliability. It 
 | Test | `tests/test_omn_sa_v0_9_0_deterministic_modes.py` | active | Verifies fixed run IDs and execution-mode metadata. |
 
 Boundary: v0.9.0 improves deterministic execution and release discipline. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+## OMN-SA v0.9.1 Stable Evidence Index and Latest Pointer System
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_9_1_stable_evidence_index.md` | active | Defines stable evidence index and latest pointer surfaces. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_9_1_stable_evidence_index_change.md` | active | Records evidence-selection hardening. |
+| Release Note | `docs/release_notes/v0_9_1_stable_evidence_index.md` | active | Records the v0.9.1 checkpoint. |
+| Test | `tests/test_omn_sa_v0_9_1_stable_evidence_index.py` | active | Verifies evidence index and latest CI fixture pointer. |
+
+Boundary: v0.9.1 improves evidence selection and reproducibility discipline. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
