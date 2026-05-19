@@ -233,3 +233,14 @@ Boundary: v0.7 compares evidence packages across runs. It does not prove correct
 | Benchmark Report | `docs/benchmarks/omn_sa_v0_7_1_rcc_n_v1_7_profile_metrics.md` | active | Public profile metrics report. |
 
 Boundary: v0.7.1 adds profile-aware governance. It does not prove correctness, empirical validation, causality, mechanism, AI understanding, production readiness, GMN replication, or full GEN v1.0.
+
+## OMN-SA v0.7.3 README v0.7 Lineage Completion
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_7_3_readme_lineage_completion_change.md` | active | Records README lineage completion patch. |
+| Release Note | `docs/release_notes/v0_7_3_readme_lineage_completion.md` | active | Records v0.7.3 checkpoint. |
+| Lineage Audit Script | `scripts/release/audit_readme_v0_7_lineage.py` | active | Validates archived v0.7 bottom section and README typo repair. |
+| Lineage Audit Report | `reports/self_organization/latest_readme_v0_7_lineage_audit.md` | active | Human-readable audit report. |
+
+Boundary: v0.7.3 repairs README lineage continuity. It does not change runtime behavior or prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

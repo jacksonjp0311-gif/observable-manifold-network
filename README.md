@@ -46,7 +46,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Ledger integrity | passed |
 | Declared artifacts replayed | 12 / 12 |
 | Missing replay artifacts | 0 |
-| Current tests | 41 OK |
+| Current tests | 44 OK |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N checker | passed |
@@ -56,11 +56,11 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | GEN boundary | GEN-R, not full GEN v1.0 |
 | NCI self | 1.0 |
 | Mini README coverage | 37 / 37 |
-| RCC-N effectiveness score | 1.0 |
+| RCC-N effectiveness score | 0.9822222222 |
 | Regular README baseline | 0.107 |
-| Measured RCC-N lift | +0.893 |
+| Measured RCC-N lift | +0.8752222222 |
 | Current tag | v0.7.2-omn-sa-readme-self-organization |
-| Current main commit | e0df03e |
+| Current main commit | d11768f |
 
 ### What this is not
 
@@ -624,7 +624,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.7.2.2.
+- Current software architecture layer: OMN-SA v0.7.2.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -1114,3 +1114,59 @@ v0.6 law:
 Boundary:
 
 Evidence replay and run ledger integrity improve artifact continuity. They do not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+---
+
+## OMN-SA v0.7 Evidence Drift Comparison and Multi-Run Stability Dashboard
+
+v0.7 made OMN-SA evidence comparable across runs.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.7 architecture | `docs/software_architecture/omn_sa_v0_7_software_architecture.md` | Evidence drift comparison and multi-run stability dashboard. |
+| Evidence drift module | `src/omn/core/evidence_drift.py` | Compares recent evidence packages across runs. |
+| Evidence drift validator | `scripts/validation/validate_evidence_drift.py` | Emits latest evidence drift validation report. |
+| README canonicalizer | `scripts/release/canonicalize_readme_v0_7.py` | Repairs README health and registry drift for v0.7. |
+| Evidence drift report | `reports/evidence_drift/latest_evidence_drift_report.json` | Machine-readable multi-run comparison report. |
+| Evidence drift benchmark | `docs/benchmarks/omn_sa_v0_7_evidence_drift_metrics.md` | Human-readable v0.7 evidence drift metrics. |
+| Evidence drift dashboard | `visuals/omn_sa/omn_sa_v0_7_evidence_drift_dashboard.svg` | Public visual dashboard for multi-run evidence drift. |
+| v0.7 tests | `tests/test_omn_sa_v0_7_evidence_drift.py` | Validates evidence drift report and dashboard emission. |
+
+v0.7 law:
+
+    No evidence package is mature until it can be compared across runs.
+    No stability claim is mature until drift is measured.
+    No public benchmark is mature until the dashboard is visible.
+
+Measured checkpoint:
+
+| Surface | Status |
+|---|---:|
+| Evidence drift validation | passing |
+| Compared packages | 8 latest evidence packages |
+| Artifact count spread | 0 |
+| Load errors | 0 |
+| Overpromotion flags | 0 |
+| Seeds seen | synthetic-toy, lorenz, artifact-graph |
+| Benchmark classes seen | S0, S1, S3 |
+| Evidence replay | passing |
+| Ledger integrity | passing |
+| RCC-N checker | passing |
+| Mini README coverage | 37 / 37 |
+
+Known weakness exposed by v0.7:
+
+| Metric | Availability |
+|---|---:|
+| `rmse` | unavailable across compared packages |
+| `mae` | unavailable across compared packages |
+| `delta_phi_residual` | unavailable across compared packages |
+| `omega_residual_weight` | unavailable across compared packages |
+
+This weakness is the intended target for OMN-SA v0.8.
+
+Boundary:
+
+Evidence drift comparison measures run-to-run continuity, artifact replay status, claim-status stability, artifact-count stability, load integrity, and metric availability. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
