@@ -1,0 +1,57 @@
+{
+  "schema": "OMN-SA-v0.6-evidence-replay-validation-report",
+  "passed": true,
+  "replay": {
+    "schema": "OMN-SA-v0.6-evidence-replay-record",
+    "evidence_path": "outputs\\evidence\\omn_synthetic_toy_20260519_125039_evidence_package.json",
+    "run_id": "omn_synthetic_toy_20260519_125039",
+    "seed": "synthetic-toy",
+    "claim_status": {
+      "computed_status": "runtime-validated",
+      "allowed_claim": "Minimal OMN runtime emitted graph, residual, baseline, topology, and evidence artifacts.",
+      "prohibited_claim": "This run does not prove causality, mechanism, biological equivalence, physical manifold identity, empirical validation, or full GMN replication.",
+      "overpromotion_blocked": true,
+      "benchmark_class": "S0"
+    },
+    "declared_artifact_count": 12,
+    "existing_artifacts": [
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\ledger\\omn_ledger.jsonl",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\plots\\generated_vs_observed_omn_synthetic_toy_20260519_125039.svg",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\plots\\interaction_matrix_omn_synthetic_toy_20260519_125039.svg",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\plots\\residuals_omn_synthetic_toy_20260519_125039.svg",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\reports\\omn_synthetic_toy_20260519_125039_report.md",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\generated_state_omn_synthetic_toy_20260519_125039.csv",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\graph_contract_omn_synthetic_toy_20260519_125039.json",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\interaction_matrix_omn_synthetic_toy_20260519_125039.csv",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\observables_omn_synthetic_toy_20260519_125039.json",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\omn_synthetic_toy_20260519_125039_state.json",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\residual_attribution_omn_synthetic_toy_20260519_125039.json",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\validation_residuals_omn_synthetic_toy_20260519_125039.csv"
+    ],
+    "missing_artifacts": [],
+    "failure_flags": [],
+    "passed": true,
+    "non_claim_boundary": "Evidence replay checks whether a stored evidence package can be reloaded, its declared artifacts can be inspected, and its claim boundaries remain present. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+  },
+  "ledger_record": {
+    "run_id": "omn_synthetic_toy_20260519_125039",
+    "seed": "synthetic-toy",
+    "evidence_path": "outputs\\evidence\\omn_synthetic_toy_20260519_125039_evidence_package.json",
+    "replay_passed": true,
+    "declared_artifact_count": 12,
+    "missing_artifact_count": 0,
+    "schema": "OMN-SA-v0.6-run-ledger-record",
+    "previous_hash": "6ed498dd11cd2e60f92822eb99848eec185881c85d9d54d86926b0f2c81650c5",
+    "non_claim_boundary": "Run ledger integrity checks append-only continuity and hash chaining for local run records. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.",
+    "record_hash": "b1f4e35808061bf654a40885b850d6ab92846cfe66fb85e46b88243fd6fd9987"
+  },
+  "ledger_integrity": {
+    "schema": "OMN-SA-v0.6-run-ledger-integrity-report",
+    "records": 3,
+    "passed": true,
+    "failure_flags": [],
+    "ledger_path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\ledger\\omn_run_ledger_v0_6.jsonl",
+    "non_claim_boundary": "Run ledger integrity checks append-only continuity and hash chaining for local run records. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+  },
+  "non_claim_boundary": "Evidence replay and ledger integrity validate local artifact continuity. They do not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+}

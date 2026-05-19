@@ -175,3 +175,18 @@ Boundary: these metrics summarize local validation and repository orientation. T
 | RCC-N Metrics Report | `docs/benchmarks/rcc_n_effectiveness_metrics_v0_5.md` | active | Human-readable metrics report. |
 
 Boundary: v0.5 measures stability and navigation discipline. It does not prove correctness, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.
+
+## OMN-SA v0.6 Evidence Replay and Run Ledger Integrity
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_6_software_architecture.md` | active | Evidence replay and run ledger integrity layer. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_6_evidence_replay_change.md` | active | Records v0.6 evidence continuity change. |
+| Release Note | `docs/release_notes/v0_6_0_evidence_replay.md` | active | Records v0.6 release. |
+| Evidence Replay | `src/omn/core/evidence_replay.py` | active | Replays evidence packages and re-audits declared artifacts. |
+| Run Ledger | `src/omn/core/run_ledger.py` | active | Appends and verifies hash-chained run records. |
+| Run Compare | `src/omn/core/run_compare.py` | active | Compares evidence metrics across runs. |
+| Replay Validator | `scripts/validation/validate_evidence_replay.py` | active | Validates replay and ledger integrity. |
+| Replay Report | `reports/evidence_replay/latest_evidence_replay_validation.json` | active | Latest replay validation report. |
+
+Boundary: v0.6 verifies artifact continuity and local ledger integrity. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

@@ -40,7 +40,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Runtime status | minimal local scaffold |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
-| Current tests | 26 passing |
+| Current tests | 34 passing |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N mode | self-reported repository navigation shell |
@@ -468,7 +468,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.4.
+- Current software architecture layer: OMN-SA v0.6.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -608,10 +608,12 @@ This section is a permanent root README registry. It must be updated every time 
 
     OMN v1.0 theory
     -> OMN v1.1 minimal runtime bridge
-    -> OMN-SA v0.2 software architecture
-    -> OMN local runtime scaffold
-    -> RCC-N repository navigation shell
-    -> docs registry and version update obligation
+    -> OMN-SA v0.2 contract validation
+    -> OMN-SA v0.3 modular runtime wrapper
+    -> OMN-SA v0.4 graph engine extraction
+    -> OMN-SA v0.5 topology ensemble and RCC-N metrics
+    -> OMN-SA v0.5.1 mini README repair
+    -> OMN-SA v0.6 evidence replay and run ledger integrity
 
 ### Version Update Obligation
 
@@ -653,8 +655,8 @@ Current clean checkpoint:
 | Unit tests | 13 passing |
 | Runtime seed | synthetic-toy runtime-validated |
 | Evidence validation | valid |
-| Current main commit | 08c781e |
-| Current tag | v0.4.0-omn-sa-graph-engine |
+| Current main commit | pending-v0.6 |
+| Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
 
 Validation commands:
 
@@ -690,8 +692,8 @@ Current clean checkpoint:
 | Graph observables | 3 |
 | Graph edges | 6 |
 | Graph parity | passed |
-| Current main commit | 08c781e |
-| Current tag | v0.4.0-omn-sa-graph-engine |
+| Current main commit | pending-v0.6 |
+| Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
 
 v0.4 law:
 
@@ -931,3 +933,31 @@ Repair law:
 Boundary:
 
 Mini README coverage improves repository orientation and AI-agent navigation. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+---
+
+## OMN-SA v0.6 Evidence Replay and Run Ledger Integrity
+
+v0.6 adds replayability and continuity verification to the evidence layer.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.6 architecture | `docs/software_architecture/omn_sa_v0_6_software_architecture.md` | Evidence replay and run ledger integrity layer. |
+| Evidence replay | `src/omn/core/evidence_replay.py` | Reloads latest evidence and re-audits declared artifacts. |
+| Run ledger | `src/omn/core/run_ledger.py` | Appends local run records and verifies hash-chain continuity. |
+| Run comparison | `src/omn/core/run_compare.py` | Compares evidence metrics across runs. |
+| Replay validator | `scripts/validation/validate_evidence_replay.py` | Emits evidence replay and ledger integrity reports. |
+| Replay report | `reports/evidence_replay/latest_evidence_replay_validation.json` | Latest replay validation record. |
+| Ledger | `outputs/ledger/omn_run_ledger_v0_6.jsonl` | Append-only local run continuity ledger. |
+
+v0.6 law:
+
+    No evidence package is mature until it can be replayed.
+    No replay is mature until declared artifacts are re-audited.
+    No continuity claim is mature without a ledger integrity check.
+
+Boundary:
+
+Evidence replay and run ledger integrity improve artifact continuity. They do not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
