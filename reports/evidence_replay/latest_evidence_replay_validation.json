@@ -3,8 +3,8 @@
   "passed": true,
   "replay": {
     "schema": "OMN-SA-v0.6-evidence-replay-record",
-    "evidence_path": "outputs\\evidence\\omn_synthetic_toy_20260519_134926_evidence_package.json",
-    "run_id": "omn_synthetic_toy_20260519_134926",
+    "evidence_path": "outputs\\evidence\\omn_synthetic_toy_20260519_135045_evidence_package.json",
+    "run_id": "omn_synthetic_toy_20260519_135045",
     "seed": "synthetic-toy",
     "claim_status": {
       "computed_status": "runtime-validated",
@@ -16,17 +16,17 @@
     "declared_artifact_count": 12,
     "existing_artifacts": [
       "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\ledger\\omn_ledger.jsonl",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\plots\\generated_vs_observed_omn_synthetic_toy_20260519_134926.svg",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\plots\\interaction_matrix_omn_synthetic_toy_20260519_134926.svg",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\plots\\residuals_omn_synthetic_toy_20260519_134926.svg",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\reports\\omn_synthetic_toy_20260519_134926_report.md",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\generated_state_omn_synthetic_toy_20260519_134926.csv",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\graph_contract_omn_synthetic_toy_20260519_134926.json",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\interaction_matrix_omn_synthetic_toy_20260519_134926.csv",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\observables_omn_synthetic_toy_20260519_134926.json",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\omn_synthetic_toy_20260519_134926_state.json",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\residual_attribution_omn_synthetic_toy_20260519_134926.json",
-      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\validation_residuals_omn_synthetic_toy_20260519_134926.csv"
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\plots\\generated_vs_observed_omn_synthetic_toy_20260519_135045.svg",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\plots\\interaction_matrix_omn_synthetic_toy_20260519_135045.svg",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\plots\\residuals_omn_synthetic_toy_20260519_135045.svg",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\reports\\omn_synthetic_toy_20260519_135045_report.md",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\generated_state_omn_synthetic_toy_20260519_135045.csv",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\graph_contract_omn_synthetic_toy_20260519_135045.json",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\interaction_matrix_omn_synthetic_toy_20260519_135045.csv",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\observables_omn_synthetic_toy_20260519_135045.json",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\omn_synthetic_toy_20260519_135045_state.json",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\residual_attribution_omn_synthetic_toy_20260519_135045.json",
+      "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\state\\validation_residuals_omn_synthetic_toy_20260519_135045.csv"
     ],
     "missing_artifacts": [],
     "failure_flags": [],
@@ -34,20 +34,20 @@
     "non_claim_boundary": "Evidence replay checks whether a stored evidence package can be reloaded, its declared artifacts can be inspected, and its claim boundaries remain present. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
   },
   "ledger_record": {
-    "run_id": "omn_synthetic_toy_20260519_134926",
+    "run_id": "omn_synthetic_toy_20260519_135045",
     "seed": "synthetic-toy",
-    "evidence_path": "outputs\\evidence\\omn_synthetic_toy_20260519_134926_evidence_package.json",
+    "evidence_path": "outputs\\evidence\\omn_synthetic_toy_20260519_135045_evidence_package.json",
     "replay_passed": true,
     "declared_artifact_count": 12,
     "missing_artifact_count": 0,
     "schema": "OMN-SA-v0.6-run-ledger-record",
-    "previous_hash": "4ffb5227ae49af24e38b73da9f4586961247b72f33006e3eb5d8178eaf8c5ee7",
+    "previous_hash": "42aaf46b082c3a9fefb64a5641905fec12e1feb1899315b61e2eef6db61b9f55",
     "non_claim_boundary": "Run ledger integrity checks append-only continuity and hash chaining for local run records. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.",
-    "record_hash": "b68168dcc6e75291723cfbad0debf7227f9a09a5116ce3b4750787196bd7cfb1"
+    "record_hash": "f746d63abdebfb90aeb56b7dd193e707ef0686338fe3ad969798d7439ae3c690"
   },
   "ledger_integrity": {
     "schema": "OMN-SA-v0.6-run-ledger-integrity-report",
-    "records": 36,
+    "records": 39,
     "passed": true,
     "failure_flags": [],
     "ledger_path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\ledger\\omn_run_ledger_v0_6.jsonl",
