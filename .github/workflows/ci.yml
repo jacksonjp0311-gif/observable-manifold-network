@@ -25,27 +25,50 @@ jobs:
           git status --short
           Get-ChildItem
 
-      - name: Run RCC-N checker
+      - name: Run OMN-SA v0.8.2 validation stack
         shell: pwsh
         run: |
+          $ErrorActionPreference = "Stop"
           $env:PYTHONPATH = "$PWD\src"
-          python scripts/rcc/check_rcc_nexus.py
 
-      - name: Run architecture contract validation
-        shell: pwsh
-        run: |
-          $env:PYTHONPATH = "$PWD\src"
-          python scripts/validation/validate_architecture_contracts.py
+          function Run-Check {
+            param(
+              [Parameter(Mandatory=$true)][string]$Command,
+              [Parameter(ValueFromRemainingArguments=$true)][string[]]$Args
+            )
 
-      - name: Run unit tests
-        shell: pwsh
-        run: |
-          $env:PYTHONPATH = "$PWD\src"
-          python -m unittest discover -s tests
+            & $Command @Args
+            if ($LASTEXITCODE -ne 0) {
+              throw "Command failed with exit code ${LASTEXITCODE}: $Command $($Args -join ' ')"
+            }
+          }
 
-      - name: Run OMN synthetic seed
+          Run-Check python scripts/rcc/check_rcc_nexus_v1_7_profile.py
+          Run-Check python scripts/release/audit_readme_self_organization.py
+          Run-Check python scripts/release/audit_readme_v0_7_lineage.py
+          Run-Check python scripts/release/audit_readme_v0_8_metric_availability.py
+          Run-Check python scripts/release/audit_readme_lineage_policy.py
+          Run-Check python scripts/validation/validate_evidence_drift.py
+          Run-Check python scripts/validation/validate_metric_availability.py
+          Run-Check python scripts/validation/validate_evidence_replay.py
+          Run-Check python scripts/rcc/audit_mini_readmes.py
+          Run-Check python scripts/rcc/generate_rcc_n_metrics.py
+          Run-Check python scripts/validation/validate_topology_ensemble.py
+          Run-Check python scripts/validation/validate_graph_engine.py
+          Run-Check python scripts/validation/validate_modular_runtime.py
+          Run-Check python scripts/validation/validate_architecture_contracts.py
+          Run-Check python scripts/rcc/check_rcc_nexus.py
+          Run-Check python -m unittest discover -s tests
+          Run-Check python -m omn validate
+
+      - name: Detect generated-file drift
         shell: pwsh
         run: |
-          $env:PYTHONPATH = "$PWD\src"
-          python -m omn run --seed synthetic-toy
-          python -m omn validate
+          $Status = git status --short
+          if ($Status) {
+            Write-Host "Generated-file drift detected after validation:"
+            Write-Host $Status
+            throw "Validation generated changes. Run the validation stack locally, commit refreshed reports/outputs, and push again."
+          }
+
+          Write-Host "No generated-file drift detected."

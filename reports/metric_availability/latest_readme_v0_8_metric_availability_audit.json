@@ -1,6 +1,6 @@
 {
   "schema": "OMN-SA-v0.8-readme-metric-availability-audit",
-  "timestamp": "2026-05-19T14:23:19.766219+00:00",
+  "timestamp": "2026-05-19T14:26:08.877673+00:00",
   "passed": true,
   "checks": {
     "current_layer_v08": true,
