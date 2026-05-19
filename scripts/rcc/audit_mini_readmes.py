@@ -66,21 +66,56 @@ NON_CLAIM_BOUNDARY = (
 )
 
 
+def normalize_rel(path: str) -> str:
+    return path.replace("\\", "/")
+
+
 def purpose_for(path: str) -> str:
+    path = normalize_rel(path)
     mapping = {
-        "src/omn/core": "Executable OMN runtime core and modular graph-engine surfaces.",
-        "docs/software_architecture": "Versioned OMN-SA software architecture documents.",
+        "configs": "Runtime and seed configuration surface.",
+        "docs": "Repository documentation, theory, architecture, benchmarks, and governance surface.",
+        "docs/architecture": "Architecture-level repository context and structural contracts.",
+        "docs/architecture_changes": "Versioned architecture-change records.",
+        "docs/benchmarks": "Benchmark and metric reporting surface.",
         "docs/context": "RCC/RCC-N context indexes, validation surfaces, and drift records.",
-        "rcc/nexus": "RCC-N route maps, Echo Location protocol, and AI handoff surface.",
-        "tests": "Implementation-health validation surface.",
-        "outputs": "Generated state, evidence, reports, plots, logs, and ledgers.",
+        "docs/future_architecture": "Forward-looking architecture plans and staged roadmap surfaces.",
+        "docs/injected_theory": "Injected theory records and governed theory-transfer surface.",
+        "docs/injections": "RCC/RCC-N and governance injection records.",
+        "docs/protocols": "Operating protocols, claim gates, and validation procedures.",
+        "docs/public_release": "Public release summaries and publishable context surfaces.",
+        "docs/release_notes": "Versioned release notes.",
+        "docs/software_architecture": "OMN-SA software architecture lineage.",
+        "docs/theory": "Canonical OMN theory and source-anchor documents.",
+        "examples": "Runnable seed examples and usage entry points.",
+        "outputs": "Generated runtime outputs, evidence, reports, logs, and ledgers.",
+        "rcc": "Repository Context Canon and RCC-N support surface.",
+        "rcc/nexus": "RCC-N route maps, Echo Location protocol, and agent handoff surface.",
+        "reports": "Generated reports and validation records.",
+        "reports/architecture": "Architecture validation reports.",
+        "reports/graph_engine": "Graph-engine validation reports.",
+        "reports/modular_runtime": "Modular runtime validation reports.",
         "reports/rcc_nexus": "RCC-N checker and measurement reports.",
+        "schemas": "Schema definitions and validation contracts.",
+        "schemas/omn": "OMN evidence and runtime schemas.",
+        "schemas/rcc_nexus": "RCC-N route-map and context schemas.",
+        "scripts": "Automation, validation, release, and RCC utility scripts.",
+        "scripts/rcc": "RCC-N checker, mini README repair, and metrics scripts.",
+        "scripts/release": "Release and verification scripts.",
+        "scripts/validation": "Validation entry points for architecture and runtime surfaces.",
+        "src": "Python source tree.",
+        "src/omn": "OMN Python package.",
+        "src/omn/core": "Executable OMN runtime core and modular graph-engine surfaces.",
+        "tests": "Implementation-health validation surface.",
+        "visuals": "Public chart and visual evidence surface.",
         "visuals/rcc_nexus": "RCC-N public metric charts.",
+        "visuals/omn_sa": "OMN-SA public metric charts.",
     }
     return mapping.get(path, f"Local context surface for `{path}`.")
 
 
 def shell_for(path: str) -> str:
+    path = normalize_rel(path)
     if path.startswith("src") or path.startswith("schemas"):
         return "inner"
     if path.startswith("scripts") or path.startswith("tests") or path.startswith("configs"):
@@ -93,6 +128,7 @@ def shell_for(path: str) -> str:
 
 
 def meridians_for(path: str) -> str:
+    path = normalize_rel(path)
     meridians = []
     if "docs" in path:
         meridians.append("documentation")
@@ -106,14 +142,18 @@ def meridians_for(path: str) -> str:
         meridians.append("validation")
     if "outputs" in path or "reports" in path or "visuals" in path:
         meridians.append("evidence")
+    if "schema" in path:
+        meridians.append("schema")
+    if "config" in path:
+        meridians.append("configuration")
     if not meridians:
         meridians.append("documentation")
     return ", ".join(sorted(set(meridians)))
 
 
-def write_template(path: Path, rel: str) -> None:
-    content = f"""# {rel}
-
+def local_block(rel: str) -> str:
+    top = normalize_rel(rel).split("/")[0] if rel else "root"
+    return f"""
 ## S — Specification
 
 {purpose_for(rel)}
@@ -124,14 +164,15 @@ Inbound hooks:
 
 - README.md
 - AGENTS.md
+- README_90_SECONDS.md
 - docs/context/repository_context_index.json
 - docs/context/rcc_nexus_index.json
 - rcc/nexus/route_map.json
 
 Outbound hooks:
 
-- Local files in `{rel}`
-- Validation reports when this folder participates in runtime or documentation checks
+- Local files in `{normalize_rel(rel)}`
+- Validation reports when this folder participates in runtime, documentation, release, or RCC checks
 
 ## A — Artifacts
 
@@ -148,6 +189,7 @@ Governed by OMN v1.1, OMN-SA, RCC-N, and the repository non-claim locks.
 - Do not treat navigation as validation.
 - Do not treat documentation as correctness.
 - Do not claim GMN replication without benchmark conditions.
+- Keep evidence and validation surfaces inspectable.
 
 ## E — Examples
 
@@ -165,7 +207,7 @@ Sphere Position:
 
 - Shell: {shell_for(rel)}
 - Meridian(s): {meridians_for(rel)}
-- Sector: {rel.split('/')[0] if rel else 'root'}
+- Sector: {top}
 - Version / TTL: RCC-N-v1.0 / 180 days
 - Last Verified: 2026-05-19
 
@@ -196,11 +238,97 @@ Non-Claim Locks:
 - validation_remains_required
 - rcc_nexus_is_not_ai_understanding
 """
-    path.write_text(content, encoding="utf-8")
 
 
-def audit_or_create() -> Dict[str, object]:
+def ensure_readme(rel: str) -> Dict[str, object]:
+    folder = ROOT / rel
+    readme = folder / "README.md"
+
+    created = False
+    repaired = False
+
+    if not readme.exists():
+        readme.write_text(f"# {rel}\n" + local_block(rel), encoding="utf-8")
+        created = True
+        repaired = True
+    else:
+        text = readme.read_text(encoding="utf-8", errors="ignore")
+        additions = []
+
+        if "## S — Specification" not in text:
+            additions.append(local_block(rel))
+        else:
+            if "## RCC Nexus Echo Location" not in text:
+                additions.append("""
+## RCC Nexus Echo Location
+
+Sphere Position:
+
+- Shell: """ + shell_for(rel) + """
+- Meridian(s): """ + meridians_for(rel) + """
+- Sector: """ + (normalize_rel(rel).split("/")[0] if rel else "root") + """
+- Version / TTL: RCC-N-v1.0 / 180 days
+- Last Verified: 2026-05-19
+
+Local Role:
+
+- """ + purpose_for(rel) + """
+
+Evidence Surface:
+
+- reports/
+- outputs/
+- docs/context/drift/
+
+Validation Surface:
+
+    python scripts/rcc/check_rcc_nexus.py
+    python -m unittest discover -s tests
+
+Claim Boundary:
+
+- """ + NON_CLAIM_BOUNDARY + """
+
+Non-Claim Locks:
+
+- navigation_is_not_validation
+- documentation_is_not_correctness
+- context_reconstruction_is_not_code_quality
+- validation_remains_required
+- rcc_nexus_is_not_ai_understanding
+""")
+            if "Claim Boundary" not in text:
+                additions.append("\n## Claim Boundary\n\n- " + NON_CLAIM_BOUNDARY + "\n")
+            if "Non-Claim Locks" not in text:
+                additions.append("""
+## Non-Claim Locks
+
+- navigation_is_not_validation
+- documentation_is_not_correctness
+- context_reconstruction_is_not_code_quality
+- validation_remains_required
+- rcc_nexus_is_not_ai_understanding
+""")
+
+        if additions:
+            readme.write_text(text.rstrip() + "\n\n" + "\n\n".join(additions).strip() + "\n", encoding="utf-8")
+            repaired = True
+
+    text_after = readme.read_text(encoding="utf-8", errors="ignore")
+    missing = [marker for marker in REQUIRED_MARKERS if marker not in text_after]
+
+    return {
+        "path": str(readme.relative_to(ROOT)),
+        "created": created,
+        "repaired": repaired,
+        "missing": missing,
+        "complete": not missing,
+    }
+
+
+def audit_or_repair() -> Dict[str, object]:
     created: List[str] = []
+    repaired: List[str] = []
     existing: List[str] = []
     incomplete: Dict[str, List[str]] = {}
 
@@ -209,26 +337,25 @@ def audit_or_create() -> Dict[str, object]:
         if not folder.exists():
             continue
 
-        readme = folder / "README.md"
-        if not readme.exists():
-            write_template(readme, rel)
-            created.append(str(readme.relative_to(ROOT)))
+        result = ensure_readme(rel)
+        if result["created"]:
+            created.append(result["path"])
         else:
-            existing.append(str(readme.relative_to(ROOT)))
-
-        text = readme.read_text(encoding="utf-8", errors="ignore")
-        missing = [marker for marker in REQUIRED_MARKERS if marker not in text]
-        if missing:
-            incomplete[str(readme.relative_to(ROOT))] = missing
+            existing.append(result["path"])
+        if result["repaired"] and not result["created"]:
+            repaired.append(result["path"])
+        if not result["complete"]:
+            incomplete[result["path"]] = result["missing"]
 
     total = len(created) + len(existing)
     complete = total - len(incomplete)
     coverage = complete / total if total else 0.0
 
     return {
-        "schema": "RCC-N-v0.5-mini-readme-audit",
+        "schema": "RCC-N-v0.5.1-mini-readme-audit",
         "total_major_dirs_with_readmes": total,
         "created": created,
+        "repaired": repaired,
         "existing": existing,
         "incomplete": incomplete,
         "complete_count": complete,
@@ -239,7 +366,7 @@ def audit_or_create() -> Dict[str, object]:
 
 
 def main() -> int:
-    report = audit_or_create()
+    report = audit_or_repair()
 
     out_dir = ROOT / "reports" / "mini_readmes"
     out_dir.mkdir(parents=True, exist_ok=True)
@@ -264,10 +391,18 @@ def main() -> int:
     for item in report["created"]:
         md_lines.append(f"- `{item}`")
 
+    md_lines.extend(["", "## Repaired", ""])
+
+    for item in report["repaired"]:
+        md_lines.append(f"- `{item}`")
+
     md_lines.extend(["", "## Incomplete", ""])
 
-    for item, missing in report["incomplete"].items():
-        md_lines.append(f"- `{item}` missing: {', '.join(missing)}")
+    if report["incomplete"]:
+        for item, missing in report["incomplete"].items():
+            md_lines.append(f"- `{item}` missing: {', '.join(missing)}")
+    else:
+        md_lines.append("- None")
 
     md_lines.extend([
         "",

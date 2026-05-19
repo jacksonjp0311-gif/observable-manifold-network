@@ -910,3 +910,24 @@ v0.5 law:
 Boundary:
 
 RCC-N metrics measure repository orientation, routing, context coverage, validation linkage, mini README coverage, and non-claim discipline. They do not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.
+
+---
+
+## OMN-SA v0.5.1 Mini README Coverage Repair
+
+v0.5.0 added RCC-N effectiveness measurement and revealed a real local-context weakness:
+
+    mini README coverage: 0.297
+    complete mini READMEs: 11 / 37
+
+v0.5.1 repairs this by upgrading the mini README audit from create-only behavior to repair behavior. Existing README files now receive missing RCC-N local context sections instead of being left incomplete.
+
+Repair law:
+
+    Measurement exposed drift.
+    Repair filled the local context surface.
+    Recalibration updates the public metrics.
+
+Boundary:
+
+Mini README coverage improves repository orientation and AI-agent navigation. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

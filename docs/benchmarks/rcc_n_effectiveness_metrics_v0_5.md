@@ -2,9 +2,9 @@
 
 ## Summary
 
-- RCC-N effectiveness score: 0.888
+- RCC-N effectiveness score: 1.000
 - Regular README structural baseline: 0.107
-- Lift over baseline: 0.781
+- Lift over baseline: 0.893
 
 ## Metrics
 
@@ -15,7 +15,7 @@
 | evidence_surface_coverage | 1.000 |
 | readme_marker_coverage | 1.000 |
 | route_map_marker_coverage | 1.000 |
-| mini_readme_coverage | 0.297 |
+| mini_readme_coverage | 1.000 |
 | nci_self | 1.000 |
 
 ## Boundary
