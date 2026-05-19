@@ -261,3 +261,16 @@ Boundary: v0.7.3 repairs README lineage continuity. It does not change runtime b
 | Tests | `tests/test_omn_sa_v0_8_metric_availability.py` | active | Validates runtime evidence schema and metric availability. |
 
 Boundary: v0.8 makes residual metrics available for comparison. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+## OMN-SA v0.8.1 Validation Compatibility and Lineage Audit Repair
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_8_1_validation_compatibility_repair.md` | active | Repairs v0.8 validation compatibility and lineage audits. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_8_1_validation_compatibility_repair_change.md` | active | Records post-v0.8 validation repair. |
+| Release Note | `docs/release_notes/v0_8_1_validation_compatibility_repair.md` | active | Records v0.8.1 checkpoint. |
+| README Self-Organization Audit | `scripts/release/audit_readme_self_organization.py` | active | Version-aware self-organization audit. |
+| v0.7 Lineage Audit | `scripts/release/audit_readme_v0_7_lineage.py` | active | Historical lineage audit decoupled from old current test count. |
+| Runtime Test | `tests/test_runtime.py` | active | Accepts v0.8 evidence schema and checks canonical metrics. |
+
+Boundary: v0.8.1 repairs validation compatibility. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

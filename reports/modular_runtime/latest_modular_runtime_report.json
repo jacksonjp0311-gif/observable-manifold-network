@@ -1,6 +1,6 @@
 {
   "schema": "OMN-SA-v0.3-modular-runtime-envelope",
-  "run_id": "omn_synthetic_toy_20260519_133845",
+  "run_id": "omn_synthetic_toy_20260519_134213",
   "seed": "synthetic-toy",
   "legacy_runtime_used": true,
   "modular_layer": {

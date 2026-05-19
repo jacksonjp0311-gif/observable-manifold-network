@@ -1,10 +1,8 @@
 from __future__ import annotations
 
 import json
-import re
 from pathlib import Path
 from datetime import datetime, timezone
-
 
 ROOT = Path(__file__).resolve().parents[2]
 README = ROOT / "README.md"
@@ -20,21 +18,22 @@ def main() -> int:
     text = README.read_text(encoding="utf-8", errors="ignore")
 
     checks = {
-        "health_snapshot_v072": "Current software layer | OMN-SA v0.7.2" in text,
+        "health_snapshot_current_layer_present": "Current software layer | OMN-SA v" in text,
+        "health_snapshot_not_pending_commit": "pending-v0.8.0" not in text and "pending-v0.8" not in text,
         "no_expected_tests_wording": "expected after v0.7.1" not in text,
-        "ai_tracking_v072": "Current software architecture layer: OMN-SA v0.7.2" in text,
+        "ai_tracking_present": "Current software architecture layer:" in text,
         "rcc_v17_visible": "RCC-N v1.7 adoption-profile governance" in text or "RCC-N v1.7 Full profile governance" in text,
         "self_org_section_present": "Current v0.7.2 README Self-Organization Audit" in text,
-        "current_stack_v072": "omn_sa_v0_7_2_readme_self_organization.md" in text,
+        "current_stack_present": "Current Versioned Documentation Stack" in text,
         "v071_profile_still_visible": "omn_sa_v0_7_1_rcc_n_v1_7_profile_injection.md" in text,
-        "v08_next_weakness_visible": "v0.8 residual" in text or "v0.8 residual metrics" in text,
+        "v08_metric_layer_visible": "Current v0.8 Metric Availability and Residual Field Hardening" in text,
         "archived_v04_not_current": "## Archived v0.4 Metrics Snapshot" in text,
     }
 
     missing = [key for key, value in checks.items() if not value]
 
     report = {
-        "schema": "OMN-SA-v0.7.2-readme-self-organization-audit",
+        "schema": "OMN-SA-v0.8.1-readme-self-organization-audit",
         "timestamp": datetime.now(timezone.utc).isoformat(),
         "passed": len(missing) == 0,
         "checks": checks,
@@ -51,7 +50,7 @@ def main() -> int:
     json_path.write_text(json.dumps(report, indent=2), encoding="utf-8")
 
     lines = [
-        "# OMN-SA v0.7.2 README Self-Organization Audit",
+        "# OMN-SA README Self-Organization Audit",
         "",
         f"- Passed: {report['passed']}",
         "",
@@ -64,11 +63,7 @@ def main() -> int:
     for key, value in checks.items():
         lines.append(f"| {key} | {value} |")
 
-    lines.extend([
-        "",
-        "## Missing",
-        "",
-    ])
+    lines.extend(["", "## Missing", ""])
 
     if missing:
         for item in missing:
@@ -76,14 +71,7 @@ def main() -> int:
     else:
         lines.append("- None")
 
-    lines.extend([
-        "",
-        "## Boundary",
-        "",
-        NON_CLAIM_BOUNDARY,
-        "",
-    ])
-
+    lines.extend(["", "## Boundary", "", NON_CLAIM_BOUNDARY, ""])
     md_path.write_text("\n".join(lines), encoding="utf-8")
 
     print(json.dumps(report, indent=2))

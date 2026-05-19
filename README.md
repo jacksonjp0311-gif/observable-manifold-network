@@ -60,8 +60,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | RCC-N effectiveness score | 0.9822222222 |
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.8752222222 |
-| Current tag | v0.8.0-omn-sa-metric-availability-residual-hardening |
-| Current main commit | faef7dc |
+| Current tag | pending-v0.8.0 |
+| Current main commit | pending-v0.8.0 |
 
 ### What this is not
 
@@ -654,7 +654,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.7.2.
+- Current software architecture layer: OMN-SA v0.8.1.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -1202,3 +1202,6 @@ Boundary:
 Evidence drift comparison measures run-to-run continuity, artifact replay status, claim-status stability, artifact-count stability, load integrity, and metric availability. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
 
 Current architecture chain extension: OMN-SA v0.8 metric availability and residual field hardening.
+
+
+Current architecture chain extension: OMN-SA v0.8.1 validation compatibility repair.

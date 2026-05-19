@@ -3,29 +3,13 @@
   "passed": true,
   "report": {
     "schema": "OMN-SA-v0.7-evidence-drift-report",
-    "evidence_package_count": 126,
+    "evidence_package_count": 141,
     "compared_count": 8,
     "records": [
       {
-        "run_id": "omn_synthetic_toy_20260519_133843",
-        "seed": "synthetic-toy",
-        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_133843_evidence_package.json",
-        "computed_status": "runtime-validated",
-        "benchmark_class": "S0",
-        "overpromotion_blocked": true,
-        "declared_artifact_count": 12,
-        "metrics": {
-          "rmse": 0.2514420782621668,
-          "mae": 0.2001435984844158,
-          "delta_phi_residual": 0.2001435984844158,
-          "omega_residual_weight": 0.8332336240953464
-        },
-        "load_error": null
-      },
-      {
-        "run_id": "omn_artifact_graph_20260519_133843",
+        "run_id": "omn_artifact_graph_20260519_133850",
         "seed": "artifact-graph",
-        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_artifact_graph_20260519_133843_evidence_package.json",
+        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_artifact_graph_20260519_133850_evidence_package.json",
         "computed_status": "runtime-validated",
         "benchmark_class": "S3",
         "overpromotion_blocked": true,
@@ -39,9 +23,25 @@
         "load_error": null
       },
       {
-        "run_id": "omn_lorenz_20260519_133845",
+        "run_id": "omn_synthetic_toy_20260519_134212",
+        "seed": "synthetic-toy",
+        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_134212_evidence_package.json",
+        "computed_status": "runtime-validated",
+        "benchmark_class": "S0",
+        "overpromotion_blocked": true,
+        "declared_artifact_count": 12,
+        "metrics": {
+          "rmse": 0.2514420782621668,
+          "mae": 0.2001435984844158,
+          "delta_phi_residual": 0.2001435984844158,
+          "omega_residual_weight": 0.8332336240953464
+        },
+        "load_error": null
+      },
+      {
+        "run_id": "omn_lorenz_20260519_134213",
         "seed": "lorenz",
-        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_lorenz_20260519_133845_evidence_package.json",
+        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_lorenz_20260519_134213_evidence_package.json",
         "computed_status": "runtime-validated",
         "benchmark_class": "S1",
         "overpromotion_blocked": true,
@@ -55,9 +55,9 @@
         "load_error": null
       },
       {
-        "run_id": "omn_artifact_graph_20260519_133845",
+        "run_id": "omn_artifact_graph_20260519_134213",
         "seed": "artifact-graph",
-        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_artifact_graph_20260519_133845_evidence_package.json",
+        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_artifact_graph_20260519_134213_evidence_package.json",
         "computed_status": "runtime-validated",
         "benchmark_class": "S3",
         "overpromotion_blocked": true,
@@ -71,9 +71,9 @@
         "load_error": null
       },
       {
-        "run_id": "omn_synthetic_toy_20260519_133845",
+        "run_id": "omn_synthetic_toy_20260519_134213",
         "seed": "synthetic-toy",
-        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_133845_evidence_package.json",
+        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_134213_evidence_package.json",
         "computed_status": "runtime-validated",
         "benchmark_class": "S0",
         "overpromotion_blocked": true,
@@ -87,9 +87,9 @@
         "load_error": null
       },
       {
-        "run_id": "omn_synthetic_toy_20260519_133846",
+        "run_id": "omn_synthetic_toy_20260519_134214",
         "seed": "synthetic-toy",
-        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_133846_evidence_package.json",
+        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_134214_evidence_package.json",
         "computed_status": "runtime-validated",
         "benchmark_class": "S0",
         "overpromotion_blocked": true,
@@ -103,9 +103,9 @@
         "load_error": null
       },
       {
-        "run_id": "omn_synthetic_toy_20260519_133847",
+        "run_id": "omn_synthetic_toy_20260519_134215",
         "seed": "synthetic-toy",
-        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_133847_evidence_package.json",
+        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_134215_evidence_package.json",
         "computed_status": "runtime-validated",
         "benchmark_class": "S0",
         "overpromotion_blocked": true,
@@ -119,9 +119,9 @@
         "load_error": null
       },
       {
-        "run_id": "omn_artifact_graph_20260519_133847",
+        "run_id": "omn_artifact_graph_20260519_134215",
         "seed": "artifact-graph",
-        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_artifact_graph_20260519_133847_evidence_package.json",
+        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_artifact_graph_20260519_134215_evidence_package.json",
         "computed_status": "runtime-validated",
         "benchmark_class": "S3",
         "overpromotion_blocked": true,

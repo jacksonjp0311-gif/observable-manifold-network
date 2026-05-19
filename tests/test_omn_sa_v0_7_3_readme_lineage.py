@@ -7,6 +7,7 @@ from pathlib import Path
 ROOT = Path(__file__).resolve().parents[1]
 README = ROOT / "README.md"
 
+
 class TestOMNSAV073ReadmeLineage(unittest.TestCase):
     def test_archived_v07_section_present(self):
         text = README.read_text(encoding="utf-8", errors="ignore")
@@ -30,6 +31,7 @@ class TestOMNSAV073ReadmeLineage(unittest.TestCase):
 
         report = json.loads((ROOT / "reports" / "self_organization" / "latest_readme_v0_7_lineage_audit.json").read_text(encoding="utf-8"))
         self.assertTrue(report["passed"], report)
+
 
 if __name__ == "__main__":
     unittest.main()

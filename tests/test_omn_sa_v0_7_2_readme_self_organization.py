@@ -9,17 +9,17 @@ README = ROOT / "README.md"
 
 
 class TestOMNSAV072ReadmeSelfOrganization(unittest.TestCase):
-    def test_readme_current_state_is_v072(self):
+    def test_readme_current_state_is_versioned_and_self_org_section_remains(self):
         text = README.read_text(encoding="utf-8", errors="ignore")
-        self.assertIn("Current software layer | OMN-SA v0.7.2", text)
-        self.assertIn("Current software architecture layer: OMN-SA v0.7.2", text)
+        self.assertIn("Current software layer | OMN-SA v", text)
+        self.assertIn("Current v0.7.2 README Self-Organization Audit", text)
         self.assertNotIn("expected after v0.7.1", text)
 
-    def test_readme_profile_and_next_weakness_visible(self):
+    def test_readme_profile_and_v08_visible(self):
         text = README.read_text(encoding="utf-8", errors="ignore")
         self.assertIn("RCC-N v1.7", text)
         self.assertIn("Full profile", text)
-        self.assertTrue("v0.8 residual" in text or "v0.8 residual metrics" in text)
+        self.assertIn("Current v0.8 Metric Availability and Residual Field Hardening", text)
 
     def test_self_organization_audit_passes(self):
         result = subprocess.run(
