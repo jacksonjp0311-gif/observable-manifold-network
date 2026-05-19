@@ -103,3 +103,15 @@ Boundary rule: injection records are not architecture docs, architecture changes
 | Architecture Test | `tests/test_omn_sa_v0_2_architecture.py` | active | Unit tests for v0.2 architecture contract. |
 
 Boundary: OMN-SA v0.2 is software architecture hardening. It does not update OMN theory, prove code correctness, prove empirical validation, or replicate GMN.
+
+## OMN-SA v0.1 Source Anchor Insertion
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Source Anchor | `docs/theory/omn_sa_v0_1_source_anchor.md` | active | Preserves original OMN-SA v0.1 software-architecture lineage. |
+| Injection Record | `docs/injections/omn_sa_v0_1_theory_insertion.md` | active | Records Anchor -> Inject -> Retract -> Seal for v0.1 source insertion. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_1_theory_insertion_change.md` | active | Documents lineage-preservation architecture change. |
+| Release Note | `docs/release_notes/v0_2_1_theory_insertion.md` | active | Records v0.2.1 theory insertion patch. |
+| Validation Test | `tests/test_theory_insertion_docs.py` | active | Verifies insertion docs, locks, and registry references. |
+
+Boundary: this insertion preserves lineage. It does not replace OMN-SA v0.2, update OMN theory, validate GMN, or prove runtime correctness.

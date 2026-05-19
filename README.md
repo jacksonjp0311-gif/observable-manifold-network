@@ -740,3 +740,27 @@ The repository now includes the next software architecture iteration:
 OMN-SA v0.2 is engineering hardening.
 
 It does not update OMN theory, prove empirical validation, prove code correctness, prove causality, prove mechanism, prove AI understanding, prove production readiness, or replicate GMN.
+
+---
+
+## OMN-SA v0.1 Source Anchor
+
+The original OMN-SA v0.1 software-architecture theory is now preserved inside the repository docs:
+
+| Artifact | Path | Purpose |
+|---|---|---|
+| v0.1 Source Anchor | `docs/theory/omn_sa_v0_1_source_anchor.md` | Preserves the original minimal runtime architecture invariant and locks. |
+| Insertion Record | `docs/injections/omn_sa_v0_1_theory_insertion.md` | Records the Anchor -> Inject -> Retract -> Seal insertion process. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_1_theory_insertion_change.md` | Records the documentation architecture change. |
+| Release Note | `docs/release_notes/v0_2_1_theory_insertion.md` | Records the v0.2.1 lineage-preservation patch. |
+
+Current separation:
+
+- OMN-SA v0.1 = preserved source anchor.
+- OMN-SA v0.2 = current software architecture.
+- OMN v1.1 = current theory anchor.
+- Runtime commits = implementation evidence.
+
+Boundary:
+
+The v0.1 source anchor improves lineage traceability. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
