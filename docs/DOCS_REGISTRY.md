@@ -132,3 +132,20 @@ Boundary: this insertion preserves lineage. It does not replace OMN-SA v0.2, upd
 | Tests | `tests/test_omn_sa_v0_3_modular_core.py` | active | Tests v0.3 modular core behavior. |
 
 Boundary: v0.3 wraps and validates the current runtime before deeper refactor. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+## OMN-SA v0.4 Graph Engine
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_4_software_architecture.md` | active | Defines graph engine extraction and evidence-preserving runtime split. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_4_graph_engine_change.md` | active | Records v0.4 graph-engine architecture change. |
+| Release Note | `docs/release_notes/v0_4_0_graph_engine.md` | active | Records v0.4 graph-engine release. |
+| Observables Module | `src/omn/core/observables.py` | active | Builds and validates observable series. |
+| Interactions Module | `src/omn/core/interactions.py` | active | Computes association matrix and typed edges. |
+| Graph Engine Module | `src/omn/core/graph_engine.py` | active | Builds modular graph engine state and parity summary. |
+| Residuals Module | `src/omn/core/residuals.py` | active | Computes RMSE, MAE, DeltaPhi, and Omega. |
+| Evidence IO Module | `src/omn/core/evidence_io.py` | active | Loads and writes evidence/report JSON. |
+| Graph Validator | `scripts/validation/validate_graph_engine.py` | active | Validates modular graph engine and parity surface. |
+| Tests | `tests/test_omn_sa_v0_4_graph_engine.py` | active | Tests v0.4 graph engine behavior. |
+
+Boundary: v0.4 begins graph-engine extraction. It does not prove causality, mechanism, empirical validation, production readiness, AI understanding, or GMN replication.

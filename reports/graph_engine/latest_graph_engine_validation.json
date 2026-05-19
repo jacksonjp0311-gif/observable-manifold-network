@@ -1,0 +1,180 @@
+{
+  "schema": "OMN-SA-v0.4-graph-engine-validation-report",
+  "passed": true,
+  "graph_state": {
+    "schema": "OMN-SA-v0.4-graph-engine-state",
+    "run_id": "omn_sa_v0_4_graph_engine_validation",
+    "observables": [
+      {
+        "name": "x",
+        "values": [
+          0.0,
+          1.0,
+          2.0,
+          3.0,
+          4.0
+        ],
+        "observable_type": "synthetic",
+        "claim_boundary": "Observable series does not prove mechanism."
+      },
+      {
+        "name": "y",
+        "values": [
+          0.0,
+          2.0,
+          4.0,
+          6.0,
+          8.0
+        ],
+        "observable_type": "synthetic",
+        "claim_boundary": "Observable series does not prove mechanism."
+      },
+      {
+        "name": "z",
+        "values": [
+          4.0,
+          3.0,
+          2.0,
+          1.0,
+          0.0
+        ],
+        "observable_type": "synthetic",
+        "claim_boundary": "Observable series does not prove mechanism."
+      }
+    ],
+    "observable_validation": {
+      "schema": "OMN-SA-v0.4-observable-validation",
+      "passed": true,
+      "count": 3,
+      "failure_flags": [],
+      "boundary": "Observable validation checks declared series structure, not truth or mechanism."
+    },
+    "interaction_matrix": {
+      "schema": "OMN-SA-v0.4-interaction-matrix",
+      "method": "correlation",
+      "names": [
+        "x",
+        "y",
+        "z"
+      ],
+      "matrix": [
+        [
+          1.0,
+          0.9999999999999998,
+          -0.9999999999999998
+        ],
+        [
+          0.9999999999999998,
+          1.0,
+          -0.9999999999999998
+        ],
+        [
+          -0.9999999999999998,
+          -0.9999999999999998,
+          1.0
+        ]
+      ],
+      "boundary": "Interaction weights are association scores. They do not prove causality or mechanism."
+    },
+    "graph_contract": {
+      "schema": "OMN-SA-v0.3-graph-contract-envelope",
+      "run_id": "omn_sa_v0_4_graph_engine_validation",
+      "nodes": [
+        {
+          "node_id": "x",
+          "observable_name": "x",
+          "observable_type": "synthetic",
+          "claim_boundary": "Observable series does not prove mechanism."
+        },
+        {
+          "node_id": "y",
+          "observable_name": "y",
+          "observable_type": "synthetic",
+          "claim_boundary": "Observable series does not prove mechanism."
+        },
+        {
+          "node_id": "z",
+          "observable_name": "z",
+          "observable_type": "synthetic",
+          "claim_boundary": "Observable series does not prove mechanism."
+        }
+      ],
+      "edges": [
+        {
+          "source": "x",
+          "target": "y",
+          "edge_type": "correlation",
+          "weight": 0.9999999999999998,
+          "direction": "inferred",
+          "confidence": 0.9999999999999998,
+          "status": "computed",
+          "claim_boundary": "Edge confidence is not causal certainty."
+        },
+        {
+          "source": "x",
+          "target": "z",
+          "edge_type": "correlation",
+          "weight": -0.9999999999999998,
+          "direction": "inferred",
+          "confidence": 0.9999999999999998,
+          "status": "computed",
+          "claim_boundary": "Edge confidence is not causal certainty."
+        },
+        {
+          "source": "y",
+          "target": "x",
+          "edge_type": "correlation",
+          "weight": 0.9999999999999998,
+          "direction": "inferred",
+          "confidence": 0.9999999999999998,
+          "status": "computed",
+          "claim_boundary": "Edge confidence is not causal certainty."
+        },
+        {
+          "source": "y",
+          "target": "z",
+          "edge_type": "correlation",
+          "weight": -0.9999999999999998,
+          "direction": "inferred",
+          "confidence": 0.9999999999999998,
+          "status": "computed",
+          "claim_boundary": "Edge confidence is not causal certainty."
+        },
+        {
+          "source": "z",
+          "target": "x",
+          "edge_type": "correlation",
+          "weight": -0.9999999999999998,
+          "direction": "inferred",
+          "confidence": 0.9999999999999998,
+          "status": "computed",
+          "claim_boundary": "Edge confidence is not causal certainty."
+        },
+        {
+          "source": "z",
+          "target": "y",
+          "edge_type": "correlation",
+          "weight": -0.9999999999999998,
+          "direction": "inferred",
+          "confidence": 0.9999999999999998,
+          "status": "computed",
+          "claim_boundary": "Edge confidence is not causal certainty."
+        }
+      ],
+      "valid": true,
+      "failure_flags": []
+    },
+    "edge_count": 6,
+    "boundary": "Graph engine state is an explainability scaffold. It does not prove causality, mechanism, empirical validation, or GMN replication."
+  },
+  "parity": {
+    "schema": "OMN-SA-v0.4-graph-engine-parity",
+    "legacy_has_graph_surface": true,
+    "modular_graph_contract_valid": true,
+    "edge_count": 6,
+    "passed": true,
+    "boundary": "Parity summary checks preservation of graph-contract surfaces, not scientific validity."
+  },
+  "legacy_run_id": "omn_synthetic_toy_20260519_123131",
+  "non_claim_boundary": "Graph engine validation checks modular graph-contract extraction and parity surfaces. It does not prove causality, mechanism, empirical validation, production readiness, AI understanding, or GMN replication."
+}

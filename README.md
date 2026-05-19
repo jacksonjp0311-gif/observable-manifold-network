@@ -793,3 +793,31 @@ v0.3 law:
 Boundary:
 
 OMN-SA v0.3 is modularization-safe architecture. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+---
+
+## OMN-SA v0.4 Graph Engine
+
+The repository now begins the evidence-preserving graph-engine split.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.4 architecture | `docs/software_architecture/omn_sa_v0_4_software_architecture.md` | Defines graph engine extraction and evidence-preserving runtime split. |
+| Observables | `src/omn/core/observables.py` | Builds and validates observable series. |
+| Interactions | `src/omn/core/interactions.py` | Computes association matrix and typed edges. |
+| Graph Engine | `src/omn/core/graph_engine.py` | Builds graph engine state and graph contract. |
+| Residuals | `src/omn/core/residuals.py` | Computes RMSE, MAE, DeltaPhi, and Omega. |
+| Evidence IO | `src/omn/core/evidence_io.py` | Loads and writes evidence/report JSON. |
+| Validator | `scripts/validation/validate_graph_engine.py` | Validates graph engine and parity surface. |
+
+v0.4 law:
+
+    No split without parity.
+    No parity without evidence.
+    No evidence without validation.
+
+Boundary:
+
+Graph engine extraction improves runtime structure. It does not prove causality, mechanism, empirical validation, production readiness, AI understanding, or GMN replication.
