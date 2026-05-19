@@ -55,8 +55,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | RCC-N effectiveness score | 1.0 |
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.893 |
-| Current tag | pending-v0.7.0 |
-| Current main commit | pending-v0.7.0 |
+| Current tag | v0.7.0-omn-sa-evidence-drift-dashboard |
+| Current main commit | 31f039a |
 
 ### What this is not
 
