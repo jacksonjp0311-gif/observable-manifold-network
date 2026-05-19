@@ -1,6 +1,6 @@
 {
   "schema": "OMN-SA-v0.8.1-readme-self-organization-audit",
-  "timestamp": "2026-05-19T14:26:07.723000+00:00",
+  "timestamp": "2026-05-19T14:31:11.367378+00:00",
   "passed": true,
   "checks": {
     "health_snapshot_current_layer_present": true,
