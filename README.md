@@ -46,7 +46,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Ledger integrity | passed |
 | Declared artifacts replayed | 12 / 12 |
 | Missing replay artifacts | 0 |
-| Current tests | 39 OK expected after v0.7.1 |
+| Current tests | 41 OK expected after v0.7.1 |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N checker | passed |
@@ -55,8 +55,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | RCC-N effectiveness score | 1.0 |
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.893 |
-| Current tag | pending-v0.7.1 |
-| Current main commit | pending-v0.7.1 |
+| Current tag | v0.7.1-omn-sa-rcc-n-v1-7-profile-injection |
+| Current main commit | db4526a |
 
 ### What this is not
 
