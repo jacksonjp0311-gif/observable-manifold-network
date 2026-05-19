@@ -149,3 +149,13 @@ Boundary: v0.3 wraps and validates the current runtime before deeper refactor. I
 | Tests | `tests/test_omn_sa_v0_4_graph_engine.py` | active | Tests v0.4 graph engine behavior. |
 
 Boundary: v0.4 begins graph-engine extraction. It does not prove causality, mechanism, empirical validation, production readiness, AI understanding, or GMN replication.
+
+## OMN-SA v0.4 Metrics and README Chart
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Metrics Snapshot | `docs/benchmarks/omn_sa_v0_4_metrics.md` | active | Records v0.4 validation metrics and boundaries. |
+| README Chart | `visuals/omn_sa/omn_sa_v0_4_metrics.svg` | active | Visual summary of v0.4 validation status. |
+| README Update | `README.md` | active | Current main README now reflects v0.4 metrics, graph engine, and tag. |
+
+Boundary: these metrics summarize local validation and repository orientation. They do not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

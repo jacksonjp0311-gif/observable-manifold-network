@@ -1,0 +1,59 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="980" height="560" viewBox="0 0 980 560" role="img" aria-labelledby="title desc">
+  <title id="title">OMN-SA v0.4 Metrics Snapshot</title>
+  <desc id="desc">Validated OMN-SA v0.4 graph engine metrics compared with earlier checkpoints.</desc>
+  <rect width="980" height="560" rx="28" fill="#0f172a"/>
+  <text x="48" y="58" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="30" font-weight="700">OMN-SA v0.4 Graph Engine Metrics</text>
+  <text x="48" y="90" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="15">Graph engine extraction + evidence-preserving parity validation</text>
+
+  <g transform="translate(48,130)">
+    <rect x="0" y="0" width="270" height="120" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="22" y="34" fill="#93c5fd" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Validation Stack</text>
+    <text x="22" y="68" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">5 / 5</text>
+    <text x="22" y="96" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="13">graph, modular, architecture, RCC-N, evidence</text>
+
+    <rect x="310" y="0" width="270" height="120" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="332" y="34" fill="#86efac" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">Unit Tests</text>
+    <text x="332" y="68" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">26 passing</text>
+    <text x="332" y="96" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="13">implementation-health surface</text>
+
+    <rect x="620" y="0" width="270" height="120" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="642" y="34" fill="#fcd34d" font-family="Segoe UI, Arial, sans-serif" font-size="15" font-weight="700">RCC-N</text>
+    <text x="642" y="68" fill="#f8fafc" font-family="Segoe UI, Arial, sans-serif" font-size="32" font-weight="700">NCI 1.0</text>
+    <text x="642" y="96" fill="#cbd5e1" font-family="Segoe UI, Arial, sans-serif" font-size="13">navigation integrity, not code correctness</text>
+  </g>
+
+  <g transform="translate(70,310)" font-family="Segoe UI, Arial, sans-serif">
+    <text x="0" y="-28" fill="#f8fafc" font-size="18" font-weight="700">Checkpoint Growth</text>
+
+    <text x="0" y="22" fill="#cbd5e1" font-size="13">v0.2</text>
+    <rect x="80" y="4" width="260" height="24" rx="8" fill="#1e293b"/>
+    <rect x="80" y="4" width="130" height="24" rx="8" fill="#60a5fa"/>
+    <text x="355" y="22" fill="#cbd5e1" font-size="13">contract validation</text>
+
+    <text x="0" y="72" fill="#cbd5e1" font-size="13">v0.3</text>
+    <rect x="80" y="54" width="260" height="24" rx="8" fill="#1e293b"/>
+    <rect x="80" y="54" width="195" height="24" rx="8" fill="#34d399"/>
+    <text x="355" y="72" fill="#cbd5e1" font-size="13">modular wrapper</text>
+
+    <text x="0" y="122" fill="#cbd5e1" font-size="13">v0.4</text>
+    <rect x="80" y="104" width="260" height="24" rx="8" fill="#1e293b"/>
+    <rect x="80" y="104" width="260" height="24" rx="8" fill="#fbbf24"/>
+    <text x="355" y="122" fill="#cbd5e1" font-size="13">graph engine extraction</text>
+
+    <line x1="580" y1="10" x2="850" y2="10" stroke="#475569" stroke-width="2"/>
+    <circle cx="610" cy="10" r="10" fill="#60a5fa"/>
+    <circle cx="720" cy="10" r="10" fill="#34d399"/>
+    <circle cx="830" cy="10" r="10" fill="#fbbf24"/>
+    <text x="580" y="45" fill="#cbd5e1" font-size="13">v0.2 contracts</text>
+    <text x="690" y="45" fill="#cbd5e1" font-size="13">v0.3 wrapper</text>
+    <text x="795" y="45" fill="#cbd5e1" font-size="13">v0.4 graph</text>
+
+    <text x="580" y="96" fill="#f8fafc" font-size="16" font-weight="700">v0.4 Law</text>
+    <text x="580" y="124" fill="#cbd5e1" font-size="14">No split without parity.</text>
+    <text x="580" y="146" fill="#cbd5e1" font-size="14">No parity without evidence.</text>
+    <text x="580" y="168" fill="#cbd5e1" font-size="14">No evidence without validation.</text>
+  </g>
+
+  <rect x="48" y="500" width="884" height="1" fill="#334155"/>
+  <text x="48" y="528" fill="#94a3b8" font-family="Segoe UI, Arial, sans-serif" font-size="13">Boundary: metrics show local validation and repository orientation discipline. They do not prove causality, mechanism, empirical validation, AI understanding, production readiness, or GMN replication.</text>
+</svg>

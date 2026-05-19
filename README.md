@@ -40,7 +40,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Runtime status | minimal local scaffold |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
-| Current tests | 13 passing |
+| Current tests | 26 passing |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N mode | self-reported repository navigation shell |
@@ -211,7 +211,7 @@ The current hardening layer includes:
 | `docs/injections/` | Stores RCC/RCC-N injection records. | Records governance additions as explicit injections. |
 | `rcc/nexus/` | Stores RCC-N protocol, route maps, task matrix, Echo template, and handoff contract. | Makes the repo agent-navigable. |
 | `scripts/rcc/` | Stores RCC-N checker and future repair scripts. | Enforces repository-context integrity. |
-| `src/omn/core/` | Stores the executable runtime implementation. | Contains actual OMN v0.1 behavior. |
+| `src/omn/core/` | Stores the executable runtime implementation. | Contains current OMN runtime and extracted graph-engine modules. |
 | `src/omn/schemas/` | Stores state and evidence schemas. | Supports evidence package validation. |
 | `examples/` | Stores seed execution examples. | Gives humans a simple entry path. |
 | `tests/` | Stores implementation-health tests. | Catches local scaffold regressions. |
@@ -468,7 +468,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.2.
+- Current software architecture layer: OMN-SA v0.4.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -641,7 +641,7 @@ It does not prove code correctness, empirical validation, patch safety, causalit
 
 ---
 
-## Current v0.2 Validation Status
+## Archived v0.2 Validation Status
 
 Current clean checkpoint:
 
@@ -653,8 +653,8 @@ Current clean checkpoint:
 | Unit tests | 13 passing |
 | Runtime seed | synthetic-toy runtime-validated |
 | Evidence validation | valid |
-| Current main commit | 542df92 |
-| Intended tag | v0.2.0-omn-sa-contract-validation |
+| Current main commit | 08c781e |
+| Current tag | v0.4.0-omn-sa-graph-engine |
 
 Validation commands:
 
@@ -667,6 +667,65 @@ Validation commands:
 Boundary:
 
 Passing this validation surface does not prove code correctness, production readiness, empirical validation, causality, mechanism, AI understanding, or GMN replication.
+
+
+---
+
+## Current v0.4 Metrics Snapshot
+
+![OMN-SA v0.4 Metrics](visuals/omn_sa/omn_sa_v0_4_metrics.svg)
+
+Current clean checkpoint:
+
+| Surface | Status |
+|---|---:|
+| Graph engine validation | passing |
+| Modular runtime validation | passing |
+| Architecture contract validation | passing |
+| RCC-N checker | passing |
+| NCI self | 1.0 |
+| Unit tests | 26 passing |
+| Runtime seed | synthetic-toy runtime-validated |
+| Evidence validation | valid |
+| Graph observables | 3 |
+| Graph edges | 6 |
+| Graph parity | passed |
+| Current main commit | 08c781e |
+| Current tag | v0.4.0-omn-sa-graph-engine |
+
+v0.4 law:
+
+    No split without parity.
+    No parity without evidence.
+    No evidence without validation.
+
+v0.4 added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.4 architecture | `docs/software_architecture/omn_sa_v0_4_software_architecture.md` | Graph engine extraction and evidence-preserving runtime split. |
+| Metrics report | `docs/benchmarks/omn_sa_v0_4_metrics.md` | Current v0.4 validation metrics. |
+| Metrics chart | `visuals/omn_sa/omn_sa_v0_4_metrics.svg` | Visual README summary of current validation state. |
+| Observables | `src/omn/core/observables.py` | Builds and validates observable series. |
+| Interactions | `src/omn/core/interactions.py` | Computes association matrix and typed edges. |
+| Graph engine | `src/omn/core/graph_engine.py` | Builds graph engine state and graph contract. |
+| Residuals | `src/omn/core/residuals.py` | Computes RMSE, MAE, DeltaPhi, and Omega. |
+| Evidence IO | `src/omn/core/evidence_io.py` | Loads and writes evidence/report JSON. |
+| Graph validator | `scripts/validation/validate_graph_engine.py` | Validates graph engine and parity surface. |
+
+Validation commands:
+
+    python scripts/validation/validate_graph_engine.py
+    python scripts/validation/validate_modular_runtime.py
+    python scripts/validation/validate_architecture_contracts.py
+    python scripts/rcc/check_rcc_nexus.py
+    python -m unittest discover -s tests
+    python -m omn run --seed synthetic-toy
+    python -m omn validate
+
+Boundary:
+
+These metrics show local validation, graph-contract extraction, and repository orientation discipline. They do not prove code correctness, production readiness, empirical validation, causality, mechanism, AI understanding, or GMN replication.
 
 ## RCC-N Benchmarks and Public Release
 ### RCC-N Echo Chart
