@@ -1,9 +1,9 @@
 {
   "schema": "OMN-SA-v0.8.2-readme-lineage-policy-audit",
-  "timestamp": "2026-05-19T14:10:16.680708+00:00",
-  "passed": true,
+  "timestamp": "2026-05-19T14:13:36.800731+00:00",
+  "passed": false,
   "checks": {
-    "current_health_v082": true,
+    "current_health_v082": false,
     "ai_tracking_v082": true,
     "ai_readme_update_policy_present": true,
     "policy_lists_required_zones": true,
@@ -17,6 +17,8 @@
     "loose_chain_extensions_removed": true,
     "v08_metric_availability_declared": true
   },
-  "missing": [],
+  "missing": [
+    "current_health_v082"
+  ],
   "non_claim_boundary": "README lineage-policy audit checks current-state, registry-state, AI policy, and historical lineage surfaces. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
 }

@@ -872,6 +872,17 @@ This section is a permanent root README registry. It must be updated every time 
 | README Policy | `reports/readme_policy/latest_readme_lineage_policy_audit.md` | active | v0.8.2 README lineage-policy audit. |
 | Release Notes | `docs/release_notes/v0_8_2_readme_lineage_policy.md` | active | v0.8.2 README lineage-policy checkpoint. |
 | RCC-N Context | `docs/context/rcc_nexus_index.json` and `docs/context/rcc_nexus_profile_v1_7.json` | active | Repository navigation and profile-gated governance. |
+
+### Historical RCC-N Profile Lineage Marker
+
+The v0.7.1 RCC-N profile injection remains part of the active historical lineage for README self-organization audits:
+
+| Layer | Historical file | Status | Purpose |
+|---|---|---|---|
+| Historical RCC-N Profile Architecture | `docs/software_architecture/omn_sa_v0_7_1_rcc_n_v1_7_profile_injection.md` | archived-active | RCC-N v1.7 profile injection layer retained for lineage audits. |
+
+Boundary: this marker preserves historical README lineage. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
 ### Current Architecture Chain
 
 OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization -> OMN-SA v0.7.3 README lineage completion -> OMN-SA v0.8 metric availability and residual field hardening -> OMN-SA v0.8.1 validation compatibility repair -> OMN-SA v0.8.2 README lineage and AI update policy
