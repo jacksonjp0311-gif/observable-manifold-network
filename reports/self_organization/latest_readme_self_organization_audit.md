@@ -1,13 +1,13 @@
 # OMN-SA README Self-Organization Audit
 
-- Passed: True
+- Passed: False
 
 ## Checks
 
 | Check | Result |
 |---|---:|
 | health_snapshot_current_layer_present | True |
-| health_snapshot_not_pending_commit | True |
+| health_snapshot_not_pending_commit | False |
 | no_expected_tests_wording | True |
 | ai_tracking_present | True |
 | rcc_v17_visible | True |
@@ -19,7 +19,7 @@
 
 ## Missing
 
-- None
+- health_snapshot_not_pending_commit
 
 ## Boundary
 

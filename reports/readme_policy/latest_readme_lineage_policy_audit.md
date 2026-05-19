@@ -1,12 +1,12 @@
 # OMN-SA v0.8.2 README Lineage Policy Audit
 
-- Passed: True
+- Passed: False
 
 ## Checks
 
 | Check | Result |
 |---|---:|
-| current_health_v082 | True |
+| current_health_v082 | False |
 | ai_tracking_v082 | True |
 | ai_readme_update_policy_present | True |
 | policy_lists_required_zones | True |
@@ -22,7 +22,7 @@
 
 ## Missing
 
-- None
+- current_health_v082
 
 ## Boundary
 
