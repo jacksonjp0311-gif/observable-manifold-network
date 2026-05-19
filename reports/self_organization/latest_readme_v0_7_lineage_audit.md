@@ -1,6 +1,6 @@
 # OMN-SA v0.7.3 README v0.7 Lineage Audit
 
-- Passed: True
+- Passed: False
 
 ## Checks
 
@@ -11,11 +11,11 @@
 | v07_known_metric_weakness_present | True |
 | v08_target_present | True |
 | ai_tracking_typo_removed | True |
-| current_tests_44 | True |
+| current_tests_44 | False |
 
 ## Missing
 
-- None
+- current_tests_44
 
 ## Boundary
 

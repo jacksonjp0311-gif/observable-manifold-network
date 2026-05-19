@@ -1,27 +1,59 @@
 {
-  "schema": "OMN-SA-v0.7-evidence-drift-validation",
+  "schema": "OMN-SA-v0.8-metric-availability-validation",
   "passed": true,
-  "report": {
+  "summary": {
+    "schema": "OMN-SA-v0.8-metric-availability-summary",
+    "all_required_metrics_available": true,
+    "compared_count": 8,
+    "metric_rows": [
+      {
+        "metric": "rmse",
+        "available": 8,
+        "unavailable": 0,
+        "availability": 1.0,
+        "status": "available",
+        "min": 0.2514420782621668,
+        "max": 14.061015230850494,
+        "spread": 13.809573152588326
+      },
+      {
+        "metric": "mae",
+        "available": 8,
+        "unavailable": 0,
+        "availability": 1.0,
+        "status": "available",
+        "min": 0.2001435984844158,
+        "max": 11.814644246706038,
+        "spread": 11.614500648221622
+      },
+      {
+        "metric": "delta_phi_residual",
+        "available": 8,
+        "unavailable": 0,
+        "availability": 1.0,
+        "status": "available",
+        "min": 0.2001435984844158,
+        "max": 11.814644246706038,
+        "spread": 11.614500648221622
+      },
+      {
+        "metric": "omega_residual_weight",
+        "available": 8,
+        "unavailable": 0,
+        "availability": 1.0,
+        "status": "available",
+        "min": 0.07803572075417128,
+        "max": 0.8332336240953464,
+        "spread": 0.7551979033411751
+      }
+    ],
+    "non_claim_boundary": "Metric availability validation checks whether evidence packages expose residual fields for comparison. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+  },
+  "evidence_drift_report": {
     "schema": "OMN-SA-v0.7-evidence-drift-report",
-    "evidence_package_count": 126,
+    "evidence_package_count": 127,
     "compared_count": 8,
     "records": [
-      {
-        "run_id": "omn_synthetic_toy_20260519_133843",
-        "seed": "synthetic-toy",
-        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_133843_evidence_package.json",
-        "computed_status": "runtime-validated",
-        "benchmark_class": "S0",
-        "overpromotion_blocked": true,
-        "declared_artifact_count": 12,
-        "metrics": {
-          "rmse": 0.2514420782621668,
-          "mae": 0.2001435984844158,
-          "delta_phi_residual": 0.2001435984844158,
-          "omega_residual_weight": 0.8332336240953464
-        },
-        "load_error": null
-      },
       {
         "run_id": "omn_artifact_graph_20260519_133843",
         "seed": "artifact-graph",
@@ -119,6 +151,22 @@
         "load_error": null
       },
       {
+        "run_id": "omn_lorenz_20260519_133847",
+        "seed": "lorenz",
+        "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_lorenz_20260519_133847_evidence_package.json",
+        "computed_status": "runtime-validated",
+        "benchmark_class": "S1",
+        "overpromotion_blocked": true,
+        "declared_artifact_count": 12,
+        "metrics": {
+          "rmse": 14.061015230850494,
+          "mae": 11.814644246706038,
+          "delta_phi_residual": 11.814644246706038,
+          "omega_residual_weight": 0.07803572075417128
+        },
+        "load_error": null
+      },
+      {
         "run_id": "omn_artifact_graph_20260519_133847",
         "seed": "artifact-graph",
         "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_artifact_graph_20260519_133847_evidence_package.json",
@@ -193,11 +241,5 @@
     "failure_flags": [],
     "non_claim_boundary": "Evidence drift comparison checks run-to-run continuity, artifact replay status, claim-status stability, and metric availability. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
   },
-  "outputs": {
-    "json": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\reports\\evidence_drift\\latest_evidence_drift_report.json",
-    "md": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\reports\\evidence_drift\\latest_evidence_drift_report.md",
-    "docs_md": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\docs\\benchmarks\\omn_sa_v0_7_evidence_drift_metrics.md",
-    "svg": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\visuals\\omn_sa\\omn_sa_v0_7_evidence_drift_dashboard.svg"
-  },
-  "non_claim_boundary": "Evidence drift validation checks multi-run continuity and dashboard emission. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+  "non_claim_boundary": "Metric availability validation checks whether evidence packages expose residual fields for comparison. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
 }

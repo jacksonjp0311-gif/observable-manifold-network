@@ -244,3 +244,20 @@ Boundary: v0.7.1 adds profile-aware governance. It does not prove correctness, e
 | Lineage Audit Report | `reports/self_organization/latest_readme_v0_7_lineage_audit.md` | active | Human-readable audit report. |
 
 Boundary: v0.7.3 repairs README lineage continuity. It does not change runtime behavior or prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+## OMN-SA v0.8 Metric Availability and Residual Field Hardening
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_8_metric_availability_residual_hardening.md` | active | Canonical v0.8 metric availability architecture. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_8_metric_availability_change.md` | active | Records v0.8 schema and residual hardening. |
+| Release Note | `docs/release_notes/v0_8_0_metric_availability_residual_hardening.md` | active | Records v0.8 release. |
+| Runtime Patch | `src/omn/core/runtime.py` | active | Emits canonical metrics.validation and metrics.baseline blocks. |
+| Drift Patch | `src/omn/core/evidence_drift.py` | active | Reads v0.8 canonical metrics with legacy fallback. |
+| Validator | `scripts/validation/validate_metric_availability.py` | active | Checks residual metric availability across latest evidence packages. |
+| README Audit | `scripts/release/audit_readme_v0_8_metric_availability.py` | active | Validates public README v0.8 metric availability surface. |
+| Benchmark Report | `docs/benchmarks/omn_sa_v0_8_metric_availability_metrics.md` | active | Public metric availability benchmark. |
+| Chart | `visuals/omn_sa/omn_sa_v0_8_metric_availability.svg` | active | Public v0.8 metric availability chart. |
+| Tests | `tests/test_omn_sa_v0_8_metric_availability.py` | active | Validates runtime evidence schema and metric availability. |
+
+Boundary: v0.8 makes residual metrics available for comparison. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

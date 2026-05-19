@@ -3,7 +3,7 @@
 ## Summary
 
 - Passed: True
-- Evidence packages found: 116
+- Evidence packages found: 127
 - Evidence packages compared: 8
 - Seeds seen: artifact-graph, lorenz, synthetic-toy
 - Claim statuses seen: runtime-validated
@@ -16,23 +16,23 @@
 
 | Metric | Available | Unavailable | Min | Max | Spread | Status |
 |---|---:|---:|---:|---:|---:|---|
-| rmse | 0 | 8 | n/a | n/a | n/a | unavailable |
-| mae | 0 | 8 | n/a | n/a | n/a | unavailable |
-| delta_phi_residual | 0 | 8 | n/a | n/a | n/a | unavailable |
-| omega_residual_weight | 0 | 8 | n/a | n/a | n/a | unavailable |
+| rmse | 8 | 0 | 0.251442 | 14.061 | 13.8096 | computed |
+| mae | 8 | 0 | 0.200144 | 11.8146 | 11.6145 | computed |
+| delta_phi_residual | 8 | 0 | 0.200144 | 11.8146 | 11.6145 | computed |
+| omega_residual_weight | 8 | 0 | 0.0780357 | 0.833234 | 0.755198 | computed |
 
 ## Compared Records
 
 | Run ID | Seed | Claim status | Benchmark | Artifact count |
 |---|---|---|---|---:|
-| omn_artifact_graph_20260519_132028 | artifact-graph | runtime-validated | S3 | 12 |
-| omn_lorenz_20260519_132357 | lorenz | runtime-validated | S1 | 12 |
-| omn_artifact_graph_20260519_132357 | artifact-graph | runtime-validated | S3 | 12 |
-| omn_synthetic_toy_20260519_132357 | synthetic-toy | runtime-validated | S0 | 12 |
-| omn_synthetic_toy_20260519_132358 | synthetic-toy | runtime-validated | S0 | 12 |
-| omn_artifact_graph_20260519_132358 | artifact-graph | runtime-validated | S3 | 12 |
-| omn_synthetic_toy_20260519_132359 | synthetic-toy | runtime-validated | S0 | 12 |
-| omn_artifact_graph_20260519_132359 | artifact-graph | runtime-validated | S3 | 12 |
+| omn_artifact_graph_20260519_133843 | artifact-graph | runtime-validated | S3 | 12 |
+| omn_lorenz_20260519_133845 | lorenz | runtime-validated | S1 | 12 |
+| omn_artifact_graph_20260519_133845 | artifact-graph | runtime-validated | S3 | 12 |
+| omn_synthetic_toy_20260519_133845 | synthetic-toy | runtime-validated | S0 | 12 |
+| omn_synthetic_toy_20260519_133846 | synthetic-toy | runtime-validated | S0 | 12 |
+| omn_synthetic_toy_20260519_133847 | synthetic-toy | runtime-validated | S0 | 12 |
+| omn_lorenz_20260519_133847 | lorenz | runtime-validated | S1 | 12 |
+| omn_artifact_graph_20260519_133847 | artifact-graph | runtime-validated | S3 | 12 |
 
 ## Failure Flags
 

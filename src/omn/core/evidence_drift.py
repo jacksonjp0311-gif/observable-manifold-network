@@ -51,17 +51,36 @@ def get_nested(payload: Dict[str, Any], path: List[str]) -> Any:
     return current
 
 
+def first_available(payload: Dict[str, Any], paths: List[List[str]]) -> Optional[float]:
+    for path in paths:
+        value = safe_float(get_nested(payload, path))
+        if value is not None:
+            return value
+    return None
+
+
 def metric_snapshot(payload: Dict[str, Any]) -> Dict[str, Optional[float]]:
-    metric_paths = {
-        "rmse": ["metrics", "validation", "rmse"],
-        "mae": ["metrics", "validation", "mae"],
-        "delta_phi_residual": ["metrics", "validation", "delta_phi_residual"],
-        "omega_residual_weight": ["metrics", "validation", "omega_residual_weight"],
-    }
+    """Return canonical drift metrics from v0.8 evidence, with legacy fallback."""
 
     return {
-        name: safe_float(get_nested(payload, path))
-        for name, path in metric_paths.items()
+        "rmse": first_available(payload, [
+            ["metrics", "validation", "rmse"],
+            ["metrics", "rmse"],
+        ]),
+        "mae": first_available(payload, [
+            ["metrics", "validation", "mae"],
+            ["metrics", "mae"],
+        ]),
+        "delta_phi_residual": first_available(payload, [
+            ["metrics", "validation", "delta_phi_residual"],
+            ["metrics", "delta_phi_residual"],
+            ["metrics", "delta_phi_omn"],
+        ]),
+        "omega_residual_weight": first_available(payload, [
+            ["metrics", "validation", "omega_residual_weight"],
+            ["metrics", "omega_residual_weight"],
+            ["metrics", "omega_omn"],
+        ]),
     }
 
 

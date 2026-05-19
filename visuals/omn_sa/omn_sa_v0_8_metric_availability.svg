@@ -1,0 +1,52 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+  <title id="title">OMN-SA v0.8 Metric Availability</title>
+  <desc id="desc">Residual metric availability across compared evidence packages.</desc>
+  <rect width="1040" height="620" rx="30" fill="#0f172a"/>
+
+  <text x="52" y="60" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">OMN-SA v0.8 Metric Availability</text>
+  <text x="52" y="92" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="15">Residual fields exposed in evidence packages for multi-run comparison.</text>
+
+  <g transform="translate(52,128)">
+    <rect x="0" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="22" y="34" fill="#93c5fd" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Availability Check</text>
+    <text x="22" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">passed</text>
+    <text x="22" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">required residual fields</text>
+
+    <rect x="318" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="340" y="34" fill="#86efac" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Compared Evidence</text>
+    <text x="340" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">8</text>
+    <text x="340" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">latest packages</text>
+
+    <rect x="636" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="658" y="34" fill="#fcd34d" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Residual Schema</text>
+    <text x="658" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">v0.8</text>
+    <text x="658" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">metrics.validation block</text>
+  </g>
+
+  <g transform="translate(70,0)" font-family="Segoe UI, Arial">
+    <text x="0" y="280" fill="#f8fafc" font-size="19" font-weight="700">Metric Availability Across Compared Packages</text>
+    
+    <text x="0" y="328" fill="#cbd5e1" font-size="14">RMSE</text>
+    <rect x="180" y="310" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="180" y="310" width="520" height="24" rx="8" fill="#38bdf8"/>
+    <text x="720" y="328" fill="#f8fafc" font-size="14">1.000</text>
+
+    <text x="0" y="374" fill="#cbd5e1" font-size="14">MAE</text>
+    <rect x="180" y="356" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="180" y="356" width="520" height="24" rx="8" fill="#34d399"/>
+    <text x="720" y="374" fill="#f8fafc" font-size="14">1.000</text>
+
+    <text x="0" y="420" fill="#cbd5e1" font-size="14">DeltaPhi</text>
+    <rect x="180" y="402" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="180" y="402" width="520" height="24" rx="8" fill="#fbbf24"/>
+    <text x="720" y="420" fill="#f8fafc" font-size="14">1.000</text>
+
+    <text x="0" y="466" fill="#cbd5e1" font-size="14">Omega</text>
+    <rect x="180" y="448" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="180" y="448" width="520" height="24" rx="8" fill="#a78bfa"/>
+    <text x="720" y="466" fill="#f8fafc" font-size="14">1.000</text>
+
+  </g>
+
+  <text x="52" y="585" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="12">Boundary: metric availability proves fields are exposed for comparison. It does not prove correctness, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.</text>
+</svg>

@@ -1,12 +1,12 @@
 # OMN-SA v0.7.2 README Self-Organization Audit
 
-- Passed: True
+- Passed: False
 
 ## Checks
 
 | Check | Result |
 |---|---:|
-| health_snapshot_v072 | True |
+| health_snapshot_v072 | False |
 | no_expected_tests_wording | True |
 | ai_tracking_v072 | True |
 | rcc_v17_visible | True |
@@ -18,7 +18,7 @@
 
 ## Missing
 
-- None
+- health_snapshot_v072
 
 ## Boundary
 

@@ -437,14 +437,14 @@ def run(seed="synthetic-toy", root="."):
     gate = claim_gate(contract["valid"], True, benchmark_class)
 
     state = {
-        "schema": "OMN-SA-v0.1-state",
+        "schema": "OMN-SA-v0.8-state",
         "run_id": run_id,
         "seed": seed,
         "timestamp": utc_iso(),
         "source_boundary": {
             "primary_source": "Park et al. GMN paper",
             "source_method": "Generative Manifold Networks",
-            "codex_architecture": "OMN-SA v0.1",
+            "codex_architecture": "OMN-SA v0.8",
             "gmns_not_renamed_as_codex_invention": True
         },
         "observables": {"count": len(nodes), "path": str(paths["observables"])},
@@ -465,14 +465,45 @@ def run(seed="synthetic-toy", root="."):
     simple_svg(paths["plot_residuals"], f"{seed} residual absolute error", [abs(validation[i][cols[0]] - generated[i][cols[0]]) for i in range(len(generated))])
     simple_svg(paths["plot_matrix"], f"{seed} interaction row sums", [sum(row) for row in matrix])
 
+    validation_metrics = {
+        "rmse": res["rmse"],
+        "mae": res["mae"],
+        "correlation": res["correlation"],
+        "delta_phi_residual": res["delta_phi_omn"],
+        "omega_residual_weight": res["omega_omn"],
+    }
+
+    baseline_metrics = {
+        "rmse": base_res["rmse"],
+        "mae": base_res["mae"],
+        "correlation": base_res["correlation"],
+        "delta_phi_residual": base_res["delta_phi_omn"],
+        "omega_residual_weight": base_res["omega_omn"],
+        "baseline_equivalent": base_res["rmse"] <= res["rmse"],
+    }
+
+    metrics_block = {
+        "schema": "OMN-SA-v0.8-metrics-block",
+        "validation": validation_metrics,
+        "baseline": baseline_metrics,
+        "legacy": {
+            "rmse": res["rmse"],
+            "mae": res["mae"],
+            "correlation": res["correlation"],
+            "delta_phi_omn": res["delta_phi_omn"],
+            "omega_omn": res["omega_omn"],
+        },
+        "non_claim_boundary": "Residual metrics measure generated-vs-observed error for the local run. They do not prove causality, mechanism, empirical validation, production readiness, AI understanding, or GMN replication."
+    }
+
     evidence = {
-        "schema": "OMN-SA-v0.1-evidence-package",
+        "schema": "OMN-SA-v0.8-evidence-package",
         "run_id": run_id,
         "seed": seed,
         "benchmark_class": benchmark_class,
         "claim_status": gate,
         "source_boundary": state["source_boundary"],
-        "metrics": res,
+        "metrics": metrics_block,
         "artifacts": {
             "state": str(paths["state"]),
             "observables": str(paths["observables"]),

@@ -37,16 +37,17 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Surface | Current result |
 |---|---:|
 | Package / CLI | `omn` |
-| Current software layer | OMN-SA v0.7.2 |
-| Latest public alignment patch | OMN-SA v0.7.2 |
+| Current software layer | OMN-SA v0.8 |
+| Latest public alignment patch | OMN-SA v0.8 |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
 | Evidence replay | passed |
 | Evidence drift comparison | passed |
+| Metric availability | passed |
 | Ledger integrity | passed |
 | Declared artifacts replayed | 12 / 12 |
 | Missing replay artifacts | 0 |
-| Current tests | 44 OK |
+| Current tests | pending-v0.8 |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N checker | passed |
@@ -59,8 +60,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | RCC-N effectiveness score | 0.9822222222 |
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.8752222222 |
-| Current tag | v0.7.2-omn-sa-readme-self-organization |
-| Current main commit | a5d73d2 |
+| Current tag | pending-v0.8.0 |
+| Current main commit | pending-v0.8.0 |
 
 ### What this is not
 
@@ -227,6 +228,35 @@ v0.7.2 law:
 Boundary:
 
 Self-organization improves repository orientation and AI agent self-location. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+
+---
+
+## Current v0.8 Metric Availability and Residual Field Hardening
+
+![OMN-SA v0.8 Metric Availability](visuals/omn_sa/omn_sa_v0_8_metric_availability.svg)
+
+v0.8 repairs the metric availability weakness exposed by v0.7 evidence drift.
+
+Current metric availability target:
+
+| Metric | Required path |
+|---|---|
+| rmse | metrics.validation.rmse |
+| mae | metrics.validation.mae |
+| delta_phi_residual | metrics.validation.delta_phi_residual |
+| omega_residual_weight | metrics.validation.omega_residual_weight |
+
+v0.8 law:
+
+    A metric is not available until the evidence package exposes it where validators expect it.
+    A residual is not mature until it is named consistently across runtime, evidence, drift, and report surfaces.
+
+Boundary:
+
+Metric availability means residual fields are exposed for comparison. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
 
 
 # PART I - Human README
@@ -1170,3 +1200,5 @@ This weakness is the intended target for OMN-SA v0.8.
 Boundary:
 
 Evidence drift comparison measures run-to-run continuity, artifact replay status, claim-status stability, artifact-count stability, load integrity, and metric availability. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+Current architecture chain extension: OMN-SA v0.8 metric availability and residual field hardening.
