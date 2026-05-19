@@ -1,0 +1,54 @@
+{
+  "schema": "OMN-SA-v0.3-modular-runtime-envelope",
+  "run_id": "omn_synthetic_toy_20260519_122716",
+  "seed": "synthetic-toy",
+  "legacy_runtime_used": true,
+  "modular_layer": {
+    "contracts": "omn.core.contracts",
+    "claim_gate": "omn.core.claim_gate",
+    "artifact_audit": "omn.core.artifact_audit",
+    "schema_contracts": "omn.core.schema_contracts"
+  },
+  "claim_gate": {
+    "computed_status": "runtime-validated",
+    "failure_flags": [],
+    "allowed_claim": "Local runtime evidence may support implementation behavior only.",
+    "prohibited_claim": "This run does not prove causality, mechanism, biological equivalence, physical manifold identity, empirical validation, production readiness, AI understanding, or GMN replication.",
+    "overpromotion_blocked": true,
+    "baseline_equivalent": true,
+    "topology_sensitive": true
+  },
+  "evidence_key_audit": {
+    "required": [
+      "run_id",
+      "seed",
+      "claim_status",
+      "source_boundary",
+      "metrics",
+      "artifacts",
+      "baselines",
+      "topology_sensitivity"
+    ],
+    "missing": [],
+    "passed": true,
+    "boundary": "Evidence key audit checks contract completeness, not empirical validation."
+  },
+  "artifact_path_audit": {
+    "declared_count": 12,
+    "missing": [],
+    "passed": true,
+    "boundary": "Artifact path audit checks declared file existence, not scientific validity or code correctness."
+  },
+  "non_claim_locks": {
+    "simulation_is_not_proof": true,
+    "prediction_is_not_mechanism": true,
+    "observable_topology_is_not_truth": true,
+    "edge_confidence_is_not_causal_certainty": true,
+    "schema_validation_is_not_truth": true,
+    "ci_passing_is_not_correctness": true,
+    "rcc_nexus_is_not_ai_understanding": true,
+    "gmn_authorship_preserved": true
+  },
+  "evidence_package": null,
+  "boundary": "The v0.3 modular wrapper validates contracts around the current runtime. It does not prove empirical validity, causality, mechanism, production readiness, AI understanding, or GMN replication."
+}

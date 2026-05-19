@@ -764,3 +764,32 @@ Current separation:
 Boundary:
 
 The v0.1 source anchor improves lineage traceability. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+---
+
+## OMN-SA v0.3 Modular Runtime
+
+The repository now begins core evolution through a safe modular wrapper.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.3 architecture | `docs/software_architecture/omn_sa_v0_3_software_architecture.md` | Defines modular runtime split and contract wrapper layer. |
+| Contracts | `src/omn/core/contracts.py` | Defines non-claim locks and contract helpers. |
+| Claim gate | `src/omn/core/claim_gate.py` | Computes bounded claim status from evidence. |
+| Artifact audit | `src/omn/core/artifact_audit.py` | Checks evidence keys and declared artifact paths. |
+| Schema contracts | `src/omn/core/schema_contracts.py` | Loads lightweight schema contracts. |
+| Modular runtime | `src/omn/core/modular_runtime.py` | Wraps current runtime without blind rewrite. |
+| Validator | `scripts/validation/validate_modular_runtime.py` | Validates modular core and emits report. |
+
+v0.3 law:
+
+    Wrap before rewrite.
+    Validate before split.
+    Preserve evidence before refactor.
+    Keep claims bounded.
+
+Boundary:
+
+OMN-SA v0.3 is modularization-safe architecture. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

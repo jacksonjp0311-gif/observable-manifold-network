@@ -115,3 +115,20 @@ Boundary: OMN-SA v0.2 is software architecture hardening. It does not update OMN
 | Validation Test | `tests/test_theory_insertion_docs.py` | active | Verifies insertion docs, locks, and registry references. |
 
 Boundary: this insertion preserves lineage. It does not replace OMN-SA v0.2, update OMN theory, validate GMN, or prove runtime correctness.
+
+## OMN-SA v0.3 Modular Runtime
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_3_software_architecture.md` | active | Defines modular runtime wrapper and contract split path. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_3_modular_runtime_change.md` | active | Records v0.3 core runtime architecture evolution. |
+| Release Note | `docs/release_notes/v0_3_0_modular_runtime.md` | active | Records v0.3 modular runtime release. |
+| Modular Contracts | `src/omn/core/contracts.py` | active | Defines contract helpers and non-claim locks. |
+| Claim Gate Module | `src/omn/core/claim_gate.py` | active | Computes bounded claim status from evidence. |
+| Artifact Audit Module | `src/omn/core/artifact_audit.py` | active | Audits evidence keys and declared artifact paths. |
+| Schema Contract Module | `src/omn/core/schema_contracts.py` | active | Loads lightweight schema contracts. |
+| Modular Runtime Wrapper | `src/omn/core/modular_runtime.py` | active | Wraps current runtime and emits modular runtime report. |
+| Modular Runtime Validator | `scripts/validation/validate_modular_runtime.py` | active | Validates v0.3 module layer and runtime wrapper. |
+| Tests | `tests/test_omn_sa_v0_3_modular_core.py` | active | Tests v0.3 modular core behavior. |
+
+Boundary: v0.3 wraps and validates the current runtime before deeper refactor. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
