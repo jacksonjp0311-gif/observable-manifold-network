@@ -259,6 +259,45 @@ Boundary:
 Metric availability means residual fields are exposed for comparison. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
 
 
+
+---
+
+## Current v0.8.1 Validation Compatibility Repair
+
+v0.8.1 is the compatibility repair after the v0.8 metric-availability hardening layer.
+
+It fixes the validation stack so historical README audits continue to validate lineage while the active current-state dashboard reports the v0.8/v0.8.1 system.
+
+Current v0.8.1 checkpoint:
+
+| Surface | Result |
+|---|---:|
+| README self-organization audit | passed |
+| README v0.7 lineage audit | passed |
+| README v0.8 metric availability audit | passed |
+| RCC-N v1.7 profile checker | passed |
+| RCC-N checker | passed |
+| Unit tests | 50 OK |
+| Evidence drift | passed |
+| Metric availability | passed |
+| Evidence replay | passed |
+| Mini README coverage | 37 / 37 |
+| NCI self | 1.0 |
+| RCC-N effectiveness score | 0.9822222222 |
+| Metric availability | 8 / 8 compared packages |
+| Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
+
+v0.8.1 law:
+
+    Historical audits validate lineage.
+    Current audits validate the active stack.
+    README metadata must not chase its own commit hash.
+    Release references must remain stable and validation-bound.
+
+Boundary:
+
+v0.8.1 repairs README validation compatibility and release-reference clarity. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
 # PART I - Human README
 
 ## Current Identity
@@ -796,7 +835,7 @@ This section is a permanent root README registry. It must be updated every time 
 
 ### Current Architecture Chain
 
-OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization
+OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization -> OMN-SA v0.7.3 README lineage completion -> OMN-SA v0.8 metric availability and residual field hardening -> OMN-SA v0.8.1 validation compatibility repair
 
 ### Version Update Obligation
 
