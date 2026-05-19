@@ -159,3 +159,19 @@ Boundary: v0.4 begins graph-engine extraction. It does not prove causality, mech
 | README Update | `README.md` | active | Current main README now reflects v0.4 metrics, graph engine, and tag. |
 
 Boundary: these metrics summarize local validation and repository orientation. They do not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+## OMN-SA v0.5 Topology Ensemble and RCC-N Metrics
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_5_software_architecture.md` | active | Topology ensemble and RCC-N measurement surface. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_5_topology_rcc_metrics_change.md` | active | Records v0.5 measurement architecture change. |
+| Release Note | `docs/release_notes/v0_5_0_topology_rcc_metrics.md` | active | Records v0.5 release. |
+| Topology Ensemble | `src/omn/core/topology_ensemble.py` | active | Tests graph stability across thresholds. |
+| Topology Validator | `scripts/validation/validate_topology_ensemble.py` | active | Emits topology ensemble validation report. |
+| Mini README Audit | `scripts/rcc/audit_mini_readmes.py` | active | Creates and audits mini READMEs. |
+| RCC-N Metrics | `scripts/rcc/generate_rcc_n_metrics.py` | active | Measures RCC-N effectiveness and chart output. |
+| RCC-N Chart | `visuals/rcc_nexus/rcc_n_effectiveness_v0_5.svg` | active | Public visual measurement of RCC-N effectiveness. |
+| RCC-N Metrics Report | `docs/benchmarks/rcc_n_effectiveness_metrics_v0_5.md` | active | Human-readable metrics report. |
+
+Boundary: v0.5 measures stability and navigation discipline. It does not prove correctness, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.

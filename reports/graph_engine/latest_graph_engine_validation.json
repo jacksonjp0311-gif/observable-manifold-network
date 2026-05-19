@@ -175,6 +175,6 @@
     "passed": true,
     "boundary": "Parity summary checks preservation of graph-contract surfaces, not scientific validity."
   },
-  "legacy_run_id": "omn_synthetic_toy_20260519_123541",
+  "legacy_run_id": "omn_synthetic_toy_20260519_124341",
   "non_claim_boundary": "Graph engine validation checks modular graph-contract extraction and parity surfaces. It does not prove causality, mechanism, empirical validation, production readiness, AI understanding, or GMN replication."
 }

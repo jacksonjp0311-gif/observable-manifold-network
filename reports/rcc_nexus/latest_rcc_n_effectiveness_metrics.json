@@ -1,0 +1,16 @@
+{
+  "schema": "RCC-N-v0.5-effectiveness-metrics",
+  "metrics": {
+    "context_surface_coverage": 1.0,
+    "validation_surface_coverage": 1.0,
+    "evidence_surface_coverage": 1.0,
+    "readme_marker_coverage": 1.0,
+    "route_map_marker_coverage": 1.0,
+    "mini_readme_coverage": 0.2972972972972973,
+    "nci_self": 1.0
+  },
+  "rcc_n_effectiveness_score": 0.8875675675675675,
+  "regular_readme_baseline_score": 0.107,
+  "lift_over_regular_readme": 0.7805675675675675,
+  "boundary": "RCC-N metrics measure repository orientation, routing, context coverage, validation linkage, and non-claim discipline. They do not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication."
+}

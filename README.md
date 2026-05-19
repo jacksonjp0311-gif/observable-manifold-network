@@ -880,3 +880,33 @@ v0.4 law:
 Boundary:
 
 Graph engine extraction improves runtime structure. It does not prove causality, mechanism, empirical validation, production readiness, AI understanding, or GMN replication.
+
+---
+
+## OMN-SA v0.5 Topology Ensemble and RCC-N Metrics
+
+![RCC-N Effectiveness Metrics](visuals/rcc_nexus/rcc_n_effectiveness_v0_5.svg)
+
+v0.5 adds direct measurement of RCC-N and mini README coverage.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.5 architecture | `docs/software_architecture/omn_sa_v0_5_software_architecture.md` | Topology ensemble and RCC-N measurement surface. |
+| Topology ensemble | `src/omn/core/topology_ensemble.py` | Tests graph stability across threshold perturbations. |
+| Topology validation | `scripts/validation/validate_topology_ensemble.py` | Emits topology ensemble validation report. |
+| Mini README audit | `scripts/rcc/audit_mini_readmes.py` | Creates missing mini READMEs and measures coverage. |
+| RCC-N metrics | `scripts/rcc/generate_rcc_n_metrics.py` | Measures RCC-N effectiveness and lift over regular README baseline. |
+| RCC-N chart | `visuals/rcc_nexus/rcc_n_effectiveness_v0_5.svg` | Public chart for RCC-N effectiveness. |
+| Metrics report | `docs/benchmarks/rcc_n_effectiveness_metrics_v0_5.md` | Human-readable RCC-N metric report. |
+
+v0.5 law:
+
+    No single graph gets a strong explanation claim until topology stability is tested.
+    No repository navigation claim without mini README coverage.
+    No RCC-N effectiveness claim without measurement and chart.
+
+Boundary:
+
+RCC-N metrics measure repository orientation, routing, context coverage, validation linkage, mini README coverage, and non-claim discipline. They do not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.

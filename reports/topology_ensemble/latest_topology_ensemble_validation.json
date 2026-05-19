@@ -1,0 +1,44 @@
+{
+  "schema": "OMN-SA-v0.5-topology-ensemble",
+  "run_id": "omn_sa_v0_5_topology_ensemble_validation",
+  "thresholds": [
+    0.1,
+    0.25,
+    0.5,
+    0.9
+  ],
+  "graph_states": [
+    {
+      "threshold": 0.1,
+      "edge_count": 6,
+      "valid": true
+    },
+    {
+      "threshold": 0.25,
+      "edge_count": 6,
+      "valid": true
+    },
+    {
+      "threshold": 0.5,
+      "edge_count": 6,
+      "valid": true
+    },
+    {
+      "threshold": 0.9,
+      "edge_count": 6,
+      "valid": true
+    }
+  ],
+  "edge_stability": {
+    "x->y:correlation": 1.0,
+    "x->z:correlation": 1.0,
+    "y->x:correlation": 1.0,
+    "y->z:correlation": 1.0,
+    "z->x:correlation": 1.0,
+    "z->y:correlation": 1.0
+  },
+  "edge_count_spread": 0,
+  "classification_flip_detected": false,
+  "passed": true,
+  "boundary": "Topology ensemble measures graph stability under policy perturbation. It does not prove causality, mechanism, empirical validation, production readiness, AI understanding, or GMN replication."
+}
