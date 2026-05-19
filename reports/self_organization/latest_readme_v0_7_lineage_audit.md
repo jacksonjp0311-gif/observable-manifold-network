@@ -1,6 +1,6 @@
 # OMN-SA README v0.7 Lineage Audit
 
-- Passed: True
+- Passed: False
 
 ## Checks
 
@@ -12,11 +12,11 @@
 | v08_target_or_repair_present | True |
 | ai_tracking_typo_removed | True |
 | current_tests_surface_present | True |
-| current_tests_not_pending | True |
+| current_tests_not_pending | False |
 
 ## Missing
 
-- None
+- current_tests_not_pending
 
 ## Boundary
 

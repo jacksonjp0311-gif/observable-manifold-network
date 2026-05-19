@@ -1,10 +1,10 @@
 {
   "schema": "OMN-SA-v0.8.1-readme-self-organization-audit",
-  "timestamp": "2026-05-19T13:47:30.314689+00:00",
-  "passed": true,
+  "timestamp": "2026-05-19T13:49:27.223211+00:00",
+  "passed": false,
   "checks": {
     "health_snapshot_current_layer_present": true,
-    "health_snapshot_not_pending_commit": true,
+    "health_snapshot_not_pending_commit": false,
     "no_expected_tests_wording": true,
     "ai_tracking_present": true,
     "rcc_v17_visible": true,
@@ -14,6 +14,8 @@
     "v08_metric_layer_visible": true,
     "archived_v04_not_current": true
   },
-  "missing": [],
+  "missing": [
+    "health_snapshot_not_pending_commit"
+  ],
   "non_claim_boundary": "README self-organization audit checks current-state orientation and archive separation. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication."
 }
