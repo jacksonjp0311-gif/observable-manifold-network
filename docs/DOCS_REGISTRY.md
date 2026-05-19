@@ -287,3 +287,15 @@ Boundary: v0.8.1 repairs validation compatibility. It does not prove correctness
 | Tests | `tests/test_omn_sa_v0_8_2_readme_lineage_policy.py` | active | Verifies AI policy and v0.8/v0.8.1/v0.8.2 bottom lineage sections. |
 
 Boundary: v0.8.2 improves README maintenance and AI orientation. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+## OMN-SA v0.8.3 CI / Release Boundary Separation
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_8_3_ci_release_boundary_separation.md` | active | Defines CI / release mode separation. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_8_3_ci_release_boundary_change.md` | active | Records operational architecture repair. |
+| Release Note | `docs/release_notes/v0_8_3_ci_release_boundary.md` | active | Records the v0.8.3 checkpoint. |
+| Local Release Script | `scripts/release/run_release_validation.ps1` | active | Runs full artifact-emitting release validation locally. |
+| Test | `tests/test_omn_sa_v0_8_3_ci_release_boundary.py` | active | Verifies CI smoke gate stays non-mutating. |
+
+Boundary: v0.8.3 improves operational release discipline and CI reliability. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

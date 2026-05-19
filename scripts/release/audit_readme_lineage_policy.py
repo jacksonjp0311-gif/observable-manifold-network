@@ -17,9 +17,23 @@ NON_CLAIM_BOUNDARY = (
 def main() -> int:
     text = README.read_text(encoding="utf-8", errors="ignore")
 
+    current_is_v082_or_newer = (
+        "Current software layer | OMN-SA v0.8.2" in text
+        or "Current software layer | OMN-SA v0.8.3" in text
+        or "Current software layer | OMN-SA v0.9" in text
+        or "Current software layer | OMN-SA v1." in text
+    )
+
+    ai_tracking_is_v082_or_newer = (
+        "Current software architecture layer: OMN-SA v0.8.2" in text
+        or "Current software architecture layer: OMN-SA v0.8.3" in text
+        or "Current software architecture layer: OMN-SA v0.9" in text
+        or "Current software architecture layer: OMN-SA v1." in text
+    )
+
     checks = {
-        "current_health_v082": "Current software layer | OMN-SA v0.8.2" in text,
-        "ai_tracking_v082": "Current software architecture layer: OMN-SA v0.8.2" in text,
+        "current_health_v082_or_newer": current_is_v082_or_newer,
+        "ai_tracking_v082_or_newer": ai_tracking_is_v082_or_newer,
         "ai_readme_update_policy_present": "## AI README Update Policy" in text,
         "policy_lists_required_zones": "Required root README update zones" in text,
         "current_stack_v082": "omn_sa_v0_8_2_readme_lineage_policy.md" in text,

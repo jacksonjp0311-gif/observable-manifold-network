@@ -37,8 +37,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Surface | Current result |
 |---|---:|
 | Package / CLI | `omn` |
-| Current software layer | OMN-SA v0.8.2 |
-| Latest public alignment patch | OMN-SA v0.8.2 README lineage policy repair |
+| Current software layer | OMN-SA v0.8 |
+| Latest public alignment patch | OMN-SA v0.8 |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
 | Evidence replay | passed |
@@ -47,7 +47,7 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Ledger integrity | passed |
 | Declared artifacts replayed | 12 / 12 |
 | Missing replay artifacts | 0 |
-| Current tests | 53 OK |
+| Current tests | pending-v0.8 |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N checker | passed |
@@ -60,8 +60,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | RCC-N effectiveness score | 0.9822222222 |
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.8752222222 |
-| Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
-| Release reference | v0.8.2 README lineage policy repair |
+| Current tag | pending-v0.8.0 |
+| Current main commit | pending-v0.8.0 |
 
 ### What this is not
 
@@ -297,6 +297,25 @@ v0.8.1 law:
 Boundary:
 
 v0.8.1 repairs README validation compatibility and release-reference clarity. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+---
+
+## Current v0.8.3 CI / Release Boundary Separation
+
+v0.8.3 separates GitHub Actions smoke validation from local artifact-emitting release validation.
+
+The system learned that artifact-refresh validators should not run in CI because they write timestamped reports, evidence summaries, latest-run files, replay ledgers, and dashboards.
+
+v0.8.3 law:
+
+    CI verifies committed state.
+    Release validation refreshes evidence state.
+    Never let CI create release artifacts.
+
+Boundary:
+
+v0.8.3 improves operational stability and repository release discipline. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
 
 # PART I - Human README
 
@@ -693,7 +712,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.8.2.
+- Current software architecture layer: OMN-SA v0.8.3.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -927,7 +946,7 @@ Historical checkpoint at that version:
 | Unit tests | 13 passing |
 | Runtime seed | synthetic-toy runtime-validated |
 | Evidence validation | valid |
-| Release reference | v0.8.2 README lineage policy repair |
+| Release reference | v0.8.3 CI / release boundary separation |
 | Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
 
 Validation commands:
@@ -964,7 +983,7 @@ Historical checkpoint at that version:
 | Graph observables | 3 |
 | Graph edges | 6 |
 | Graph parity | passed |
-| Release reference | v0.8.2 README lineage policy repair |
+| Release reference | v0.8.3 CI / release boundary separation |
 | Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
 
 v0.4 law:
@@ -1403,3 +1422,30 @@ v0.8.2 law:
 Boundary:
 
 v0.8.2 improves README maintenance, AI orientation, and version-lineage continuity. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+---
+
+## OMN-SA v0.8.3 CI / Release Boundary Separation
+
+v0.8.3 is the operational boundary repair that separates non-mutating CI from artifact-emitting local release validation.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.8.3 architecture | `docs/software_architecture/omn_sa_v0_8_3_ci_release_boundary_separation.md` | Defines CI / release mode separation. |
+| v0.8.3 architecture change | `docs/architecture_changes/omn_sa_v0_8_3_ci_release_boundary_change.md` | Records operational architecture repair. |
+| v0.8.3 release note | `docs/release_notes/v0_8_3_ci_release_boundary.md` | Records the v0.8.3 checkpoint. |
+| Local release validation | `scripts/release/run_release_validation.ps1` | Runs full artifact-emitting validation locally. |
+| CI boundary test | `tests/test_omn_sa_v0_8_3_ci_release_boundary.py` | Verifies CI does not run artifact-refresh validators. |
+
+v0.8.3 law:
+
+    CI verifies committed state.
+    Release validation refreshes evidence state.
+    Do not let CI create release artifacts.
+    Do not treat generated report drift as a commit failure.
+
+Boundary:
+
+v0.8.3 improves operational release discipline. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
