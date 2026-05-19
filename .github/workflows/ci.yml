@@ -31,14 +31,14 @@ jobs:
           }
 
           $Required = @(
-            "Current software layer | OMN-SA v0.8.2",
+            "Current software layer | OMN-SA v0.8.3.3",
             "AI README Update Policy",
             "OMN-SA v0.8 Metric Availability and Residual Field Hardening",
             "OMN-SA v0.8.1 Validation Compatibility Repair",
             "OMN-SA v0.8.2 README Lineage and AI Update Policy",
             "Observable topology is not truth",
             "Prediction is not mechanism",
-            "Simulation is not proof"
+            "OMN-SA v0.8.3 CI / Release Boundary Separation",`n            "Simulation is not proof"
           )
 
           foreach ($Marker in $Required) {
