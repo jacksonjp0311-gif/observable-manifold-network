@@ -201,3 +201,18 @@ Boundary: v0.6 verifies artifact continuity and local ledger integrity. It does 
 | Release Note | `docs/release_notes/v0_6_1_readme_health_charts.md` | active | Records the v0.6.1 README/charts alignment patch. |
 
 Boundary: v0.6.1 improves public benchmark visibility and orientation. It does not prove correctness, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.
+
+## OMN-SA v0.7 Evidence Drift Comparison and Multi-Run Stability Dashboard
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_7_software_architecture.md` | active | Evidence drift comparison and multi-run stability dashboard. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_7_evidence_drift_change.md` | active | Records v0.7 evidence drift architecture change. |
+| Release Note | `docs/release_notes/v0_7_0_evidence_drift_dashboard.md` | active | Records v0.7 release. |
+| Evidence Drift Module | `src/omn/core/evidence_drift.py` | active | Compares evidence packages across runs. |
+| Evidence Drift Validator | `scripts/validation/validate_evidence_drift.py` | active | Validates evidence drift report and dashboard output. |
+| README Canonicalizer | `scripts/release/canonicalize_readme_v0_7.py` | active | Repairs public README health/registry drift. |
+| Benchmark Report | `docs/benchmarks/omn_sa_v0_7_evidence_drift_metrics.md` | active | Human-readable v0.7 drift metrics. |
+| Dashboard | `visuals/omn_sa/omn_sa_v0_7_evidence_drift_dashboard.svg` | active | Public v0.7 evidence drift chart. |
+
+Boundary: v0.7 compares evidence packages across runs. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

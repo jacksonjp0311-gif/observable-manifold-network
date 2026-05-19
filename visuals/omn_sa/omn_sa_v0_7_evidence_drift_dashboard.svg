@@ -1,0 +1,51 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+  <title id="title">OMN-SA v0.7 Evidence Drift Dashboard</title>
+  <desc id="desc">Multi-run evidence drift comparison dashboard.</desc>
+  <rect width="1040" height="620" rx="30" fill="#0f172a"/>
+
+  <text x="52" y="60" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">OMN-SA v0.7 Evidence Drift Dashboard</text>
+  <text x="52" y="92" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="15">Multi-run evidence comparison, claim stability, artifact-count stability, and drift visibility</text>
+
+  <g transform="translate(52,128)">
+    <rect x="0" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="22" y="34" fill="#93c5fd" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Evidence Compared</text>
+    <text x="22" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">8</text>
+    <text x="22" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">latest evidence packages</text>
+
+    <rect x="318" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="340" y="34" fill="#86efac" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Drift Check</text>
+    <text x="340" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">passed</text>
+    <text x="340" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">multi-run surface</text>
+
+    <rect x="636" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="658" y="34" fill="#fcd34d" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Artifact Spread</text>
+    <text x="658" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">0</text>
+    <text x="658" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">declared artifact-count drift</text>
+  </g>
+
+  <g transform="translate(70,310)" font-family="Segoe UI, Arial">
+    <text x="0" y="-30" fill="#f8fafc" font-size="19" font-weight="700">Run-to-Run Stability Surfaces</text>
+
+    <text x="0" y="22" fill="#cbd5e1" font-size="14">Overall evidence drift</text>
+    <rect x="210" y="4" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="210" y="4" width="520" height="24" rx="8" fill="#38bdf8"/>
+    <text x="750" y="22" fill="#f8fafc" font-size="14">passed</text>
+
+    <text x="0" y="68" fill="#cbd5e1" font-size="14">Artifact count stability</text>
+    <rect x="210" y="50" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="210" y="50" width="520" height="24" rx="8" fill="#34d399"/>
+    <text x="750" y="68" fill="#f8fafc" font-size="14">spread 0</text>
+
+    <text x="0" y="114" fill="#cbd5e1" font-size="14">Load integrity</text>
+    <rect x="210" y="96" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="210" y="96" width="520" height="24" rx="8" fill="#fbbf24"/>
+    <text x="750" y="114" fill="#f8fafc" font-size="14">0 errors</text>
+
+    <text x="0" y="160" fill="#cbd5e1" font-size="14">Claim overpromotion guard</text>
+    <rect x="210" y="142" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="210" y="142" width="520" height="24" rx="8" fill="#a78bfa"/>
+    <text x="750" y="160" fill="#f8fafc" font-size="14">0 flags</text>
+  </g>
+
+  <text x="52" y="585" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="12">Boundary: evidence drift comparison measures local continuity and run-to-run stability. It does not prove correctness, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.</text>
+</svg>

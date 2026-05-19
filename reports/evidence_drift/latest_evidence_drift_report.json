@@ -1,0 +1,192 @@
+{
+  "schema": "OMN-SA-v0.7-evidence-drift-report",
+  "evidence_package_count": 85,
+  "compared_count": 8,
+  "records": [
+    {
+      "run_id": "omn_synthetic_toy_20260519_130551",
+      "seed": "synthetic-toy",
+      "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_130551_evidence_package.json",
+      "computed_status": "runtime-validated",
+      "benchmark_class": "S0",
+      "overpromotion_blocked": true,
+      "declared_artifact_count": 12,
+      "metrics": {
+        "rmse": null,
+        "mae": null,
+        "delta_phi_residual": null,
+        "omega_residual_weight": null
+      },
+      "load_error": null
+    },
+    {
+      "run_id": "omn_artifact_graph_20260519_130551",
+      "seed": "artifact-graph",
+      "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_artifact_graph_20260519_130551_evidence_package.json",
+      "computed_status": "runtime-validated",
+      "benchmark_class": "S3",
+      "overpromotion_blocked": true,
+      "declared_artifact_count": 12,
+      "metrics": {
+        "rmse": null,
+        "mae": null,
+        "delta_phi_residual": null,
+        "omega_residual_weight": null
+      },
+      "load_error": null
+    },
+    {
+      "run_id": "omn_synthetic_toy_20260519_130553",
+      "seed": "synthetic-toy",
+      "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_130553_evidence_package.json",
+      "computed_status": "runtime-validated",
+      "benchmark_class": "S0",
+      "overpromotion_blocked": true,
+      "declared_artifact_count": 12,
+      "metrics": {
+        "rmse": null,
+        "mae": null,
+        "delta_phi_residual": null,
+        "omega_residual_weight": null
+      },
+      "load_error": null
+    },
+    {
+      "run_id": "omn_lorenz_20260519_130554",
+      "seed": "lorenz",
+      "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_lorenz_20260519_130554_evidence_package.json",
+      "computed_status": "runtime-validated",
+      "benchmark_class": "S1",
+      "overpromotion_blocked": true,
+      "declared_artifact_count": 12,
+      "metrics": {
+        "rmse": null,
+        "mae": null,
+        "delta_phi_residual": null,
+        "omega_residual_weight": null
+      },
+      "load_error": null
+    },
+    {
+      "run_id": "omn_artifact_graph_20260519_130554",
+      "seed": "artifact-graph",
+      "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_artifact_graph_20260519_130554_evidence_package.json",
+      "computed_status": "runtime-validated",
+      "benchmark_class": "S3",
+      "overpromotion_blocked": true,
+      "declared_artifact_count": 12,
+      "metrics": {
+        "rmse": null,
+        "mae": null,
+        "delta_phi_residual": null,
+        "omega_residual_weight": null
+      },
+      "load_error": null
+    },
+    {
+      "run_id": "omn_synthetic_toy_20260519_130554",
+      "seed": "synthetic-toy",
+      "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_130554_evidence_package.json",
+      "computed_status": "runtime-validated",
+      "benchmark_class": "S0",
+      "overpromotion_blocked": true,
+      "declared_artifact_count": 12,
+      "metrics": {
+        "rmse": null,
+        "mae": null,
+        "delta_phi_residual": null,
+        "omega_residual_weight": null
+      },
+      "load_error": null
+    },
+    {
+      "run_id": "omn_synthetic_toy_20260519_130555",
+      "seed": "synthetic-toy",
+      "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_synthetic_toy_20260519_130555_evidence_package.json",
+      "computed_status": "runtime-validated",
+      "benchmark_class": "S0",
+      "overpromotion_blocked": true,
+      "declared_artifact_count": 12,
+      "metrics": {
+        "rmse": null,
+        "mae": null,
+        "delta_phi_residual": null,
+        "omega_residual_weight": null
+      },
+      "load_error": null
+    },
+    {
+      "run_id": "omn_artifact_graph_20260519_130555",
+      "seed": "artifact-graph",
+      "path": "C:\\Users\\jacks\\OneDrive\\Desktop\\observable-manifold-network\\outputs\\evidence\\omn_artifact_graph_20260519_130555_evidence_package.json",
+      "computed_status": "runtime-validated",
+      "benchmark_class": "S3",
+      "overpromotion_blocked": true,
+      "declared_artifact_count": 12,
+      "metrics": {
+        "rmse": null,
+        "mae": null,
+        "delta_phi_residual": null,
+        "omega_residual_weight": null
+      },
+      "load_error": null
+    }
+  ],
+  "seeds_seen": [
+    "artifact-graph",
+    "lorenz",
+    "synthetic-toy"
+  ],
+  "claim_statuses_seen": [
+    "runtime-validated"
+  ],
+  "benchmark_classes_seen": [
+    "S0",
+    "S1",
+    "S3"
+  ],
+  "artifact_count_spread": 0,
+  "metric_drift": [
+    {
+      "metric": "rmse",
+      "available": 0,
+      "unavailable": 8,
+      "min": null,
+      "max": null,
+      "spread": null,
+      "status": "unavailable"
+    },
+    {
+      "metric": "mae",
+      "available": 0,
+      "unavailable": 8,
+      "min": null,
+      "max": null,
+      "spread": null,
+      "status": "unavailable"
+    },
+    {
+      "metric": "delta_phi_residual",
+      "available": 0,
+      "unavailable": 8,
+      "min": null,
+      "max": null,
+      "spread": null,
+      "status": "unavailable"
+    },
+    {
+      "metric": "omega_residual_weight",
+      "available": 0,
+      "unavailable": 8,
+      "min": null,
+      "max": null,
+      "spread": null,
+      "status": "unavailable"
+    }
+  ],
+  "load_error_count": 0,
+  "overpromotion_flag_count": 0,
+  "passed": true,
+  "failure_flags": [],
+  "non_claim_boundary": "Evidence drift comparison checks run-to-run continuity, artifact replay status, claim-status stability, and metric availability. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+}

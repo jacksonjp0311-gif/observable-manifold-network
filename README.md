@@ -37,15 +37,16 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Surface | Current result |
 |---|---:|
 | Package / CLI | `omn` |
-| Current software layer | OMN-SA v0.6 |
-| Latest public alignment patch | OMN-SA v0.6.1 |
+| Current software layer | OMN-SA v0.7 |
+| Latest public alignment patch | OMN-SA v0.7 |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
 | Evidence replay | passed |
+| Evidence drift comparison | passed |
 | Ledger integrity | passed |
 | Declared artifacts replayed | 12 / 12 |
 | Missing replay artifacts | 0 |
-| Current tests | 34 OK |
+| Current tests | 38 OK |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N checker | passed |
@@ -54,8 +55,9 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | RCC-N effectiveness score | 1.0 |
 | Regular README baseline | 0.107 |
 | Measured RCC-N lift | +0.893 |
-| Current tag | v0.6.0-omn-sa-evidence-replay-ledger |
-| Current README metrics patch | v0.6.1 |
+| Current tag | pending-v0.7.0 |
+| Current main commit | pending-v0.7.0 |
+
 ### What this is not
 
 - Not a claim to have invented GMN.
@@ -122,6 +124,42 @@ Evolution law:
     Validate the repair.
     Chart the benchmark.
     Freeze the tag.
+
+
+
+---
+
+## Current v0.7 Evidence Drift Dashboard
+
+![OMN-SA v0.7 Evidence Drift Dashboard](visuals/omn_sa/omn_sa_v0_7_evidence_drift_dashboard.svg)
+
+v0.7 adds multi-run evidence drift comparison.
+
+Current measured state:
+
+| Surface | Result |
+|---|---:|
+| Evidence drift validation | passed |
+| Compared evidence packages | latest 8 or fewer available |
+| Artifact count spread | 0 expected |
+| Load error count | 0 expected |
+| Claim overpromotion flags | 0 expected |
+| Evidence replay | passed |
+| Ledger integrity | passed |
+| RCC-N effectiveness | 1.0 |
+| Mini README coverage | 37 / 37 |
+| Unit tests | 38 OK expected after v0.7 |
+
+v0.7 law:
+
+    No evidence package is mature until it can be compared across runs.
+    No stability claim is mature until drift is measured.
+    No public benchmark is mature until the dashboard is visible.
+
+Boundary:
+
+Evidence drift comparison measures local continuity, run-to-run stability, artifact-count stability, load integrity, and claim-status discipline. It does not prove code correctness, patch safety, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.
+
 
 # PART I - Human README
 
@@ -406,7 +444,7 @@ Validation tells the agent whether reality agreed.
 
 Current NCI mode: `self`.
 
-Current NCI target: `0.90+`.
+Current NCI target: `1.0`.
 
 NCI components:
 
@@ -518,7 +556,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.6.
+- Current software architecture layer: OMN-SA v0.7.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -646,24 +684,17 @@ This section is a permanent root README registry. It must be updated every time 
 | Layer | Current file | Status | Notes |
 |---|---|---|---|
 | Theory | `docs/theory/omn_v1_1_theory_bridge.md` | active | OMN v1.1 minimal runtime bridge and adoption layer. |
-| Software Architecture | `docs/software_architecture/omn_sa_v0_1_software_architecture.md` | active | OMN-SA v0.1 minimal runtime software architecture. |
+| Software Architecture | `docs/software_architecture/omn_sa_v0_7_software_architecture.md` | active | OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard. |
 | Source Boundary | `docs/architecture/source_boundary.md` | active | GMN authorship and non-invention boundary. |
-| Docs Registry | `docs/DOCS_REGISTRY.md` | active | Canonical map of theory, architecture, injections, and future docs. |
+| Docs Registry | `docs/DOCS_REGISTRY.md` | active | Canonical map of theory, architecture, injections, metrics, and future docs. |
 | Injection Records | `docs/injections/` | active | RCC-N and docs-registry injections. |
-| Future Architecture | `docs/future_architecture/README.md` | reserved | Planned architecture tracks before promotion. |
-| Release Notes | `docs/release_notes/README.md` | active | Version update checklist and current checkpoint. |
+| Benchmarks | `docs/benchmarks/omn_sa_v0_7_evidence_drift_metrics.md` | active | v0.7 evidence drift metrics. |
+| Release Notes | `docs/release_notes/v0_7_0_evidence_drift_dashboard.md` | active | v0.7 version checkpoint. |
 | RCC-N Context | `docs/context/rcc_nexus_index.json` | active | Repository navigation and Echo Location index. |
 
 ### Current Architecture Chain
 
-    OMN v1.0 theory
-    -> OMN v1.1 minimal runtime bridge
-    -> OMN-SA v0.2 contract validation
-    -> OMN-SA v0.3 modular runtime wrapper
-    -> OMN-SA v0.4 graph engine extraction
-    -> OMN-SA v0.5 topology ensemble and RCC-N metrics
-    -> OMN-SA v0.5.1 mini README repair
-    -> OMN-SA v0.6 evidence replay and run ledger integrity
+OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard
 
 ### Version Update Obligation
 
