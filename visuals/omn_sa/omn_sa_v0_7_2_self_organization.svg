@@ -1,0 +1,57 @@
+<svg xmlns="http://www.w3.org/2000/svg" width="1040" height="620" viewBox="0 0 1040 620" role="img" aria-labelledby="title desc">
+  <title id="title">OMN-SA v0.7.2 Self-Organization Audit</title>
+  <desc id="desc">README self-organization, current state, archive separation, profile layer, and next measured weakness.</desc>
+
+  <rect width="1040" height="620" rx="30" fill="#0f172a"/>
+
+  <text x="52" y="60" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">OMN-SA v0.7.2 Self-Organization Audit</text>
+  <text x="52" y="92" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="15">Current-state map repair for deeper human/AI repository navigation.</text>
+
+  <g transform="translate(52,128)">
+    <rect x="0" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="22" y="34" fill="#93c5fd" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Current Stack</text>
+    <text x="22" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">v0.7.2</text>
+    <text x="22" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">README self-organization</text>
+
+    <rect x="318" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="340" y="34" fill="#86efac" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Profile Layer</text>
+    <text x="340" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">Full</text>
+    <text x="340" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">RCC-N v1.7 profile active</text>
+
+    <rect x="636" y="0" width="285" height="122" rx="18" fill="#111827" stroke="#334155"/>
+    <text x="658" y="34" fill="#fcd34d" font-family="Segoe UI, Arial" font-size="15" font-weight="700">Next Weakness</text>
+    <text x="658" y="72" fill="#f8fafc" font-family="Segoe UI, Arial" font-size="32" font-weight="700">v0.8</text>
+    <text x="658" y="100" fill="#cbd5e1" font-family="Segoe UI, Arial" font-size="13">residual metric hardening</text>
+  </g>
+
+  <g transform="translate(70,310)" font-family="Segoe UI, Arial">
+    <text x="0" y="-30" fill="#f8fafc" font-size="19" font-weight="700">Self-Organization Surfaces</text>
+
+    <text x="0" y="22" fill="#cbd5e1" font-size="14">Current health snapshot</text>
+    <rect x="240" y="4" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="240" y="4" width="520" height="24" rx="8" fill="#38bdf8"/>
+    <text x="780" y="22" fill="#f8fafc" font-size="14">canonical</text>
+
+    <text x="0" y="68" fill="#cbd5e1" font-size="14">AI version tracking</text>
+    <rect x="240" y="50" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="240" y="50" width="520" height="24" rx="8" fill="#34d399"/>
+    <text x="780" y="68" fill="#f8fafc" font-size="14">aligned</text>
+
+    <text x="0" y="114" fill="#cbd5e1" font-size="14">RCC-N v1.7 profile visibility</text>
+    <rect x="240" y="96" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="240" y="96" width="520" height="24" rx="8" fill="#fbbf24"/>
+    <text x="780" y="114" fill="#f8fafc" font-size="14">visible</text>
+
+    <text x="0" y="160" fill="#cbd5e1" font-size="14">Historical archive separation</text>
+    <rect x="240" y="142" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="240" y="142" width="520" height="24" rx="8" fill="#a78bfa"/>
+    <text x="780" y="160" fill="#f8fafc" font-size="14">reworded</text>
+
+    <text x="0" y="206" fill="#cbd5e1" font-size="14">Next-step clarity</text>
+    <rect x="240" y="188" width="520" height="24" rx="8" fill="#1e293b"/>
+    <rect x="240" y="188" width="520" height="24" rx="8" fill="#22c55e"/>
+    <text x="780" y="206" fill="#f8fafc" font-size="14">v0.8 queued</text>
+  </g>
+
+  <text x="52" y="585" fill="#94a3b8" font-family="Segoe UI, Arial" font-size="12">Boundary: self-organization improves repository orientation and agent self-location. It does not prove correctness, empirical validation, causality, mechanism, AI understanding, production readiness, or GMN replication.</text>
+</svg>

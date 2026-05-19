@@ -2,10 +2,10 @@ metric,score
 context_surface_coverage,1.0
 validation_surface_coverage,1.0
 evidence_surface_coverage,1.0
-readme_marker_coverage,1.0
+readme_marker_coverage,0.8888888888888888
 route_map_marker_coverage,1.0
 mini_readme_coverage,1.0
 nci_self,1.0
-rcc_n_effectiveness_score,1.0
+rcc_n_effectiveness_score,0.9822222222222222
 regular_readme_baseline_score,0.107
-lift_over_regular_readme,0.893
+lift_over_regular_readme,0.8752222222222222
