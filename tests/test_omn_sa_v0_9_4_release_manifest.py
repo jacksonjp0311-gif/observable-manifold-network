@@ -29,9 +29,9 @@ class TestOMNSAV094ReleaseManifest(unittest.TestCase):
 
     def test_readme_registry_and_checker_reference_v094(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertRegex(readme, r"Current software layer \| OMN-SA v0\.9\.[4-9]")
+        self.assertRegex(readme, r"Current software layer \| OMN-SA (v0\.9\.[4-9]|v1\.0\.0)")
         self.assertIn("releases/omn_sa_v0_9_4_release_manifest.json", readme)
-        self.assertIn("OMN-SA v0.9.5 v1.0 readiness gate", readme)
+        self.assertIn("OMN-SA v1.0.0 stable public runtime checkpoint", readme)
 
         result = subprocess.run(
             [
@@ -39,11 +39,11 @@ class TestOMNSAV094ReleaseManifest(unittest.TestCase):
                 "scripts/release/update_version_surfaces.py",
                 "--check",
                 "--version",
-                "OMN-SA v0.9.5",
+                "OMN-SA v1.0.0",
                 "--tests",
-                "70",
+                "73",
                 "--patch-name",
-                "OMN-SA v0.9.5 v1.0 readiness gate",
+                "OMN-SA v1.0.0 stable public runtime checkpoint",
             ],
             cwd=ROOT,
             text=True,

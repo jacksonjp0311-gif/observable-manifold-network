@@ -385,3 +385,18 @@ Boundary: v0.9.4 improves release traceability and release-readiness inspection.
 | Test | `tests/test_omn_sa_v0_9_5_v1_0_readiness_gate.py` | active | Verifies readiness classification and boundaries. |
 
 Boundary: v0.9.5 improves release-promotion discipline and readiness inspection. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+## OMN-SA v1.0.0 Stable Public Runtime Checkpoint
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v1_0_0_stable_public_runtime_checkpoint.md` | active | Defines stable public checkpoint discipline. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v1_0_0_stable_public_runtime_checkpoint_change.md` | active | Records checkpoint consolidation. |
+| Release Note | `docs/release_notes/v1_0_0_stable_public_runtime_checkpoint.md` | active | Records the v1.0.0 checkpoint. |
+| Manifest JSON | `releases/omn_sa_v1_0_0_stable_public_runtime_checkpoint.json` | active | Machine-readable stable checkpoint object. |
+| Manifest MD | `releases/omn_sa_v1_0_0_stable_public_runtime_checkpoint.md` | active | Human-readable stable checkpoint seal. |
+| Test | `tests/test_omn_sa_v1_0_0_stable_public_checkpoint.py` | active | Verifies stable checkpoint surfaces and boundaries. |
+
+Boundary: v1.0.0 records a stable local public-runtime and repository-governance checkpoint. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

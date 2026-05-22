@@ -1,0 +1,30 @@
+{
+  "schema": "OMN-SA-v1.0.0-stable-public-runtime-checkpoint",
+  "version": "OMN-SA v1.0.0",
+  "release_reference": "v1.0.0-stable-public-runtime-checkpoint",
+  "generated_at": "2026-05-22T09:01:31.663089+00:00",
+  "source_base_commit": "773b2c1",
+  "expected_tests": 73,
+  "classification": "stable-public-runtime-checkpoint",
+  "readiness_basis": "Promoted from OMN-SA v0.9.5 v1.0-ready-candidate.",
+  "stabilized_surfaces": {
+    "deterministic_run_identity": "passed",
+    "stable_evidence_index": "passed",
+    "public_metrics_dashboard": "passed",
+    "readme_registry_autopatcher": "passed",
+    "release_manifest_version_seal": "passed",
+    "v1_0_readiness_gate": "passed",
+    "non_claim_locks": "preserved"
+  },
+  "validation_commands": [
+    "python -m unittest discover -s tests",
+    "python scripts/release/update_version_surfaces.py --check --version \"OMN-SA v1.0.0\" --tests 73 --patch-name \"OMN-SA v1.0.0 stable public runtime checkpoint\"",
+    "python scripts/release/check_v1_0_readiness.py --version \"OMN-SA v1.0.0\" --tests 73 --patch-name \"OMN-SA v1.0.0 stable public runtime checkpoint\"",
+    "python -m omn run --seed synthetic-toy --ci-mode --run-id omn_ci_smoke --output-dir outputs_ci --no-write-report",
+    "python -m omn index-evidence --output-dir outputs_ci",
+    "python -m omn report-latest --output-dir outputs_ci --mode ci",
+    "python -m omn validate --output-dir outputs_ci --mode ci",
+    "python -m omn --help"
+  ],
+  "non_claim_boundary": "The v1.0.0 checkpoint records a stable local public-runtime and repository-governance surface. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+}

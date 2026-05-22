@@ -33,11 +33,11 @@ class TestOMNSAV095V10ReadinessGate(unittest.TestCase):
                 "python",
                 "scripts/release/check_v1_0_readiness.py",
                 "--version",
-                "OMN-SA v0.9.5",
+                "OMN-SA v1.0.0",
                 "--tests",
-                "70",
+                "73",
                 "--patch-name",
-                "OMN-SA v0.9.5 v1.0 readiness gate",
+                "OMN-SA v1.0.0 stable public runtime checkpoint",
             ],
             cwd=ROOT,
             text=True,
@@ -50,7 +50,7 @@ class TestOMNSAV095V10ReadinessGate(unittest.TestCase):
 
     def test_readme_references_readiness_gate(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertIn("Current software layer | OMN-SA v0.9.5", readme)
+        self.assertIn("Current software layer | OMN-SA v1.0.0", readme)
         self.assertIn("v1.0 readiness gate", readme)
         self.assertIn("reports/readiness/latest_v1_0_readiness_report.json", readme)
 

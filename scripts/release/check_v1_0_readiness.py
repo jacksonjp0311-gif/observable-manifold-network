@@ -144,7 +144,7 @@ def build_report(version: str, tests: str, patch_name: str, require_clean: bool)
 def main() -> int:
     parser = argparse.ArgumentParser(description="OMN-SA v1.0 readiness gate")
     parser.add_argument("--version", default="OMN-SA v0.9.5")
-    parser.add_argument("--tests", default="70")
+    parser.add_argument("--tests", default="73")
     parser.add_argument("--patch-name", default="OMN-SA v0.9.5 v1.0 readiness gate")
     parser.add_argument("--require-clean", action="store_true")
     parser.add_argument("--write-report", action="store_true")

@@ -14,7 +14,7 @@ class TestOMNSAV092PublicMetricsDashboard(unittest.TestCase):
 
         text = dashboard.read_text(encoding="utf-8")
         self.assertIn("Current Public Metrics Dashboard", text)
-        self.assertIn("Unit tests | 70 OK", text)
+        self.assertIn("Unit tests | 73 OK", text)
         self.assertIn("Mini README coverage | 37 / 37", text)
         self.assertIn("RCC-N effectiveness score | 0.9822222222", text)
         self.assertIn("Measured RCC-N lift | +0.8752222222", text)
@@ -23,7 +23,7 @@ class TestOMNSAV092PublicMetricsDashboard(unittest.TestCase):
 
     def test_readme_links_current_public_metrics(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertRegex(readme, r"Current software layer \| OMN-SA v0\.9\.[2-9]")
+        self.assertRegex(readme, r"Current software layer \| OMN-SA (v0\.9\.[2-9]|v1\.0\.0)")
         self.assertIn("docs/benchmarks/current_public_metrics.md", readme)
         self.assertIn("visuals/omn_sa/current_public_metrics.svg", readme)
 

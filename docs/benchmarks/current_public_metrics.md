@@ -1,6 +1,6 @@
 # OMN-SA Current Public Metrics Dashboard
 
-Generated: 2026-05-22T08:47:21.191953+00:00
+Generated: 2026-05-22T09:01:31.663089+00:00
 
 ## Purpose
 
@@ -12,7 +12,7 @@ It is designed to show what the repository has accomplished without inflating cl
 
 | Surface | Current result | Meaning |
 |---|---:|---|
-| Unit tests | 70 OK | Local implementation and documentation-health tests pass. |
+| Unit tests | 73 OK | Local implementation and documentation-health tests pass. |
 | Mini README coverage | 37 / 37 | Major repository directories expose local context surfaces. |
 | RCC-N effectiveness score | 0.9822222222 | Repository navigation/context coverage score. |
 | Regular README baseline | 0.107 | Structural baseline for a normal README-only orientation surface. |
@@ -26,6 +26,7 @@ It is designed to show what the repository has accomplished without inflating cl
 | README / registry autopatcher | passed | Version surfaces can be checked before release completion. |
 | Release manifest / version seal | passed | Release-readiness is recorded in a machine-readable manifest. |
 | v1.0 readiness gate | passed | Repository is classified as a v1.0-ready candidate. |
+| v1.0.0 stable checkpoint | passed | Current public runtime and repository-governance surfaces are sealed. |
 
 ## Public Claim
 
@@ -49,8 +50,8 @@ OMN-SA demonstrates that a software repository can expose measurable navigation,
 
 ```powershell
 python -m unittest discover -s tests
-python scripts/release/update_version_surfaces.py --check --version "OMN-SA v0.9.5" --tests 70 --patch-name "OMN-SA v0.9.5 v1.0 readiness gate"
-python scripts/release/check_v1_0_readiness.py --version "OMN-SA v0.9.5" --tests 70 --patch-name "OMN-SA v0.9.5 v1.0 readiness gate"
+python scripts/release/update_version_surfaces.py --check --version "OMN-SA v1.0.0" --tests 73 --patch-name "OMN-SA v1.0.0 stable public runtime checkpoint"
+python scripts/release/check_v1_0_readiness.py --version "OMN-SA v1.0.0" --tests 73 --patch-name "OMN-SA v1.0.0 stable public runtime checkpoint"
 python -m omn run --seed synthetic-toy --ci-mode --run-id omn_ci_smoke --output-dir outputs_ci --no-write-report
 python -m omn index-evidence --output-dir outputs_ci
 python -m omn report-latest --output-dir outputs_ci --mode ci
