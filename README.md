@@ -1,5 +1,7 @@
 # Observable Manifold Network: Governed Observable-Topology Runtime
 
+<img width="1254" height="1254" alt="image" src="https://github.com/user-attachments/assets/8f97616c-8464-4af3-b887-c12e51e07cb5" />
+
 ## Repository Description
 
 Governed observable-topology runtime with source-bounded GMN attribution, typed graph contracts, residual validation, baseline comparison, topology sensitivity, claim gates, evidence packages, and RCC-N repository navigation.
@@ -15,6 +17,10 @@ Boundary: this description improves discoverability and maintenance discipline. 
 > Observable Manifold Network is a local-first reference runtime for testing whether an observable-topology scaffold can declare observable nodes, type interaction edges, construct graph contracts, generate future states, validate residuals, compare baselines, report topology sensitivity, preserve non-claim locks, and emit audit-ready evidence packages.
 
 Important boundary: this is not a claim to have invented Generative Manifold Networks. GMN remains Park et al.'s method. OMN is a Codex software/runtime architecture and documentation shell.
+
+<img width="1536" height="1024" alt="image" src="https://github.com/user-attachments/assets/d36a822a-7aa3-479d-83c0-23a060e4f26b" />
+
+<img width="1448" height="1086" alt="image" src="https://github.com/user-attachments/assets/464c29bf-c810-48f8-88ba-f0aa5cbde910" />
 
 ## Human Director Box
 
