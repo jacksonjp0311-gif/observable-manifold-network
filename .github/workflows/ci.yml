@@ -31,10 +31,10 @@ jobs:
           }
 
           $Required = @(
-            "Current software layer | OMN-SA v0.9.4",
-            "Latest public alignment patch | OMN-SA v0.9.4 release manifest / version seal",
-            "Current tests | 67 OK",
-            "Release reference | v0.9.4 release manifest / version seal",
+            "Current software layer | OMN-SA v0.9.5",
+            "Latest public alignment patch | OMN-SA v0.9.5 v1.0 readiness gate",
+            "Current tests | 70 OK",
+            "Release reference | v0.9.5 v1.0 readiness gate",
             "AI README Update Policy",
             "OMN-SA v0.8 Metric Availability and Residual Field Hardening",
             "OMN-SA v0.8.1 Validation Compatibility Repair",
@@ -45,6 +45,7 @@ jobs:
             "OMN-SA v0.9.2 Public Metrics Dashboard",
             "OMN-SA v0.9.3 README / Registry Autopatcher",
             "OMN-SA v0.9.4 Release Manifest / Version Seal",
+            "OMN-SA v0.9.5 v1.0 Readiness Gate",
             "Observable topology is not truth",
             "Prediction is not mechanism",
             "Simulation is not proof"

@@ -369,3 +369,19 @@ Boundary: v0.9.3 improves release hygiene and repository orientation. It does no
 | Test | `tests/test_omn_sa_v0_9_4_release_manifest.py` | active | Verifies manifest presence, validation commands, and boundaries. |
 
 Boundary: v0.9.4 improves release traceability and release-readiness inspection. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+## OMN-SA v0.9.5 v1.0 Readiness Gate
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_9_5_v1_0_readiness_gate.md` | active | Defines v1.0 readiness-gate discipline. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_9_5_v1_0_readiness_gate_change.md` | active | Records release-promotion hardening. |
+| Release Note | `docs/release_notes/v0_9_5_v1_0_readiness_gate.md` | active | Records the v0.9.5 checkpoint. |
+| Readiness Checker | `scripts/release/check_v1_0_readiness.py` | active | Classifies v1.0 readiness. |
+| Readiness Report JSON | `reports/readiness/latest_v1_0_readiness_report.json` | active | Machine-readable readiness report. |
+| Readiness Report MD | `reports/readiness/latest_v1_0_readiness_report.md` | active | Human-readable readiness report. |
+| Test | `tests/test_omn_sa_v0_9_5_v1_0_readiness_gate.py` | active | Verifies readiness classification and boundaries. |
+
+Boundary: v0.9.5 improves release-promotion discipline and readiness inspection. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

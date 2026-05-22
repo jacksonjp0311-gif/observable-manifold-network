@@ -37,8 +37,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Surface | Current result |
 |---|---:|
 | Package / CLI | `omn` |
-| Current software layer | OMN-SA v0.9.4 |
-| Latest public alignment patch | OMN-SA v0.9.4 release manifest / version seal |
+| Current software layer | OMN-SA v0.9.5 |
+| Latest public alignment patch | OMN-SA v0.9.5 v1.0 readiness gate |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
 | Evidence replay | passed |
@@ -49,9 +49,10 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Public metrics dashboard | passed |
 | README / registry autopatcher | passed |
 | Release manifest / version seal | passed |
+| v1.0 readiness gate | passed |
 | Declared artifacts replayed | 12 / 12 |
 | Missing replay artifacts | 0 |
-| Current tests | 67 OK |
+| Current tests | 70 OK |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N checker | passed |
@@ -69,8 +70,10 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Version surface checker | `scripts/release/update_version_surfaces.py` |
 | Release manifest | `releases/omn_sa_v0_9_4_release_manifest.json` |
 | Release manifest summary | `releases/omn_sa_v0_9_4_release_manifest.md` |
+| v1.0 readiness report | `reports/readiness/latest_v1_0_readiness_report.json` |
+| v1.0 readiness summary | `reports/readiness/latest_v1_0_readiness_report.md` |
 | Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
-| Release reference | v0.9.4 release manifest / version seal |
+| Release reference | v0.9.5 v1.0 readiness gate |
 
 
 ### What this is not
@@ -455,6 +458,33 @@ v0.9.4 law:
 Boundary:
 
 v0.9.4 improves release traceability and release-readiness inspection. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+
+---
+
+## Current v0.9.5 v1.0 Readiness Gate
+
+v0.9.5 adds a readiness classifier before the v1.0.0 public runtime checkpoint.
+
+Readiness surfaces:
+
+| Surface | Path |
+|---|---|
+| Readiness checker | `scripts/release/check_v1_0_readiness.py` |
+| Readiness report JSON | `reports/readiness/latest_v1_0_readiness_report.json` |
+| Readiness report MD | `reports/readiness/latest_v1_0_readiness_report.md` |
+| Release manifest JSON | `releases/omn_sa_v0_9_4_release_manifest.json` |
+| Current public metrics | `docs/benchmarks/current_public_metrics.md` |
+
+v0.9.5 law:
+
+    No v1.0 without a readiness classifier.
+
+Boundary:
+
+v0.9.5 improves release-promotion discipline and readiness inspection. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
 
 
 # PART I - Human README
@@ -867,7 +897,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.9.4.
+- Current software architecture layer: OMN-SA v0.9.5.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -1036,8 +1066,9 @@ This section is a permanent root README registry. It must be updated every time 
 | Layer | Current file | Status | Notes |
 |---|---|---|---|
 | Theory | `docs/theory/omn_v1_1_theory_bridge.md` | active | OMN v1.1 minimal runtime bridge and adoption layer. |
-| Software Architecture | `docs/software_architecture/omn_sa_v0_9_4_release_manifest_version_seal.md` | active | Release manifest and version seal. |
-| Prior Software Architecture | `docs/software_architecture/omn_sa_v0_9_3_readme_registry_autopatcher.md` | active | README / registry autopatcher and version-surface checking. |
+| Software Architecture | `docs/software_architecture/omn_sa_v0_9_5_v1_0_readiness_gate.md` | active | v1.0 readiness gate and promotion classifier. |
+| Prior Software Architecture | `docs/software_architecture/omn_sa_v0_9_4_release_manifest_version_seal.md` | active | Release manifest and version seal. |
+| Registry Autopatcher Architecture | `docs/software_architecture/omn_sa_v0_9_3_readme_registry_autopatcher.md` | active | README / registry autopatcher and version-surface checking. |
 | Public Metrics Architecture | `docs/software_architecture/omn_sa_v0_9_2_public_metrics_dashboard.md` | active | Public metrics dashboard hardening. |
 | Evidence Index Architecture | `docs/software_architecture/omn_sa_v0_9_1_stable_evidence_index.md` | active | Stable evidence index and latest pointer system. |
 | Runtime Determinism Architecture | `docs/software_architecture/omn_sa_v0_9_0_deterministic_run_identity.md` | active | Deterministic run identity and execution-mode hardening. |
@@ -1051,7 +1082,7 @@ This section is a permanent root README registry. It must be updated every time 
 | Benchmarks | `docs/benchmarks/omn_sa_v0_8_metric_availability_metrics.md` | active | v0.8 metric availability benchmark. |
 | Self-Organization | `reports/self_organization/latest_readme_self_organization_audit.md` | active | Current README self-organization audit. |
 | README Policy | `reports/readme_policy/latest_readme_lineage_policy_audit.md` | active | Version-aware README lineage-policy audit. |
-| Release Notes | `docs/release_notes/v0_9_4_release_manifest_version_seal.md` | active | v0.9.4 release manifest / version seal checkpoint. |
+| Release Notes | `docs/release_notes/v0_9_5_v1_0_readiness_gate.md` | active | v0.9.5 v1.0 readiness gate checkpoint. |
 | RCC-N Context | `docs/context/rcc_nexus_index.json` and `docs/context/rcc_nexus_profile_v1_7.json` | active | Repository navigation and profile-gated governance. |
 
 
@@ -1067,7 +1098,7 @@ Boundary: this marker preserves historical README lineage. It does not prove cod
 
 ### Current Architecture Chain
 
-OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization -> OMN-SA v0.7.3 README lineage completion -> OMN-SA v0.8 metric availability and residual field hardening -> OMN-SA v0.8.1 validation compatibility repair -> OMN-SA v0.8.2 README lineage and AI update policy -> OMN-SA v0.8.3 CI / release boundary separation -> OMN-SA v0.9.0 deterministic run identity and execution modes -> OMN-SA v0.9.1 stable evidence index and latest pointer system -> OMN-SA v0.9.2 public metrics dashboard hardening -> OMN-SA v0.9.3 README / registry autopatcher -> OMN-SA v0.9.4 release manifest / version seal
+OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization -> OMN-SA v0.7.3 README lineage completion -> OMN-SA v0.8 metric availability and residual field hardening -> OMN-SA v0.8.1 validation compatibility repair -> OMN-SA v0.8.2 README lineage and AI update policy -> OMN-SA v0.8.3 CI / release boundary separation -> OMN-SA v0.9.0 deterministic run identity and execution modes -> OMN-SA v0.9.1 stable evidence index and latest pointer system -> OMN-SA v0.9.2 public metrics dashboard hardening -> OMN-SA v0.9.3 README / registry autopatcher -> OMN-SA v0.9.4 release manifest / version seal -> OMN-SA v0.9.5 v1.0 readiness gate
 
 
 ### Version Update Obligation
@@ -1092,7 +1123,8 @@ Every future version must update this registry section when any of the following
 - evidence pointer/index behavior and latest-evidence selection rules,
 - current public metrics dashboard and benchmark chart status,
 - version-surface checker status before release completion,
-- release manifest and version-seal status.
+- release manifest and version-seal status,
+- v1.0 readiness classifier status.
 
 ### Boundary
 
@@ -1751,3 +1783,31 @@ v0.9.4 law:
 Boundary:
 
 v0.9.4 improves release traceability. It does not prove empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+---
+
+## OMN-SA v0.9.5 v1.0 Readiness Gate
+
+v0.9.5 classifies the repository as a v1.0-ready candidate only if the required release surfaces are present and aligned.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.9.5 architecture | `docs/software_architecture/omn_sa_v0_9_5_v1_0_readiness_gate.md` | Defines readiness-gate discipline. |
+| v0.9.5 architecture change | `docs/architecture_changes/omn_sa_v0_9_5_v1_0_readiness_gate_change.md` | Records release-promotion hardening. |
+| v0.9.5 release note | `docs/release_notes/v0_9_5_v1_0_readiness_gate.md` | Records the v0.9.5 checkpoint. |
+| Readiness checker | `scripts/release/check_v1_0_readiness.py` | Classifies v1.0 readiness. |
+| Readiness report JSON | `reports/readiness/latest_v1_0_readiness_report.json` | Machine-readable readiness report. |
+| Readiness report MD | `reports/readiness/latest_v1_0_readiness_report.md` | Human-readable readiness report. |
+| Readiness tests | `tests/test_omn_sa_v0_9_5_v1_0_readiness_gate.py` | Verifies readiness classification and boundaries. |
+
+v0.9.5 law:
+
+    No v1.0 without a readiness classifier.
+
+Boundary:
+
+v0.9.5 improves release-promotion discipline. It does not prove empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

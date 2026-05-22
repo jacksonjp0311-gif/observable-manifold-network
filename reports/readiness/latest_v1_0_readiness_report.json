@@ -1,0 +1,21 @@
+{
+  "schema": "OMN-SA-v0.9.5-v1.0-readiness-report",
+  "generated_at": "2026-05-22T08:47:21.191953+00:00",
+  "version": "OMN-SA v0.9.5",
+  "target": "OMN-SA v1.0.0",
+  "source_base_commit": "7e39a8c",
+  "readiness_classification": "v1.0-ready-candidate",
+  "passed": true,
+  "expected_tests": 70,
+  "required_surfaces": [
+    "README.md",
+    "docs/DOCS_REGISTRY.md",
+    ".github/workflows/ci.yml",
+    "scripts/release/update_version_surfaces.py",
+    "scripts/release/check_v1_0_readiness.py",
+    "docs/benchmarks/current_public_metrics.md",
+    "visuals/omn_sa/current_public_metrics.svg",
+    "releases/omn_sa_v0_9_4_release_manifest.json"
+  ],
+  "non_claim_boundary": "The v1.0 readiness report records local release-readiness surfaces. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication."
+}

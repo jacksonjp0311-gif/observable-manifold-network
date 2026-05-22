@@ -14,7 +14,7 @@ class TestOMNSAV092PublicMetricsDashboard(unittest.TestCase):
 
         text = dashboard.read_text(encoding="utf-8")
         self.assertIn("Current Public Metrics Dashboard", text)
-        self.assertIn("Unit tests | 67 OK", text)
+        self.assertIn("Unit tests | 70 OK", text)
         self.assertIn("Mini README coverage | 37 / 37", text)
         self.assertIn("RCC-N effectiveness score | 0.9822222222", text)
         self.assertIn("Measured RCC-N lift | +0.8752222222", text)
