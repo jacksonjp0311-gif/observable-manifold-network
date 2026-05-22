@@ -354,3 +354,18 @@ Boundary: v0.9.2 improves public interpretability and benchmark visibility. It d
 | Test | `tests/test_omn_sa_v0_9_3_readme_registry_autopatcher.py` | active | Verifies checker presence and current surface alignment. |
 
 Boundary: v0.9.3 improves release hygiene and repository orientation. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+## OMN-SA v0.9.4 Release Manifest / Version Seal
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_9_4_release_manifest_version_seal.md` | active | Defines release manifest and version seal discipline. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_9_4_release_manifest_version_seal_change.md` | active | Records release-readiness hardening. |
+| Release Note | `docs/release_notes/v0_9_4_release_manifest_version_seal.md` | active | Records the v0.9.4 checkpoint. |
+| Release Manifest JSON | `releases/omn_sa_v0_9_4_release_manifest.json` | active | Machine-readable release object. |
+| Release Manifest MD | `releases/omn_sa_v0_9_4_release_manifest.md` | active | Human-readable release seal. |
+| Test | `tests/test_omn_sa_v0_9_4_release_manifest.py` | active | Verifies manifest presence, validation commands, and boundaries. |
+
+Boundary: v0.9.4 improves release traceability and release-readiness inspection. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

@@ -1,6 +1,6 @@
-# OMN-SA v0.9.2 Current Public Metrics Dashboard
+# OMN-SA Current Public Metrics Dashboard
 
-Generated: 2026-05-19T20:41:33.735971+00:00
+Generated: 2026-05-22T08:42:28.896687+00:00
 
 ## Purpose
 
@@ -12,7 +12,7 @@ It is designed to show what the repository has accomplished without inflating cl
 
 | Surface | Current result | Meaning |
 |---|---:|---|
-| Unit tests | 63 OK | Local implementation and documentation-health tests pass. |
+| Unit tests | 67 OK | Local implementation and documentation-health tests pass. |
 | Mini README coverage | 37 / 37 | Major repository directories expose local context surfaces. |
 | RCC-N effectiveness score | 0.9822222222 | Repository navigation/context coverage score. |
 | Regular README baseline | 0.107 | Structural baseline for a normal README-only orientation surface. |
@@ -22,10 +22,13 @@ It is designed to show what the repository has accomplished without inflating cl
 | Metric availability | passed | Required residual metrics are exposed where validators expect them. |
 | Deterministic CI fixture | valid | `--ci-mode` fixture validates through explicit output routing. |
 | Stable evidence index | passed | Latest evidence can be selected through explicit pointer files. |
+| Public metrics dashboard | passed | Current metrics are visible in README-linked dashboard/chart surfaces. |
+| README / registry autopatcher | passed | Version surfaces can be checked before release completion. |
+| Release manifest / version seal | passed | Release-readiness is recorded in a machine-readable manifest. |
 
 ## Public Claim
 
-OMN-SA demonstrates that a software repository can expose measurable navigation, evidence, validation, deterministic execution, and claim-boundary surfaces.
+OMN-SA demonstrates that a software repository can expose measurable navigation, evidence, validation, deterministic execution, release-readiness, and claim-boundary surfaces.
 
 ## Non-Claims
 
@@ -39,12 +42,13 @@ OMN-SA demonstrates that a software repository can expose measurable navigation,
 
 ## Chart
 
-![OMN-SA v0.9.2 Public Metrics Dashboard](../../visuals/omn_sa/current_public_metrics.svg)
+![OMN-SA Current Public Metrics Dashboard](../../visuals/omn_sa/current_public_metrics.svg)
 
 ## Reproduction Commands
 
 ```powershell
 python -m unittest discover -s tests
+python scripts/release/update_version_surfaces.py --check --version "OMN-SA v0.9.4" --tests 67 --patch-name "OMN-SA v0.9.4 release manifest / version seal"
 python -m omn run --seed synthetic-toy --ci-mode --run-id omn_ci_smoke --output-dir outputs_ci --no-write-report
 python -m omn index-evidence --output-dir outputs_ci
 python -m omn report-latest --output-dir outputs_ci --mode ci
