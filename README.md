@@ -37,8 +37,8 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Surface | Current result |
 |---|---:|
 | Package / CLI | `omn` |
-| Current software layer | OMN-SA v0.9.2 |
-| Latest public alignment patch | OMN-SA v0.9.2 public metrics dashboard |
+| Current software layer | OMN-SA v0.9.3 |
+| Latest public alignment patch | OMN-SA v0.9.3 README / registry autopatcher |
 | Seeds | synthetic-toy, lorenz, artifact-graph |
 | Evidence emission | state, evidence, report, plots, logs, ledger |
 | Evidence replay | passed |
@@ -47,9 +47,10 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Ledger integrity | passed |
 | Stable evidence index | passed |
 | Public metrics dashboard | passed |
+| README / registry autopatcher | passed |
 | Declared artifacts replayed | 12 / 12 |
 | Missing replay artifacts | 0 |
-| Current tests | 63 OK |
+| Current tests | 65 OK |
 | Claim status | runtime-validated locally |
 | Source boundary | GMN authorship preserved |
 | RCC-N checker | passed |
@@ -64,8 +65,9 @@ It also adds folder-level mini READMEs with RCC Nexus Echo Location blocks, a do
 | Measured RCC-N lift | +0.8752222222 |
 | Current public metrics | `docs/benchmarks/current_public_metrics.md` |
 | Current metrics chart | `visuals/omn_sa/current_public_metrics.svg` |
+| Version surface checker | `scripts/release/update_version_surfaces.py` |
 | Release tag | v0.8.1-omn-sa-validation-compatibility-repair |
-| Release reference | v0.9.2 public metrics dashboard |
+| Release reference | v0.9.3 README / registry autopatcher |
 
 
 ### What this is not
@@ -399,6 +401,31 @@ v0.9.2 law:
 Boundary:
 
 v0.9.2 improves public interpretability and benchmark visibility. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+
+---
+
+## Current v0.9.3 README / Registry Autopatcher
+
+v0.9.3 adds a reusable version-surface checker so README, CI, and DOCS_REGISTRY alignment can be verified before a release is considered complete.
+
+Autopatcher/checker surface:
+
+    scripts/release/update_version_surfaces.py
+
+Example check:
+
+    python scripts/release/update_version_surfaces.py --check --version "OMN-SA v0.9.3" --tests 65 --patch-name "OMN-SA v0.9.3 README / registry autopatcher"
+
+v0.9.3 law:
+
+    No version bump without automated registry-surface verification.
+
+Boundary:
+
+v0.9.3 improves release hygiene and repository orientation. It does not prove code correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
 
 
 # PART I - Human README
@@ -811,7 +838,7 @@ Current repository context:
 - Repository: observable-manifold-network
 - Purpose: governed observable-topology runtime and evidence-emitting workbench.
 - Current runtime layer: OMN runtime scaffold.
-- Current software architecture layer: OMN-SA v0.9.2.
+- Current software architecture layer: OMN-SA v0.9.3.
 - Primary package: `omn`.
 - Current classification: runtime-validated locally only.
 - Current seeds: synthetic-toy, lorenz, artifact-graph.
@@ -980,8 +1007,9 @@ This section is a permanent root README registry. It must be updated every time 
 | Layer | Current file | Status | Notes |
 |---|---|---|---|
 | Theory | `docs/theory/omn_v1_1_theory_bridge.md` | active | OMN v1.1 minimal runtime bridge and adoption layer. |
-| Software Architecture | `docs/software_architecture/omn_sa_v0_9_2_public_metrics_dashboard.md` | active | Public metrics dashboard hardening. |
-| Prior Software Architecture | `docs/software_architecture/omn_sa_v0_9_1_stable_evidence_index.md` | active | Stable evidence index and latest pointer system. |
+| Software Architecture | `docs/software_architecture/omn_sa_v0_9_3_readme_registry_autopatcher.md` | active | README / registry autopatcher and version-surface checking. |
+| Prior Software Architecture | `docs/software_architecture/omn_sa_v0_9_2_public_metrics_dashboard.md` | active | Public metrics dashboard hardening. |
+| Evidence Index Architecture | `docs/software_architecture/omn_sa_v0_9_1_stable_evidence_index.md` | active | Stable evidence index and latest pointer system. |
 | Runtime Determinism Architecture | `docs/software_architecture/omn_sa_v0_9_0_deterministic_run_identity.md` | active | Deterministic run identity and execution-mode hardening. |
 | CI / Release Architecture | `docs/software_architecture/omn_sa_v0_8_3_ci_release_boundary_separation.md` | active | CI / release boundary separation. |
 | README Policy Architecture | `docs/software_architecture/omn_sa_v0_8_2_readme_lineage_policy.md` | active | README lineage and AI update-policy repair. |
@@ -993,7 +1021,7 @@ This section is a permanent root README registry. It must be updated every time 
 | Benchmarks | `docs/benchmarks/omn_sa_v0_8_metric_availability_metrics.md` | active | v0.8 metric availability benchmark. |
 | Self-Organization | `reports/self_organization/latest_readme_self_organization_audit.md` | active | Current README self-organization audit. |
 | README Policy | `reports/readme_policy/latest_readme_lineage_policy_audit.md` | active | Version-aware README lineage-policy audit. |
-| Release Notes | `docs/release_notes/v0_9_2_public_metrics_dashboard.md` | active | v0.9.2 public metrics dashboard checkpoint. |
+| Release Notes | `docs/release_notes/v0_9_3_readme_registry_autopatcher.md` | active | v0.9.3 README / registry autopatcher checkpoint. |
 | RCC-N Context | `docs/context/rcc_nexus_index.json` and `docs/context/rcc_nexus_profile_v1_7.json` | active | Repository navigation and profile-gated governance. |
 
 
@@ -1009,7 +1037,7 @@ Boundary: this marker preserves historical README lineage. It does not prove cod
 
 ### Current Architecture Chain
 
-OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization -> OMN-SA v0.7.3 README lineage completion -> OMN-SA v0.8 metric availability and residual field hardening -> OMN-SA v0.8.1 validation compatibility repair -> OMN-SA v0.8.2 README lineage and AI update policy -> OMN-SA v0.8.3 CI / release boundary separation -> OMN-SA v0.9.0 deterministic run identity and execution modes -> OMN-SA v0.9.1 stable evidence index and latest pointer system -> OMN-SA v0.9.2 public metrics dashboard hardening
+OMN v1.0 theory -> OMN v1.1 minimal runtime bridge -> OMN-SA v0.2 contract validation -> OMN-SA v0.3 modular runtime wrapper -> OMN-SA v0.4 graph engine extraction -> OMN-SA v0.5 topology ensemble and RCC-N metrics -> OMN-SA v0.5.1 mini README repair -> OMN-SA v0.6 evidence replay and run ledger integrity -> OMN-SA v0.6.1 README health/charts -> OMN-SA v0.7 evidence drift comparison and multi-run stability dashboard -> OMN-SA v0.7.1 RCC-N v1.7 profile injection -> OMN-SA v0.7.2 README self-organization canonicalization -> OMN-SA v0.7.3 README lineage completion -> OMN-SA v0.8 metric availability and residual field hardening -> OMN-SA v0.8.1 validation compatibility repair -> OMN-SA v0.8.2 README lineage and AI update policy -> OMN-SA v0.8.3 CI / release boundary separation -> OMN-SA v0.9.0 deterministic run identity and execution modes -> OMN-SA v0.9.1 stable evidence index and latest pointer system -> OMN-SA v0.9.2 public metrics dashboard hardening -> OMN-SA v0.9.3 README / registry autopatcher
 
 
 ### Version Update Obligation
@@ -1032,7 +1060,8 @@ Every future version must update this registry section when any of the following
 - deterministic run identity behavior,
 - old audits that may accidentally freeze older current-state assumptions,
 - evidence pointer/index behavior and latest-evidence selection rules,
-- current public metrics dashboard and benchmark chart status.
+- current public metrics dashboard and benchmark chart status,
+- version-surface checker status before release completion.
 
 ### Boundary
 
@@ -1638,3 +1667,29 @@ v0.9.2 law:
 Boundary:
 
 v0.9.2 improves benchmark visibility. It does not prove empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+---
+
+## OMN-SA v0.9.3 README / Registry Autopatcher
+
+v0.9.3 adds a reusable version-surface checker to prevent stale README, CI, and registry fields.
+
+Added:
+
+| Layer | Path | Purpose |
+|---|---|---|
+| v0.9.3 architecture | `docs/software_architecture/omn_sa_v0_9_3_readme_registry_autopatcher.md` | Defines README / registry autopatcher discipline. |
+| v0.9.3 architecture change | `docs/architecture_changes/omn_sa_v0_9_3_readme_registry_autopatcher_change.md` | Records version-surface hardening. |
+| v0.9.3 release note | `docs/release_notes/v0_9_3_readme_registry_autopatcher.md` | Records the v0.9.3 checkpoint. |
+| Version-surface checker | `scripts/release/update_version_surfaces.py` | Checks README, CI, and DOCS_REGISTRY alignment. |
+| Autopatcher tests | `tests/test_omn_sa_v0_9_3_readme_registry_autopatcher.py` | Verifies checker presence and current surface alignment. |
+
+v0.9.3 law:
+
+    No version bump without automated registry-surface verification.
+
+Boundary:
+
+v0.9.3 improves release hygiene. It does not prove empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

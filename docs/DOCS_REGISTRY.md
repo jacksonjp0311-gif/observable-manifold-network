@@ -340,3 +340,17 @@ Boundary: v0.9.1 improves evidence selection and reproducibility discipline. It 
 | Test | `tests/test_omn_sa_v0_9_2_public_metrics_dashboard.py` | active | Verifies dashboard/chart presence and boundaries. |
 
 Boundary: v0.9.2 improves public interpretability and benchmark visibility. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.
+
+
+
+## OMN-SA v0.9.3 README / Registry Autopatcher
+
+| Layer | File | Status | Purpose |
+|---|---|---|---|
+| Software Architecture | `docs/software_architecture/omn_sa_v0_9_3_readme_registry_autopatcher.md` | active | Defines README / registry autopatcher discipline. |
+| Architecture Change | `docs/architecture_changes/omn_sa_v0_9_3_readme_registry_autopatcher_change.md` | active | Records version-surface hardening. |
+| Release Note | `docs/release_notes/v0_9_3_readme_registry_autopatcher.md` | active | Records the v0.9.3 checkpoint. |
+| Version Surface Checker | `scripts/release/update_version_surfaces.py` | active | Checks README, CI, and DOCS_REGISTRY alignment. |
+| Test | `tests/test_omn_sa_v0_9_3_readme_registry_autopatcher.py` | active | Verifies checker presence and current surface alignment. |
+
+Boundary: v0.9.3 improves release hygiene and repository orientation. It does not prove correctness, empirical validation, causality, mechanism, production readiness, AI understanding, or GMN replication.

@@ -23,7 +23,7 @@ class TestOMNSAV092PublicMetricsDashboard(unittest.TestCase):
 
     def test_readme_links_current_public_metrics(self):
         readme = (ROOT / "README.md").read_text(encoding="utf-8")
-        self.assertIn("Current software layer | OMN-SA v0.9.2", readme)
+        self.assertTrue("Current software layer | OMN-SA v0.9.2" in readme or "Current software layer | OMN-SA v0.9.3" in readme)
         self.assertIn("docs/benchmarks/current_public_metrics.md", readme)
         self.assertIn("visuals/omn_sa/current_public_metrics.svg", readme)
 
